@@ -1,0 +1,17 @@
+ADC
+    35 - channelADC = 7 -- GPIO35
+
+SDC41
+    21 - SDA
+    22 - SCL
+
+SPS30
+    17 - TX 
+    16 - RX 
+
+MAX7219
+
+    18 - CS    - 18
+    19 - CLOCK - 19
+    23 - MOSI  - 23
+    26 - MISO  - 26

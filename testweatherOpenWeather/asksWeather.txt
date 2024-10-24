@@ -1,0 +1,10 @@
+https://api.openweathermap.org/data/2.5/weather?lat=45.26&lon=19.83&units=metric&appid=
+
+
+https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&cnt=8&units=metric&appid=
+
+
+api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=
+
+
+&units=metric	

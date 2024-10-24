@@ -1,0 +1,256 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Кросс компилятор",
+            "type": "shell",
+            "command": "luac.cross.exe -o ${workspaceFolder}/.output/${fileBasenameNoExtension}.lc  -l ${fileDirname}/${fileBasename}  > ${workspaceFolder}/.output/${fileBasenameNoExtension}.log",
+            "presentation": {
+                "reveal": "silent",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "LuaSrcDiet",
+            "type": "shell",
+            "command": "luaSrcDiet ${fileDirname}/${fileBasename} -o ./.output/${fileBasenameNoExtension}.lua",
+            "presentation": {
+                "reveal": "silent",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "COM: ESP File system Info ",
+            "type": "shell",
+            "command": "nodemcu-tool fsinfo ${input:PORT}",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "focus": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "COM: Выгрузить текущий файл",
+            "type": "shell",
+            "command": "nodemcu-tool upload  --minify ${input:PORT} ${relativeFile}",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "focus": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "HTTP: Выгрузить текущий файл",
+            "type": "shell",
+            "command": "curl.exe -F name=filename.lua -F myfile=@${relativeFile} --config ./.vscode/http.txt",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "focus": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "COM: Запустить текущий файл",
+            "type": "shell",
+            "command": "nodemcu-tool run ${input:PORT} ${fileBasename}",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "focus": true
+            }
+        },
+        {
+            "label": "HTTP: Запустить текущий файл",
+            "type": "shell",
+            "command": "curl.exe --get -d command=runfile -d filename=${fileBasename} --config ./.vscode/http.txt",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent",
+                "showReuseMessage": false,
+                "clear": true
+            }
+        },
+        {
+            "label": "COM: Запустить текущий файл в терминале",
+            "type": "shell",
+            "command": "nodemcu-tool terminal ${input:PORT} --run ${fileBasename}",
+            "problemMatcher": [],
+            "presentation": {
+                "focus": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "COM: Сброс ESP",
+            "type": "shell",
+            "command": "nodemcu-tool reset --softreset  ${input:PORT}",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent",
+                "showReuseMessage": false
+            }
+        },
+        {
+            "label": "HTTP: Сброс ESP",
+            "type": "shell",
+            "command": "curl.exe --get --data-ascii command=restart --config ./.vscode/http.txt",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent",
+                "showReuseMessage": false
+            }
+        },
+        {
+            "label": "COM: Терминал ESP",
+            "type": "shell",
+            "command": "nodemcu-tool terminal ${input:PORT}",
+            "problemMatcher": [],
+            "presentation": {
+                "focus": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "COM: LFS собрать, выгрузить и flashreload",
+            "type": "shell",
+            // "command": "Set-ExecutionPolicy RemoteSigned -Scope Process ;./.vscode/auto.ps1 2 ${input:PORT} ./.output/lfs.img ${fileDirname}/*.lua ./.output/LFS_image-float.log",
+            "command": "Set-ExecutionPolicy RemoteSigned -Scope Process ;./.vscode/auto.ps1 2 ${input:PORT} ./.output/lfs.img ${fileDirname}/*.lua ./.output/LFS_image-float.log",
+            "problemMatcher": [],
+            "presentation": {
+                "focus": true,
+                "clear": true
+            }
+        },
+
+        {
+            "label": "COM: LFS собрать",
+            "type": "shell",
+            "command": "Set-ExecutionPolicy RemoteSigned -Scope Process ;./.vscode/auto.ps1 5 ./.output/lfs.img  ./.output/LFS_image-float.log",
+            "problemMatcher": [],
+            "presentation": {
+                "focus": true,
+                "clear": true
+            }
+        },
+
+        // {
+        //     "label": "build LFS",
+        //     "type": "shell",
+        //     "command": "./.vscode/auto.sh 11 ./.output/lfs.img ./.output/lfs.log",
+        //     "presentation": {
+        //     "reveal": "silent",
+        //     "showReuseMessage": false,
+        //     "clear": true
+        //     }
+        // },
+        
+        {
+            "label": "COM: Файл скомпилировать, выгрузить, запустить",
+            "type": "shell",
+            "command": "Set-ExecutionPolicy RemoteSigned -Scope Process ; ./.vscode/auto.ps1 4 ${input:PORT} ./.output/${fileBasenameNoExtension}.lc  ${fileDirname}/${fileBasename} ./.output/${fileBasenameNoExtension}.log ${fileBasenameNoExtension}.lc",
+            "problemMatcher": [],
+            "presentation": {
+                "focus": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "COM: Файл скомпилировать, выгрузить, запустить в терминале",
+            "type": "shell",
+            "command": "Set-ExecutionPolicy RemoteSigned -Scope Process ; ./.vscode/auto.ps1 3 ${input:PORT} ./.output/${fileBasenameNoExtension}.lc  ${fileDirname}/${fileBasename} ./.output/${fileBasenameNoExtension}.log ${fileBasenameNoExtension}.lc",
+            "problemMatcher": [],
+            "presentation": {
+                "focus": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "FTP: Выгрузить текущий файл",
+            "type": "shell",
+            "command": "curl.exe -T ${relativeFile} --config ./.vscode/ftp.txt --ftp-pasv --disable-epsv --progress-bar",
+            "problemMatcher": [],
+            "presentation": {
+                "focus": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "FTP: Запустить текущий файл",
+            "type": "shell",
+            "command": "curl.exe --config ./.vscode/ftp.txt --ftp-pasv --disable-epsv  --list-only -Q 'RUN ${fileBasename}'",
+            "problemMatcher": [],
+            "presentation": {
+                "focus": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "FTP: сброс ESP",
+            "type": "shell",
+            "command": "curl.exe --config ./.vscode/ftp.txt --ftp-pasv --disable-epsv -l --silent -Q 'RST'",
+            "problemMatcher": [],
+            "presentation": {
+                "focus": true,
+                "clear": true
+            }
+        },
+
+        {
+            "label": "FTP: build LFS & upload",
+            "type": "shell",
+            "command": "Set-ExecutionPolicy RemoteSigned -Scope Process ;./.vscode/auto.ps1 1 ./.output/lfs.img ./.vscode/ftp.txt ${fileDirname}/*.lua ./.output/LFS_image-float.log",
+            "problemMatcher": [],
+            "presentation": {
+                "focus": true,
+                "clear": true
+            }
+        }
+    ],
+        "inputs": [
+            {
+                "id": "PORT",
+                "type": "pickString",
+                "description": "Выберите COM порт",
+                "options": [
+                    "--port=COM3",
+                    "--port=COM4",
+                    "--port=COM5",
+                    "--port=COM6",
+                    "--port=COM7",
+                    "--port=COM9",
+                    "--port=COM10",
+                    "--port=COM11",
+                    "--port=COM12",                    
+                    "--port=COM14",
+                    "--port=COM15",                    
+                    "--port=COM43",
+                    "/dev/ttyUSB0"
+                ],
+                "default": "--port=COM7"
+            }
+        ]
+    }
