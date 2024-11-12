@@ -24,7 +24,7 @@ DEBUG = true
 TIMEZONE = 'EST-3'
 
 wth.offset = 10800    -- Время, секунды относительно Гринвича 
-dat.maxbright = 15       -- Максимальная яркость часов, max 15
+dat.maxbright = 1       -- Максимальная яркость часов, max 15
 dat.shownight = true  -- Показ данных ночью, false - не показывать, только часы
 
 -- Is light sensor:
