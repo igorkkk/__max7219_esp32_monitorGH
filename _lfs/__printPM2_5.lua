@@ -1,7 +1,7 @@
 do
     local pm = 0
     prt('\n\n\t\t\t\t\t\t\t!!!work pm2_5', wth.pm2_5)
-    if wth.pm2_5 and tonumber(wth.pm2_5) > 25 then
+    --if wth.pm2_5 and tonumber(wth.pm2_5) > 25 then
         dat.notime = true
         dofile'dpm2_5.lua'
         pm = tonumber(wth.pm2_5)
@@ -12,7 +12,7 @@ do
                 OUT('pm' .. pm)
             end
         )
-    else
-        dofile'__printtime.lua'
-    end
+    --else
+    --    dofile'__printtime.lua'
+    --end
 end
