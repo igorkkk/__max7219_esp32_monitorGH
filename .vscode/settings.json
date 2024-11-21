@@ -35,12 +35,17 @@
         "enduser_setup",
         "time"
     ],
-    "Lua.diagnostics.disable": [
-        "lowercase-global",
-        "undefined-field",
-        "deprecated"
+    "Lua.runtime.version": "Lua 5.3",
+    "Lua.runtime.builtin": {
+        "utf8": "disable",
+        "math": "disable",
+        "bit32": "disable",
+        "os": "disable",
+        "bit": "disable"
+    },
+    "Lua.runtime.plugin": "C:/Users/remoteadmin/Documents/___SyncThing/esp/nodeMCU-emmylua//esp32/plugin.lua",
+    "Lua.workspace.library": [
+        "C:/Users/remoteadmin/Documents/___SyncThing/esp/nodeMCU-emmylua//esp32/library"
     ],
-    "Lua.runtime.version": "Lua 5.1",
-    "Lua.workspace.userThirdParty": ["C:/Users/Uzer/Documents/LuaAddons"]
 }
 

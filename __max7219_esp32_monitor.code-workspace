@@ -7,19 +7,30 @@
 	"settings": {
 		"nodemcu-tools.snippets": {
 			
-			"dat": "print() print() print('---------------------') for k,v in pairs(dat) do print(k,':',v) end print('---------------------') print() print()",
-			"wth": "print() print() print('---------------------') for k,v in pairs(wth) do print(k,':',v) end print('---------------------') print() print()",
-			"_G": "print() print() print('---------------------') for k,v in pairs(_G) do print(k,':',v) end print('---------------------') print() print()" ,
-			"pack": "print() print() print('---------------------') for k,v in pairs(_G.package.loaded) do print(k,':',v) end print('---------------------') print() print()" ,
+			"dat": "if not dat then print('No Dat Table') else for k,v in pairs(dat) do print(k,':',v) end end",
+			"wth": "if not wth then print('No Wth Table') else for k,v in pairs(wth) do print(k,':',v) end end",
+			"wt": "if not wt then print('No Work Table') else for k,v in pairs(wt) do print(k,':',v[1], v[2], v[3]) end end",
+			"_G": "for k,v in pairs(_G) do print(k,':',v) end",
+			"_G.io": "for k,v in pairs(_G.io) do print(k,':',v) end",
+			"LFS list": "for k,v in pairs(node.LFS.list()) do print(k,v) end",
 			"Restart": "node.restart()",
 			"Rename init": "dofile('_renameinit.lua')",
 			"__init": "dofile('__init.lua')",
-			"Heap": "=node.heap()",
+			"Heap": "print(node.heap())",
 			"Reload LFS": "node.LFS.reload('lfs.img')",
 			"Del lfs.img": "file.remove('lfs.img')",
 			"LFS Start":"local fi=node.LFS.get; pcall(fi and fi'_init')",
-			"LFS List":"print() print() print('---------------------') for _,v in pairs(node.LFS.list()) do print(v) end print('---------------------') print() print()",
 			"ChipID": "=node.chipid()",
-	   }
+			"WiFi 32 IP": "if dat and dat.ip then print('Got IP: '..dat.ip) else print('Lost IP') end",
+			"WiFi 32 Start": "dofile('wifi32.lua')",
+			// "WiFi IP": "=wifi.sta.getip()",
+			// "WiFi APs": "wifi.sta.getap({show_hidden=1},1,function(t) for k,v in pairs(t) do print(k..':'..v) end end)",
+			// "WiFi 8266": "do wifi.setmode(wifi.STATION) cfg={} cfg.ssid='AP_Home73' cfg.pwd='7740774077407740' cfg.save=true cfg.auto=true wifi.sta.config(cfg) wifi.sta.connect() end"
+		},
+ 	// "Lua.workspace.checkThirdParty": true,
+	// "Lua.workspace.library": [
+	// 	"C:/LUA_addons/nodeMCU-emmylua/esp32"
+	// ],
+	// "Lua.runtime.plugin": "C:/LUA_addons/nodeMCU-emmylua/esp32/plugin.lua" ,
 	}
 }

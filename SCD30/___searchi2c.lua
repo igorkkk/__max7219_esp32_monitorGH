@@ -2,12 +2,15 @@ do
     SDA = 22
     SCL = 21
 
+    
+
     -- SDA = 22
     -- SCL = 21
 
     -- SDA = 27
     -- SCL = 25   
 
+    
 
     print('SDA = '..SDA..', SCL = '..SCL..'\n----------------')
     print('Be Patient!')
