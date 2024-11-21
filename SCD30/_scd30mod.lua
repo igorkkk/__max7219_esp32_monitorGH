@@ -57,8 +57,8 @@ function scd30.reset() -- Soft Reset
 	writei2c({ 0xD3, 0x04 })
 end
 
-function scd30.read(tbl) -- Чтение данных в таблицу
-	local data, dt
+function scd30.read(tbl, call) -- Чтение данных в таблицу
+	local data, dt, nt, s
 	dt = {} -- таблица итоговых данных
 	nt = {} -- названия данных
 	nt[1] = 'co2'
@@ -85,6 +85,7 @@ function scd30.read(tbl) -- Чтение данных в таблицу
 			tbl[nt[k]] = dt[nt[k]]
 		end
 	end
+	if call then call() end
 	return dt[nt[1]], dt[nt[7]], dt[nt[13]]
 end
 
