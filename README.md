@@ -1,5 +1,7 @@
 ## Часы на матрице MAX7219 и ESP32 с модулями SCD30, SDC41, MH-Z19 и датчиком ds18b20.
 
+Источники знаний:
+
 [MAX7219](https://download.mikroe.com/documents/datasheets/MAX7219.pdf)
 
 [SCD30](https://sensirion.com/media/documents/4EAF6AF8/61652C3C/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)
