@@ -19,10 +19,6 @@
 			"LFS Start":"local fi=node.LFS.get; pcall(fi and fi'_init')",
 			"LFS List":"print() print() print('---------------------') for _,v in pairs(node.LFS.list()) do print(v) end print('---------------------') print() print()",
 			"ChipID": "=node.chipid()",
-			"WiFi Status": "local wifista=wifi.sta.status();for k,v in pairs(wifi) do if v==wifista and string.sub(k,1,4)=='STA_' then print(k) end end",
-			"WiFi IP": "=wifi.sta.getip()",
-			"WiFi APs": "wifi.sta.getap({show_hidden=1},1,function(t) for k,v in pairs(t) do print(k..':'..v) end end)",
-			"WiFi 8266": "do wifi.setmode(wifi.STATION) cfg={} cfg.ssid='AP_Home73' cfg.pwd='7740774077407740' cfg.save=true cfg.auto=true wifi.sta.config(cfg) wifi.sta.connect() end"
 	   }
 	}
 }
