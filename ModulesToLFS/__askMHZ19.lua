@@ -5,6 +5,6 @@ do
         package.loaded['_mh-z19b'], mh = nil, nil
         prt('Got co2:', wth.co2)
     end
-    local mh = require('_mh-z19b')
+    local mh = require('ModulesToLFS._mh-z19b')
     mh.askmh(wth, call)
 end

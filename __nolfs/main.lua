@@ -12,9 +12,10 @@ do
     wt[1] = { '_getnowOM.lua', 900, 0 }
     wt[2] = { '_getForecastOM.lua', 900, 0 }
     wt[3] = { '_narodtric.lua', 600, 0 }
-    wt[4] = { '__askMHZ19.lua', 300, 0 }
+    wt[4] = { '__askSCD30.lua', 120, 0 }
+    -- wt[4] = { '__askMHZ19.lua', 120, 0 }
+    -- wt[4] = { '__askSDC41.lua', 60, 0 }
     wt[5] = { '_narodask.lua', 180, 0 }
-    -- wt[6] = { '__askSDC41.lua', 60, 0 }
     wt[6] = { '__askds18b20.lua', 60, 0 }
     wt[7] = { 'mqttpub.lua', 30, 0 }
     wt[8] = { 'bright.lua', 17, 0 }
@@ -75,7 +76,7 @@ do
             end
         end
         if counter == 20 then
-            if wth.co2 and wth.co2 > 1500 then
+            if wth.co2 and tonumber(wth.co2) > 1500 then
                 dofile '__printCO2.lua'
             else
                 counter = 23

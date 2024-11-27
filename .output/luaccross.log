@@ -1,10 +1,10 @@
 
-main <(luac.cross):0,0> (1 instruction at 010e9d58)
-0+ params, 1 slot, 1 upvalue, 0 locals, 35 constants, 34 functions
+main <(luac.cross):0,0> (1 instruction at 010bfb48)
+0+ params, 1 slot, 1 upvalue, 0 locals, 29 constants, 28 functions
 	1	[1]	RETURN   	0 1
 
-main <.\_lfs\__askds18b20.lua:0,0> (36 instructions at 01086c18)
-0+ params, 10 slots, 1 upvalue, 0 locals, 11 constants, 1 function
+main <.\_lfs\__askds18b20.lua:0,0> (40 instructions at 01069c58)
+0+ params, 10 slots, 1 upvalue, 0 locals, 12 constants, 1 function
 	1	[1]	GETTABUP 	0 0 -1	; - "dat"
 	2	[1]	TEST     	0 1
 	3	[1]	JMP      	0 2	; to 6
@@ -25,24 +25,28 @@ main <.\_lfs\__askds18b20.lua:0,0> (36 instructions at 01086c18)
 	18	[5]	JMP      	0 1	; to 20
 	19	[5]	GETTABUP 	0 0 -5	; - "print"
 	20	[6]	NEWTABLE 	1 0 0
-	21	[7]	LOADK    	2 -6	; 4
-	22	[8]	LOADK    	3 -7	; 750
-	23	[21]	CLOSURE  	4 0	; 01086cc0
-	24	[23]	GETTABUP 	5 0 -9	; - "require"
-	25	[23]	LOADK    	6 -10	; "_ds18b20"
-	26	[23]	CALL     	5 2 2
-	27	[23]	SETTABUP 	0 -8 5	; - "ds"
-	28	[24]	GETTABUP 	5 0 -8	; - "ds"
-	29	[24]	GETTABLE 	5 5 -11	; "getTemp"
-	30	[24]	MOVE     	6 1
-	31	[24]	MOVE     	7 4
-	32	[24]	MOVE     	8 2
-	33	[24]	MOVE     	9 3
-	34	[24]	CALL     	5 5 1
-	35	[24]	JMP      	1 0	; to 36
-	36	[25]	RETURN   	0 1
+	21	[7]	GETTABUP 	2 0 -1	; - "dat"
+	22	[7]	GETTABLE 	2 2 -6	; "ds18pin"
+	23	[7]	TEST     	2 1
+	24	[7]	JMP      	0 1	; to 26
+	25	[7]	LOADK    	2 -7	; 4
+	26	[8]	LOADK    	3 -8	; 750
+	27	[21]	CLOSURE  	4 0	; 01069af0
+	28	[23]	GETTABUP 	5 0 -10	; - "require"
+	29	[23]	LOADK    	6 -11	; "_ds18b20"
+	30	[23]	CALL     	5 2 2
+	31	[23]	SETTABUP 	0 -9 5	; - "ds"
+	32	[24]	GETTABUP 	5 0 -9	; - "ds"
+	33	[24]	GETTABLE 	5 5 -12	; "getTemp"
+	34	[24]	MOVE     	6 1
+	35	[24]	MOVE     	7 4
+	36	[24]	MOVE     	8 2
+	37	[24]	MOVE     	9 3
+	38	[24]	CALL     	5 5 1
+	39	[24]	JMP      	1 0	; to 40
+	40	[25]	RETURN   	0 1
 
-function <.\_lfs\__askds18b20.lua:9,21> (37 instructions at 01086cc0)
+function <.\_lfs\__askds18b20.lua:9,21> (37 instructions at 01069af0)
 0 params, 9 slots, 3 upvalues, 0 locals, 14 constants, 0 functions
 	1	[10]	GETUPVAL 	0 0	; -
 	2	[10]	LOADK    	1 -1	; "Got DS18b20: "
@@ -82,64 +86,47 @@ function <.\_lfs\__askds18b20.lua:9,21> (37 instructions at 01086cc0)
 	36	[20]	SETTABLE 	0 -14 -11	; "_ds18b20" nil
 	37	[21]	RETURN   	0 1
 
-main <.\_lfs\__askMHZ19.lua:0,0> (19 instructions at 01089e18)
-0+ params, 6 slots, 1 upvalue, 0 locals, 7 constants, 1 function
-	1	[2]	GETTABUP 	0 0 -1	; - "prt"
-	2	[2]	TEST     	0 1
-	3	[2]	JMP      	0 1	; to 5
-	4	[2]	GETTABUP 	0 0 -2	; - "print"
-	5	[3]	GETTABUP 	1 0 -3	; - "wth"
-	6	[3]	TEST     	1 1
-	7	[3]	JMP      	0 2	; to 10
-	8	[3]	NEWTABLE 	1 0 0
-	9	[3]	SETTABUP 	0 -3 1	; - "wth"
-	10	[7]	CLOSURE  	1 0	; 010d1f78
-	11	[8]	GETTABUP 	2 0 -4	; - "require"
-	12	[8]	LOADK    	3 -5	; "_mh-z19b"
-	13	[8]	CALL     	2 2 2
-	14	[9]	GETTABLE 	3 2 -6	; "askmh"
-	15	[9]	GETTABUP 	4 0 -7	; - "wth"
-	16	[9]	MOVE     	5 1
-	17	[9]	CALL     	3 3 1
-	18	[9]	JMP      	1 0	; to 19
-	19	[10]	RETURN   	0 1
+main <.\_lfs\__askSCD30.lua:0,0> (29 instructions at 01069b70)
+0+ params, 11 slots, 1 upvalue, 0 locals, 10 constants, 1 function
+	1	[2]	LOADNIL  	0 3
+	2	[3]	GETTABUP 	4 0 -1	; - "wth"
+	3	[3]	TEST     	4 1
+	4	[3]	JMP      	0 2	; to 7
+	5	[3]	NEWTABLE 	4 0 0
+	6	[3]	SETTABUP 	0 -1 4	; - "wth"
+	7	[4]	GETTABUP 	4 0 -3	; - "require"
+	8	[4]	LOADK    	5 -4	; "_scd30mod"
+	9	[4]	CALL     	4 2 2
+	10	[4]	SETTABUP 	0 -2 4	; - "scd30"
+	11	[9]	CLOSURE  	4 0	; 010b1f20
+	12	[9]	MOVE     	0 4
+	13	[11]	GETTABUP 	4 0 -5	; - "scd30"
+	14	[11]	GETTABLE 	4 4 -6	; "read"
+	15	[11]	GETTABUP 	5 0 -1	; - "wth"
+	16	[11]	MOVE     	6 0
+	17	[11]	CALL     	4 3 4
+	18	[11]	MOVE     	3 6
+	19	[11]	MOVE     	2 5
+	20	[11]	MOVE     	1 4
+	21	[12]	GETTABUP 	4 0 -7	; - "print"
+	22	[12]	LOADK    	5 -8	; "co2:"
+	23	[12]	MOVE     	6 1
+	24	[12]	LOADK    	7 -9	; "Temperature:"
+	25	[12]	MOVE     	8 2
+	26	[12]	LOADK    	9 -10	; "Humidity:"
+	27	[12]	MOVE     	10 3
+	28	[12]	CALL     	4 7 1
+	29	[13]	RETURN   	0 1
 
-function <.\_lfs\__askMHZ19.lua:4,7> (11 instructions at 010d1f78)
-0 params, 3 slots, 2 upvalues, 0 locals, 8 constants, 0 functions
-	1	[5]	GETTABUP 	0 0 -1	; - "package"
-	2	[5]	GETTABLE 	0 0 -2	; "loaded"
-	3	[5]	LOADNIL  	1 0
-	4	[5]	SETTABUP 	0 -4 -5	; - "mh" nil
-	5	[5]	SETTABLE 	0 -3 1	; "_mh-z19b" -
-	6	[6]	GETUPVAL 	0 1	; -
-	7	[6]	LOADK    	1 -6	; "Got co2:"
-	8	[6]	GETTABUP 	2 0 -7	; - "wth"
-	9	[6]	GETTABLE 	2 2 -8	; "co2"
-	10	[6]	CALL     	0 3 1
-	11	[7]	RETURN   	0 1
+function <.\_lfs\__askSCD30.lua:6,9> (5 instructions at 010b1f20)
+0 params, 2 slots, 1 upvalue, 0 locals, 5 constants, 0 functions
+	1	[7]	GETTABUP 	0 0 -1	; - "package"
+	2	[7]	GETTABLE 	0 0 -2	; "loaded"
+	3	[7]	SETTABLE 	0 -3 -4	; "scd30mod" nil
+	4	[8]	SETTABUP 	0 -5 -4	; - "scd30" nil
+	5	[9]	RETURN   	0 1
 
-main <.\_lfs\__askSDC41.lua:0,0> (18 instructions at 01089bb0)
-0+ params, 10 slots, 1 upvalue, 0 locals, 9 constants, 0 functions
-	1	[1]	GETTABUP 	0 0 -1	; - "dat"
-	2	[1]	GETTABLE 	0 0 -2	; "noSDC"
-	3	[1]	TEST     	0 0
-	4	[1]	JMP      	0 1	; to 6
-	5	[1]	RETURN   	0 1
-	6	[3]	GETTABUP 	0 0 -3	; - "scd4x"
-	7	[3]	GETTABLE 	0 0 -4	; "read"
-	8	[3]	GETTABUP 	1 0 -5	; - "wth"
-	9	[3]	CALL     	0 2 4
-	10	[4]	GETTABUP 	3 0 -6	; - "prt"
-	11	[4]	LOADK    	4 -7	; "co2:"
-	12	[4]	MOVE     	5 0
-	13	[4]	LOADK    	6 -8	; "Temperature:"
-	14	[4]	MOVE     	7 1
-	15	[4]	LOADK    	8 -9	; "Humidity:"
-	16	[4]	MOVE     	9 2
-	17	[4]	CALL     	3 7 1
-	18	[5]	RETURN   	0 1
-
-main <.\_lfs\__printCO2.lua:0,0> (20 instructions at 01089ee8)
+main <.\_lfs\__printCO2.lua:0,0> (20 instructions at 010b1f78)
 0+ params, 5 slots, 1 upvalue, 0 locals, 14 constants, 1 function
 	1	[2]	GETTABUP 	0 0 -1	; - "prt"
 	2	[2]	LOADK    	1 -2	; "\t\t\t\t\t\t\t!!!Work CO2:"
@@ -158,11 +145,11 @@ main <.\_lfs\__printCO2.lua:0,0> (20 instructions at 01089ee8)
 	15	[5]	LOADK    	2 -13	; 1500
 	16	[5]	GETTABUP 	3 0 -10	; - "tmr"
 	17	[5]	GETTABLE 	3 3 -14	; "ALARM_AUTO"
-	18	[9]	CLOSURE  	4 0	; 01089f40
+	18	[9]	CLOSURE  	4 0	; 01069bc8
 	19	[5]	CALL     	0 5 1
 	20	[11]	RETURN   	0 1
 
-function <.\_lfs\__printCO2.lua:6,9> (12 instructions at 01089f40)
+function <.\_lfs\__printCO2.lua:6,9> (12 instructions at 01069bc8)
 1 param, 4 slots, 1 upvalue, 0 locals, 6 constants, 0 functions
 	1	[7]	SELF     	1 0 -1	; "stop"
 	2	[7]	CALL     	1 2 1
@@ -177,7 +164,7 @@ function <.\_lfs\__printCO2.lua:6,9> (12 instructions at 01089f40)
 	11	[8]	CALL     	1 2 1
 	12	[9]	RETURN   	0 1
 
-main <.\_lfs\__printcodeFC.lua:0,0> (117 instructions at 0108ac38)
+main <.\_lfs\__printcodeFC.lua:0,0> (117 instructions at 01069910)
 0+ params, 5 slots, 1 upvalue, 0 locals, 39 constants, 0 functions
 	1	[2]	LOADK    	0 -1	; ""
 	2	[3]	GETTABUP 	1 0 -2	; - "wth"
@@ -297,58 +284,7 @@ main <.\_lfs\__printcodeFC.lua:0,0> (117 instructions at 0108ac38)
 	116	[33]	CALL     	1 4 1
 	117	[36]	RETURN   	0 1
 
-main <.\_lfs\__printPM2_5.lua:0,0> (34 instructions at 0108aab0)
-0+ params, 6 slots, 1 upvalue, 0 locals, 19 constants, 1 function
-	1	[2]	LOADK    	0 -1	; 0
-	2	[3]	GETTABUP 	1 0 -2	; - "prt"
-	3	[3]	LOADK    	2 -3	; "\n\n\t\t\t\t\t\t\t!!!work pm2_5"
-	4	[3]	GETTABUP 	3 0 -4	; - "wth"
-	5	[3]	GETTABLE 	3 3 -5	; "pm2_5"
-	6	[3]	CALL     	1 3 1
-	7	[4]	GETTABUP 	1 0 -6	; - "dat"
-	8	[4]	SETTABLE 	1 -7 -8	; "notime" true
-	9	[5]	GETTABUP 	1 0 -9	; - "dofile"
-	10	[5]	LOADK    	2 -10	; "dpm2_5.lua"
-	11	[5]	CALL     	1 2 1
-	12	[6]	GETTABUP 	1 0 -11	; - "tonumber"
-	13	[6]	GETTABUP 	2 0 -4	; - "wth"
-	14	[6]	GETTABLE 	2 2 -5	; "pm2_5"
-	15	[6]	CALL     	1 2 2
-	16	[6]	MOVE     	0 1
-	17	[7]	LT       	0 -12 0	; 99 -
-	18	[7]	JMP      	0 5	; to 24
-	19	[7]	GETTABUP 	1 0 -13	; - "math"
-	20	[7]	GETTABLE 	1 1 -14	; "floor"
-	21	[7]	MOVE     	2 0
-	22	[7]	CALL     	1 2 2
-	23	[7]	MOVE     	0 1
-	24	[8]	GETTABUP 	1 0 -15	; - "tmr"
-	25	[8]	GETTABLE 	1 1 -16	; "create"
-	26	[8]	CALL     	1 1 2
-	27	[8]	SELF     	1 1 -17	; "alarm"
-	28	[8]	LOADK    	3 -18	; 1500
-	29	[8]	GETTABUP 	4 0 -15	; - "tmr"
-	30	[8]	GETTABLE 	4 4 -19	; "ALARM_AUTO"
-	31	[12]	CLOSURE  	5 0	; 0108ab08
-	32	[8]	CALL     	1 5 1
-	33	[13]	JMP      	1 0	; to 34
-	34	[14]	RETURN   	0 1
-
-function <.\_lfs\__printPM2_5.lua:9,12> (11 instructions at 0108ab08)
-1 param, 4 slots, 2 upvalues, 0 locals, 4 constants, 0 functions
-	1	[10]	SELF     	1 0 -1	; "stop"
-	2	[10]	CALL     	1 2 1
-	3	[10]	SELF     	1 0 -2	; "unregister"
-	4	[10]	CALL     	1 2 1
-	5	[10]	LOADNIL  	0 0
-	6	[11]	GETTABUP 	1 0 -3	; - "OUT"
-	7	[11]	LOADK    	2 -4	; "pm"
-	8	[11]	GETUPVAL 	3 1	; -
-	9	[11]	CONCAT   	2 2 3
-	10	[11]	CALL     	1 2 1
-	11	[12]	RETURN   	0 1
-
-main <.\_lfs\__printtempFC.lua:0,0> (45 instructions at 0108c840)
+main <.\_lfs\__printtempFC.lua:0,0> (45 instructions at 0106be38)
 0+ params, 5 slots, 1 upvalue, 0 locals, 18 constants, 0 functions
 	1	[2]	LOADNIL  	0 1
 	2	[3]	GETTABUP 	2 0 -1	; - "wth"
@@ -396,37 +332,47 @@ main <.\_lfs\__printtempFC.lua:0,0> (45 instructions at 0108c840)
 	44	[14]	CALL     	2 2 1
 	45	[16]	RETURN   	0 1
 
-main <.\_lfs\__printtempH.lua:0,0> (27 instructions at 01088f68)
-0+ params, 4 slots, 1 upvalue, 0 locals, 10 constants, 0 functions
+main <.\_lfs\__printtempH.lua:0,0> (37 instructions at 01069a98)
+0+ params, 5 slots, 1 upvalue, 0 locals, 12 constants, 0 functions
 	1	[2]	LOADNIL  	0 0
 	2	[3]	GETTABUP 	1 0 -1	; - "wth"
 	3	[3]	GETTABLE 	1 1 -2	; "ds18b20"
 	4	[3]	TEST     	1 1
-	5	[3]	JMP      	0 4	; to 10
+	5	[3]	JMP      	0 8	; to 14
 	6	[3]	GETTABUP 	1 0 -1	; - "wth"
 	7	[3]	GETTABLE 	1 1 -3	; "mqttint"
-	8	[3]	TEST     	1 0
-	9	[3]	JMP      	0 17	; to 27
-	10	[4]	GETTABUP 	1 0 -1	; - "wth"
-	11	[4]	GETTABLE 	1 1 -3	; "mqttint"
-	12	[4]	TESTSET  	0 1 1
-	13	[4]	JMP      	0 2	; to 16
+	8	[3]	TEST     	1 1
+	9	[3]	JMP      	0 4	; to 14
+	10	[3]	GETTABUP 	1 0 -1	; - "wth"
+	11	[3]	GETTABLE 	1 1 -4	; "temp_scd30"
+	12	[3]	TEST     	1 0
+	13	[3]	JMP      	0 23	; to 37
 	14	[4]	GETTABUP 	1 0 -1	; - "wth"
-	15	[4]	GETTABLE 	0 1 -2	; "ds18b20"
-	16	[5]	GETTABUP 	1 0 -4	; - "string"
-	17	[5]	GETTABLE 	1 1 -5	; "format"
-	18	[5]	LOADK    	2 -6	; "H%0.1f"
-	19	[5]	MOVE     	3 0
-	20	[5]	CALL     	1 3 2
-	21	[5]	MOVE     	0 1
-	22	[6]	GETTABUP 	1 0 -7	; - "dat"
-	23	[6]	SETTABLE 	1 -8 -9	; "notime" true
-	24	[7]	GETTABUP 	1 0 -10	; - "OUT"
-	25	[7]	MOVE     	2 0
-	26	[7]	CALL     	1 2 1
-	27	[9]	RETURN   	0 1
+	15	[4]	GETTABLE 	1 1 -3	; "mqttint"
+	16	[4]	TESTSET  	0 1 1
+	17	[4]	JMP      	0 6	; to 24
+	18	[4]	GETTABUP 	1 0 -1	; - "wth"
+	19	[4]	GETTABLE 	1 1 -2	; "ds18b20"
+	20	[4]	TESTSET  	0 1 1
+	21	[4]	JMP      	0 2	; to 24
+	22	[4]	GETTABUP 	1 0 -1	; - "wth"
+	23	[4]	GETTABLE 	0 1 -4	; "temp_scd30"
+	24	[5]	GETTABUP 	1 0 -5	; - "string"
+	25	[5]	GETTABLE 	1 1 -6	; "format"
+	26	[5]	LOADK    	2 -7	; "H%0.1f"
+	27	[5]	GETTABUP 	3 0 -8	; - "tonumber"
+	28	[5]	MOVE     	4 0
+	29	[5]	CALL     	3 2 0
+	30	[5]	CALL     	1 0 2
+	31	[5]	MOVE     	0 1
+	32	[6]	GETTABUP 	1 0 -9	; - "dat"
+	33	[6]	SETTABLE 	1 -10 -11	; "notime" true
+	34	[7]	GETTABUP 	1 0 -12	; - "OUT"
+	35	[7]	MOVE     	2 0
+	36	[7]	CALL     	1 2 1
+	37	[9]	RETURN   	0 1
 
-main <.\_lfs\__printtempnow.lua:0,0> (42 instructions at 0108ad40)
+main <.\_lfs\__printtempnow.lua:0,0> (42 instructions at 0106a328)
 0+ params, 3 slots, 1 upvalue, 0 locals, 12 constants, 0 functions
 	1	[1]	GETTABUP 	0 0 -1	; - "wth"
 	2	[1]	GETTABLE 	0 0 -2	; "narod"
@@ -471,171 +417,25 @@ main <.\_lfs\__printtempnow.lua:0,0> (42 instructions at 0108ad40)
 	41	[6]	CALL     	1 2 1
 	42	[7]	RETURN   	0 1
 
-main <.\_lfs\_askSPS30.lua:0,0> (68 instructions at 0108ad98)
-0+ params, 11 slots, 1 upvalue, 0 locals, 28 constants, 3 functions
-	1	[5]	GETTABUP 	0 0 -1	; - "dat"
-	2	[5]	GETTABLE 	0 0 -2	; "noSPS"
-	3	[5]	TEST     	0 0
-	4	[5]	JMP      	0 1	; to 6
-	5	[5]	RETURN   	0 1
-	6	[7]	GETTABUP 	0 0 -1	; - "dat"
-	7	[7]	SETTABLE 	0 -3 -4	; "spsworks" true
-	8	[8]	NEWTABLE 	0 0 0
-	9	[9]	NEWTABLE 	1 8 0
-	10	[9]	LOADK    	2 -6	; 126
-	11	[9]	LOADK    	3 -7	; 0
-	12	[9]	LOADK    	4 -7	; 0
-	13	[9]	LOADK    	5 -8	; 2
-	14	[9]	LOADK    	6 -9	; 1
-	15	[9]	LOADK    	7 -10	; 3
-	16	[9]	LOADK    	8 -11	; 249
-	17	[9]	LOADK    	9 -6	; 126
-	18	[9]	SETLIST  	1 8 1	; 1
-	19	[9]	SETTABLE 	0 -5 1	; "strt_ms" -
-	20	[10]	NEWTABLE 	1 6 0
-	21	[10]	LOADK    	2 -6	; 126
-	22	[10]	LOADK    	3 -7	; 0
-	23	[10]	LOADK    	4 -9	; 1
-	24	[10]	LOADK    	5 -7	; 0
-	25	[10]	LOADK    	6 -13	; 254
-	26	[10]	LOADK    	7 -6	; 126
-	27	[10]	SETLIST  	1 6 1	; 1
-	28	[10]	SETTABLE 	0 -12 1	; "stop_ms" -
-	29	[11]	NEWTABLE 	1 6 0
-	30	[11]	LOADK    	2 -6	; 126
-	31	[11]	LOADK    	3 -7	; 0
-	32	[11]	LOADK    	4 -10	; 3
-	33	[11]	LOADK    	5 -7	; 0
-	34	[11]	LOADK    	6 -15	; 252
-	35	[11]	LOADK    	7 -6	; 126
-	36	[11]	SETLIST  	1 6 1	; 1
-	37	[11]	SETTABLE 	0 -14 1	; "read_ms" -
-	38	[13]	GETTABUP 	1 0 -16	; - "prt"
-	39	[13]	LOADK    	2 -17	; "\n\n\tAsk Start PSP30:"
-	40	[13]	GETTABUP 	3 0 -18	; - "unpack"
-	41	[13]	GETTABLE 	4 0 -5	; "strt_ms"
-	42	[13]	CALL     	3 2 2
-	43	[13]	LOADK    	4 -19	; "\n"
-	44	[13]	CALL     	1 4 1
-	45	[14]	GETTABUP 	1 0 -20	; - "uart"
-	46	[14]	GETTABLE 	1 1 -21	; "write"
-	47	[14]	LOADK    	2 -8	; 2
-	48	[14]	GETTABUP 	3 0 -22	; - "table"
-	49	[14]	GETTABLE 	3 3 -18	; "unpack"
-	50	[14]	GETTABLE 	4 0 -5	; "strt_ms"
-	51	[14]	CALL     	3 2 0
-	52	[14]	CALL     	1 0 1
-	53	[16]	GETTABUP 	1 0 -23	; - "tmr"
-	54	[16]	GETTABLE 	1 1 -24	; "create"
-	55	[16]	CALL     	1 1 2
-	56	[21]	CLOSURE  	2 0	; 0108c9c8
-	57	[26]	CLOSURE  	3 1	; 0108aec8
-	58	[28]	NEWTABLE 	4 0 0
-	59	[29]	SETTABLE 	4 -9 3	; 1 -
-	60	[30]	SETTABLE 	4 -25 2	; 2 -
-	61	[31]	LOADK    	5 -9	; 1
-	62	[33]	SELF     	6 1 -26	; "alarm"
-	63	[33]	LOADK    	8 -27	; 30000
-	64	[33]	GETTABUP 	9 0 -23	; - "tmr"
-	65	[33]	GETTABLE 	9 9 -28	; "ALARM_AUTO"
-	66	[47]	CLOSURE  	10 2	; 0108af38
-	67	[33]	CALL     	6 5 1
-	68	[47]	RETURN   	0 1
-
-function <.\_lfs\_askSPS30.lua:18,21> (17 instructions at 0108c9c8)
-1 param, 5 slots, 2 upvalues, 0 locals, 9 constants, 0 functions
-	1	[19]	GETTABUP 	1 0 -1	; - "prt"
-	2	[19]	LOADK    	2 -2	; "\n\n\tAsk Stop SPS30:"
-	3	[19]	GETTABUP 	3 0 -3	; - "table"
-	4	[19]	GETTABLE 	3 3 -4	; "unpack"
-	5	[19]	GETTABUP 	4 1 -5	; - "stop_ms"
-	6	[19]	CALL     	3 2 2
-	7	[19]	LOADK    	4 -6	; "\n"
-	8	[19]	CALL     	1 4 1
-	9	[20]	GETTABUP 	1 0 -7	; - "uart"
-	10	[20]	GETTABLE 	1 1 -8	; "write"
-	11	[20]	LOADK    	2 -9	; 2
-	12	[20]	GETTABUP 	3 0 -3	; - "table"
-	13	[20]	GETTABLE 	3 3 -4	; "unpack"
-	14	[20]	GETTABUP 	4 1 -5	; - "stop_ms"
-	15	[20]	CALL     	3 2 0
-	16	[20]	CALL     	1 0 1
-	17	[21]	RETURN   	0 1
-
-function <.\_lfs\_askSPS30.lua:23,26> (17 instructions at 0108aec8)
-1 param, 5 slots, 2 upvalues, 0 locals, 9 constants, 0 functions
-	1	[24]	GETTABUP 	1 0 -1	; - "prt"
-	2	[24]	LOADK    	2 -2	; "\n\n\tAsk Read SPS30:"
-	3	[24]	GETTABUP 	3 0 -3	; - "table"
-	4	[24]	GETTABLE 	3 3 -4	; "unpack"
-	5	[24]	GETTABUP 	4 1 -5	; - "read_ms"
-	6	[24]	CALL     	3 2 2
-	7	[24]	LOADK    	4 -6	; "\n"
-	8	[24]	CALL     	1 4 1
-	9	[25]	GETTABUP 	1 0 -7	; - "uart"
-	10	[25]	GETTABLE 	1 1 -8	; "write"
-	11	[25]	LOADK    	2 -9	; 2
-	12	[25]	GETTABUP 	3 0 -3	; - "table"
-	13	[25]	GETTABLE 	3 3 -4	; "unpack"
-	14	[25]	GETTABUP 	4 1 -5	; - "read_ms"
-	15	[25]	CALL     	3 2 0
-	16	[25]	CALL     	1 0 1
-	17	[26]	RETURN   	0 1
-
-function <.\_lfs\_askSPS30.lua:33,47> (32 instructions at 0108af38)
-1 param, 4 slots, 4 upvalues, 0 locals, 12 constants, 0 functions
-	1	[34]	GETUPVAL 	1 1	; -
-	2	[34]	GETTABUP 	1 0 1	; -
-	3	[34]	CALL     	1 1 1
-	4	[35]	GETUPVAL 	1 1	; -
-	5	[35]	ADD      	1 1 -1	; - 1
-	6	[35]	SETUPVAL 	1 1	; -
-	7	[36]	GETUPVAL 	1 2	; -
-	8	[36]	SELF     	1 1 -2	; "stop"
-	9	[36]	CALL     	1 2 1
-	10	[37]	GETUPVAL 	1 2	; -
-	11	[37]	SELF     	1 1 -3	; "interval"
-	12	[37]	LOADK    	3 -4	; 2000
-	13	[37]	CALL     	1 3 1
-	14	[38]	GETUPVAL 	1 2	; -
-	15	[38]	SELF     	1 1 -5	; "start"
-	16	[38]	CALL     	1 2 1
-	17	[39]	GETUPVAL 	1 1	; -
-	18	[39]	EQ       	0 1 -6	; - 3
-	19	[39]	JMP      	0 12	; to 32
-	20	[40]	SELF     	1 0 -2	; "stop"
-	21	[40]	CALL     	1 2 1
-	22	[41]	GETUPVAL 	1 2	; -
-	23	[41]	SELF     	1 1 -7	; "unregister"
-	24	[41]	CALL     	1 2 1
-	25	[42]	LOADNIL  	0 1
-	26	[43]	SETUPVAL 	1 2	; -
-	27	[44]	GETTABUP 	1 3 -8	; - "dat"
-	28	[44]	SETTABLE 	1 -9 -10	; "spsworks" false
-	29	[45]	GETTABUP 	1 3 -11	; - "prt"
-	30	[45]	LOADK    	2 -12	; "\t\t\t\tSPS30 is Stopped"
-	31	[45]	CALL     	1 2 1
-	32	[47]	RETURN   	0 1
-
-main <.\_lfs\_ds18b20.lua:0,0> (15 instructions at 010d2e28)
+main <.\_lfs\_ds18b20.lua:0,0> (15 instructions at 0106e458)
 0+ params, 2 slots, 1 upvalue, 0 locals, 9 constants, 4 functions
 	1	[1]	NEWTABLE 	0 0 0
 	2	[2]	NEWTABLE 	1 0 0
 	3	[2]	SETTABLE 	0 -1 1	; "adrtbl" -
 	4	[3]	SETTABLE 	0 -2 -3	; "pin" 4
 	5	[4]	SETTABLE 	0 -4 -5	; "del" 750
-	6	[22]	CLOSURE  	1 0	; 010d2850
+	6	[22]	CLOSURE  	1 0	; 01068e58
 	7	[6]	SETTABLE 	0 -6 1	; "getaddrs" -
-	8	[37]	CLOSURE  	1 1	; 010d27a0
+	8	[37]	CLOSURE  	1 1	; 0106ef30
 	9	[24]	SETTABLE 	0 -7 1	; "askTemp" -
-	10	[66]	CLOSURE  	1 2	; 010d2e80
+	10	[66]	CLOSURE  	1 2	; 010b14c8
 	11	[39]	SETTABLE 	0 -8 1	; "readResult" -
-	12	[76]	CLOSURE  	1 3	; 010d2ed8
+	12	[76]	CLOSURE  	1 3	; 010b2ee0
 	13	[68]	SETTABLE 	0 -9 1	; "getTemp" -
 	14	[77]	RETURN   	0 2
 	15	[77]	RETURN   	0 1
 
-function <.\_lfs\_ds18b20.lua:6,22> (39 instructions at 010d2850)
+function <.\_lfs\_ds18b20.lua:6,22> (39 instructions at 01068e58)
 2 params, 6 slots, 2 upvalues, 0 locals, 13 constants, 0 functions
 	1	[7]	GETTABUP 	2 0 -1	; - "ow"
 	2	[7]	GETTABLE 	2 2 -2	; "setup"
@@ -677,7 +477,7 @@ function <.\_lfs\_ds18b20.lua:6,22> (39 instructions at 010d2850)
 	38	[20]	RETURN   	0 1
 	39	[22]	RETURN   	0 1
 
-function <.\_lfs\_ds18b20.lua:24,37> (36 instructions at 010d27a0)
+function <.\_lfs\_ds18b20.lua:24,37> (36 instructions at 0106ef30)
 2 params, 11 slots, 2 upvalues, 0 locals, 17 constants, 1 function
 	1	[25]	GETTABUP 	2 0 -1	; - "ow"
 	2	[25]	GETTABLE 	2 2 -2	; "setup"
@@ -712,11 +512,11 @@ function <.\_lfs\_ds18b20.lua:24,37> (36 instructions at 010d27a0)
 	31	[33]	GETTABUP 	4 1 -16	; - "del"
 	32	[33]	GETTABUP 	5 0 -13	; - "tmr"
 	33	[33]	GETTABLE 	5 5 -17	; "ALARM_SINGLE"
-	34	[36]	CLOSURE  	6 0	; 010d2a08
+	34	[36]	CLOSURE  	6 0	; 0106ef88
 	35	[33]	CALL     	2 5 1
 	36	[37]	RETURN   	0 1
 
-function <.\_lfs\_ds18b20.lua:33,36> (6 instructions at 010d2a08)
+function <.\_lfs\_ds18b20.lua:33,36> (6 instructions at 0106ef88)
 1 param, 4 slots, 3 upvalues, 0 locals, 1 constant, 0 functions
 	1	[34]	LOADNIL  	0 0
 	2	[35]	GETTABUP 	1 0 -1	; - "readResult"
@@ -725,7 +525,7 @@ function <.\_lfs\_ds18b20.lua:33,36> (6 instructions at 010d2a08)
 	5	[35]	CALL     	1 3 1
 	6	[36]	RETURN   	0 1
 
-function <.\_lfs\_ds18b20.lua:39,66> (95 instructions at 010d2e80)
+function <.\_lfs\_ds18b20.lua:39,66> (95 instructions at 010b14c8)
 2 params, 20 slots, 2 upvalues, 0 locals, 28 constants, 0 functions
 	1	[40]	LOADNIL  	2 2
 	2	[41]	GETTABUP 	5 0 -1	; - "pairs"
@@ -823,7 +623,7 @@ function <.\_lfs\_ds18b20.lua:39,66> (95 instructions at 010d2e80)
 	94	[65]	CALL     	5 2 1
 	95	[66]	RETURN   	0 1
 
-function <.\_lfs\_ds18b20.lua:68,76> (22 instructions at 010d2ed8)
+function <.\_lfs\_ds18b20.lua:68,76> (22 instructions at 010b2ee0)
 4 params, 7 slots, 1 upvalue, 0 locals, 6 constants, 0 functions
 	1	[69]	GETTABUP 	4 0 -1	; - "adrtbl"
 	2	[69]	LEN      	4 4
@@ -848,7 +648,7 @@ function <.\_lfs\_ds18b20.lua:68,76> (22 instructions at 010d2ed8)
 	21	[74]	CALL     	4 3 1
 	22	[76]	RETURN   	0 1
 
-main <.\_lfs\_getForecastOM.lua:0,0> (96 instructions at 010d27f8)
+main <.\_lfs\_getForecastOM.lua:0,0> (96 instructions at 01068eb0)
 0+ params, 20 slots, 1 upvalue, 0 locals, 35 constants, 6 functions
 	1	[1]	GETTABUP 	0 0 -1	; - "prt"
 	2	[1]	TEST     	0 1
@@ -893,7 +693,7 @@ main <.\_lfs\_getForecastOM.lua:0,0> (96 instructions at 010d27f8)
 	41	[18]	GETTABLE 	18 18 -12	; "lon"
 	42	[18]	CONCAT   	15 15 18
 	43	[18]	CALL     	14 2 1
-	44	[26]	CLOSURE  	14 0	; 010d29b0
+	44	[26]	CLOSURE  	14 0	; 010b3260
 	45	[26]	MOVE     	5 14
 	46	[28]	LOADK    	14 -16	; "GET https://api.open-meteo.com/v1/forecast?latitude="
 	47	[29]	GETTABUP 	15 0 -9	; - "dat"
@@ -904,11 +704,11 @@ main <.\_lfs\_getForecastOM.lua:0,0> (96 instructions at 010d27f8)
 	52	[32]	LOADK    	18 -18	; "&hourly=temperature_2m,weather_code&timezone=Europe%2FMoscow&temporal_resolution=hourly_6&forecast_days=1&forecast_hours=24 HTTP/1.1\r\n"
 	53	[33]	LOADK    	19 -19	; "Host: api.open-meteo.com\r\n"
 	54	[32]	CONCAT   	4 14 19
-	55	[40]	CLOSURE  	14 1	; 010d2ab8
+	55	[40]	CLOSURE  	14 1	; 010b32b8
 	56	[40]	MOVE     	2 14
-	57	[70]	CLOSURE  	14 2	; 010d2900
+	57	[70]	CLOSURE  	14 2	; 010b3520
 	58	[70]	MOVE     	3 14
-	59	[88]	CLOSURE  	14 3	; 010d2a60
+	59	[88]	CLOSURE  	14 3	; 010b3310
 	60	[90]	GETTABUP 	15 0 -9	; - "dat"
 	61	[90]	GETTABLE 	15 15 -20	; "ip"
 	62	[90]	TEST     	15 0
@@ -920,7 +720,7 @@ main <.\_lfs\_getForecastOM.lua:0,0> (96 instructions at 010d27f8)
 	68	[92]	SELF     	15 1 -23	; "alarm"
 	69	[92]	LOADK    	17 -24	; 2000
 	70	[92]	LOADK    	18 -25	; 0
-	71	[97]	CLOSURE  	19 4	; 010d2b10
+	71	[97]	CLOSURE  	19 4	; 010b33c0
 	72	[92]	CALL     	15 5 1
 	73	[98]	GETTABUP 	15 0 -26	; - "net"
 	74	[98]	GETTABLE 	15 15 -27	; "createConnection"
@@ -931,7 +731,7 @@ main <.\_lfs\_getForecastOM.lua:0,0> (96 instructions at 010d27f8)
 	79	[98]	MOVE     	0 15
 	80	[99]	SELF     	15 0 -29	; "on"
 	81	[99]	LOADK    	17 -30	; "connection"
-	82	[99]	CLOSURE  	18 5	; 010d2d78
+	82	[99]	CLOSURE  	18 5	; 010b3628
 	83	[99]	CALL     	15 4 1
 	84	[100]	SELF     	15 0 -29	; "on"
 	85	[100]	LOADK    	17 -31	; "disconnection"
@@ -947,7 +747,7 @@ main <.\_lfs\_getForecastOM.lua:0,0> (96 instructions at 010d27f8)
 	95	[102]	CALL     	15 4 1
 	96	[103]	RETURN   	0 1
 
-function <.\_lfs\_getForecastOM.lua:20,26> (17 instructions at 010d29b0)
+function <.\_lfs\_getForecastOM.lua:20,26> (17 instructions at 010b3260)
 0+ params, 7 slots, 1 upvalue, 0 locals, 3 constants, 0 functions
 	1	[21]	NEWTABLE 	0 0 0
 	2	[21]	VARARG   	1 0
@@ -967,13 +767,13 @@ function <.\_lfs\_getForecastOM.lua:20,26> (17 instructions at 010d29b0)
 	16	[25]	RETURN   	0 2
 	17	[26]	RETURN   	0 1
 
-function <.\_lfs\_getForecastOM.lua:35,40> (12 instructions at 010d2ab8)
+function <.\_lfs\_getForecastOM.lua:35,40> (12 instructions at 010b32b8)
 1 param, 3 slots, 4 upvalues, 0 locals, 3 constants, 1 function
 	1	[36]	GETTABUP 	1 0 -1	; - "prt"
 	2	[36]	LOADK    	2 -2	; "Closing connection!"
 	3	[36]	CALL     	1 2 1
 	4	[37]	GETTABUP 	1 0 -3	; - "pcall"
-	5	[37]	CLOSURE  	2 0	; 010d28a8
+	5	[37]	CLOSURE  	2 0	; 010b31b0
 	6	[37]	CALL     	1 2 1
 	7	[38]	LOADNIL  	0 1
 	8	[38]	SETUPVAL 	1 1	; -
@@ -982,14 +782,14 @@ function <.\_lfs\_getForecastOM.lua:35,40> (12 instructions at 010d2ab8)
 	11	[39]	CALL     	1 2 1
 	12	[40]	RETURN   	0 1
 
-function <.\_lfs\_getForecastOM.lua:37,37> (4 instructions at 010d28a8)
+function <.\_lfs\_getForecastOM.lua:37,37> (4 instructions at 010b31b0)
 0 params, 2 slots, 1 upvalue, 0 locals, 1 constant, 0 functions
 	1	[37]	GETUPVAL 	0 0	; -
 	2	[37]	SELF     	0 0 -1	; "close"
 	3	[37]	CALL     	0 2 1
 	4	[37]	RETURN   	0 1
 
-function <.\_lfs\_getForecastOM.lua:41,70> (104 instructions at 010d2900)
+function <.\_lfs\_getForecastOM.lua:41,70> (104 instructions at 010b3520)
 1 param, 10 slots, 4 upvalues, 0 locals, 27 constants, 0 functions
 	1	[43]	GETUPVAL 	1 1	; -
 	2	[43]	GETTABUP 	2 2 -1	; - "string"
@@ -1096,7 +896,7 @@ function <.\_lfs\_getForecastOM.lua:41,70> (104 instructions at 010d2900)
 	103	[69]	SETTABLE 	1 -27 2	; "codeFCOM" -
 	104	[70]	RETURN   	0 1
 
-function <.\_lfs\_getForecastOM.lua:72,88> (41 instructions at 010d2a60)
+function <.\_lfs\_getForecastOM.lua:72,88> (41 instructions at 010b3310)
 2 params, 6 slots, 8 upvalues, 0 locals, 6 constants, 0 functions
 	1	[73]	GETUPVAL 	2 0	; -
 	2	[73]	TEST     	2 0
@@ -1140,7 +940,7 @@ function <.\_lfs\_getForecastOM.lua:72,88> (41 instructions at 010d2a60)
 	40	[85]	CALL     	2 2 1
 	41	[88]	RETURN   	0 1
 
-function <.\_lfs\_getForecastOM.lua:92,97> (16 instructions at 010d2b10)
+function <.\_lfs\_getForecastOM.lua:92,97> (16 instructions at 010b33c0)
 1 param, 3 slots, 4 upvalues, 0 locals, 4 constants, 0 functions
 	1	[93]	GETUPVAL 	1 0	; -
 	2	[93]	TEST     	1 0
@@ -1159,7 +959,7 @@ function <.\_lfs\_getForecastOM.lua:92,97> (16 instructions at 010d2b10)
 	15	[96]	SETUPVAL 	1 3	; -
 	16	[97]	RETURN   	0 1
 
-function <.\_lfs\_getForecastOM.lua:99,99> (6 instructions at 010d2d78)
+function <.\_lfs\_getForecastOM.lua:99,99> (6 instructions at 010b3628)
 2 params, 6 slots, 1 upvalue, 0 locals, 2 constants, 0 functions
 	1	[99]	SELF     	2 0 -1	; "send"
 	2	[99]	GETUPVAL 	4 0	; -
@@ -1168,7 +968,7 @@ function <.\_lfs\_getForecastOM.lua:99,99> (6 instructions at 010d2d78)
 	5	[99]	CALL     	2 3 1
 	6	[99]	RETURN   	0 1
 
-main <.\_lfs\_getnowOM.lua:0,0> (92 instructions at 010d2958)
+main <.\_lfs\_getnowOM.lua:0,0> (92 instructions at 010b3680)
 0+ params, 24 slots, 1 upvalue, 0 locals, 33 constants, 5 functions
 	1	[1]	GETTABUP 	0 0 -1	; - "prt"
 	2	[1]	TEST     	0 1
@@ -1220,11 +1020,11 @@ main <.\_lfs\_getnowOM.lua:0,0> (92 instructions at 010d2958)
 	48	[23]	LOADK    	22 -17	; "&current=temperature_2m,relative_humidity_2m,is_day,rain,weather_code,wind_speed_10m&timezone=auto&forecast_days=1 HTTP/1.1\r\n"
 	49	[24]	LOADK    	23 -18	; "Host: api.open-meteo.com\r\n"
 	50	[23]	CONCAT   	11 18 23
-	51	[31]	CLOSURE  	18 0	; 010d2b68
+	51	[31]	CLOSURE  	18 0	; 010b3158
 	52	[31]	MOVE     	9 18
-	53	[44]	CLOSURE  	18 1	; 010d2d20
+	53	[44]	CLOSURE  	18 1	; 010b3418
 	54	[44]	MOVE     	10 18
-	55	[62]	CLOSURE  	18 2	; 010d2bc0
+	55	[62]	CLOSURE  	18 2	; 010b3368
 	56	[64]	GETTABUP 	19 0 -8	; - "dat"
 	57	[64]	GETTABLE 	19 19 -19	; "ip"
 	58	[64]	TEST     	19 0
@@ -1236,7 +1036,7 @@ main <.\_lfs\_getnowOM.lua:0,0> (92 instructions at 010d2958)
 	64	[66]	SELF     	19 8 -22	; "alarm"
 	65	[66]	LOADK    	21 -23	; 2000
 	66	[66]	LOADK    	22 -5	; 0
-	67	[71]	CLOSURE  	23 3	; 010d2c70
+	67	[71]	CLOSURE  	23 3	; 010b3470
 	68	[66]	CALL     	19 5 1
 	69	[72]	GETTABUP 	19 0 -24	; - "net"
 	70	[72]	GETTABLE 	19 19 -25	; "createConnection"
@@ -1247,7 +1047,7 @@ main <.\_lfs\_getnowOM.lua:0,0> (92 instructions at 010d2958)
 	75	[72]	MOVE     	7 19
 	76	[73]	SELF     	19 7 -27	; "on"
 	77	[73]	LOADK    	21 -28	; "connection"
-	78	[73]	CLOSURE  	22 4	; 010d2cc8
+	78	[73]	CLOSURE  	22 4	; 010b3050
 	79	[73]	CALL     	19 4 1
 	80	[74]	SELF     	19 7 -27	; "on"
 	81	[74]	LOADK    	21 -29	; "disconnection"
@@ -1263,13 +1063,13 @@ main <.\_lfs\_getnowOM.lua:0,0> (92 instructions at 010d2958)
 	91	[76]	CALL     	19 4 1
 	92	[77]	RETURN   	0 1
 
-function <.\_lfs\_getnowOM.lua:26,31> (12 instructions at 010d2b68)
+function <.\_lfs\_getnowOM.lua:26,31> (12 instructions at 010b3158)
 1 param, 3 slots, 4 upvalues, 0 locals, 3 constants, 1 function
 	1	[27]	GETTABUP 	1 0 -1	; - "prt"
 	2	[27]	LOADK    	2 -2	; "Closing connection!"
 	3	[27]	CALL     	1 2 1
 	4	[28]	GETTABUP 	1 0 -3	; - "pcall"
-	5	[28]	CLOSURE  	2 0	; 010d2c18
+	5	[28]	CLOSURE  	2 0	; 010b3208
 	6	[28]	CALL     	1 2 1
 	7	[29]	LOADNIL  	0 1
 	8	[29]	SETUPVAL 	1 1	; -
@@ -1278,14 +1078,14 @@ function <.\_lfs\_getnowOM.lua:26,31> (12 instructions at 010d2b68)
 	11	[30]	CALL     	1 2 1
 	12	[31]	RETURN   	0 1
 
-function <.\_lfs\_getnowOM.lua:28,28> (4 instructions at 010d2c18)
+function <.\_lfs\_getnowOM.lua:28,28> (4 instructions at 010b3208)
 0 params, 2 slots, 1 upvalue, 0 locals, 1 constant, 0 functions
 	1	[28]	GETUPVAL 	0 0	; -
 	2	[28]	SELF     	0 0 -1	; "close"
 	3	[28]	CALL     	0 2 1
 	4	[28]	RETURN   	0 1
 
-function <.\_lfs\_getnowOM.lua:32,44> (74 instructions at 010d2d20)
+function <.\_lfs\_getnowOM.lua:32,44> (74 instructions at 010b3418)
 1 param, 9 slots, 8 upvalues, 0 locals, 13 constants, 0 functions
 	1	[34]	GETTABUP 	1 7 -1	; - "string"
 	2	[34]	GETTABLE 	1 1 -2	; "match"
@@ -1362,7 +1162,7 @@ function <.\_lfs\_getnowOM.lua:32,44> (74 instructions at 010d2d20)
 	73	[43]	SETTABLE 	1 -13 2	; "wind" -
 	74	[44]	RETURN   	0 1
 
-function <.\_lfs\_getnowOM.lua:46,62> (41 instructions at 010d2bc0)
+function <.\_lfs\_getnowOM.lua:46,62> (41 instructions at 010b3368)
 2 params, 6 slots, 8 upvalues, 0 locals, 6 constants, 0 functions
 	1	[47]	GETUPVAL 	2 0	; -
 	2	[47]	TEST     	2 0
@@ -1406,7 +1206,7 @@ function <.\_lfs\_getnowOM.lua:46,62> (41 instructions at 010d2bc0)
 	40	[59]	CALL     	2 2 1
 	41	[62]	RETURN   	0 1
 
-function <.\_lfs\_getnowOM.lua:66,71> (16 instructions at 010d2c70)
+function <.\_lfs\_getnowOM.lua:66,71> (16 instructions at 010b3470)
 1 param, 3 slots, 4 upvalues, 0 locals, 4 constants, 0 functions
 	1	[67]	GETUPVAL 	1 0	; -
 	2	[67]	TEST     	1 0
@@ -1425,7 +1225,7 @@ function <.\_lfs\_getnowOM.lua:66,71> (16 instructions at 010d2c70)
 	15	[70]	SETUPVAL 	1 3	; -
 	16	[71]	RETURN   	0 1
 
-function <.\_lfs\_getnowOM.lua:73,73> (6 instructions at 010d2cc8)
+function <.\_lfs\_getnowOM.lua:73,73> (6 instructions at 010b3050)
 2 params, 6 slots, 1 upvalue, 0 locals, 2 constants, 0 functions
 	1	[73]	SELF     	2 0 -1	; "send"
 	2	[73]	GETUPVAL 	4 0	; -
@@ -1434,7 +1234,7 @@ function <.\_lfs\_getnowOM.lua:73,73> (6 instructions at 010d2cc8)
 	5	[73]	CALL     	2 3 1
 	6	[73]	RETURN   	0 1
 
-main <.\_lfs\_init.lua:0,0> (47 instructions at 010d2dd0)
+main <.\_lfs\_init.lua:0,0> (47 instructions at 010b34c8)
 0+ params, 6 slots, 1 upvalue, 0 locals, 18 constants, 5 functions
 	1	[1]	GETTABUP 	0 0 -1	; - "node"
 	2	[1]	GETTABLE 	0 0 -2	; "LFS"
@@ -1457,9 +1257,9 @@ main <.\_lfs\_init.lua:0,0> (47 instructions at 010d2dd0)
 	19	[4]	EQ       	0 3 -7	; - "Lua 5.1"
 	20	[4]	JMP      	0 14	; to 35
 	21	[5]	NEWTABLE 	3 0 2
-	22	[26]	CLOSURE  	4 0	; 010d84f0
+	22	[26]	CLOSURE  	4 0	; 010b3578
 	23	[26]	SETTABLE 	3 -8 4	; "__index" -
-	24	[29]	CLOSURE  	4 1	; 010d8498
+	24	[29]	CLOSURE  	4 1	; 010b35d0
 	25	[29]	SETTABLE 	3 -9 4	; "__newindex" -
 	26	[30]	MOVE     	2 3
 	27	[31]	GETTABUP 	3 0 -10	; - "setmetatable"
@@ -1475,16 +1275,16 @@ main <.\_lfs\_init.lua:0,0> (47 instructions at 010d2dd0)
 	37	[37]	SETTABLE 	1 -2 2	; "LFS" -
 	38	[38]	GETTABUP 	3 0 -13	; - "package"
 	39	[38]	GETTABLE 	3 3 -15	; "loaders"
-	40	[40]	CLOSURE  	4 2	; 010d8758
+	40	[40]	CLOSURE  	4 2	; 010b3730
 	41	[40]	SETTABLE 	3 -16 4	; 3 -
 	42	[41]	GETTABUP 	3 0 -17	; - "loadfile"
-	43	[47]	CLOSURE  	4 3	; 010d8bd0
+	43	[47]	CLOSURE  	4 3	; 010b2ff8
 	44	[47]	SETTABLE 	1 -17 4	; "loadfile" -
-	45	[48]	CLOSURE  	4 4	; 010d8a18
+	45	[48]	CLOSURE  	4 4	; 010b30a8
 	46	[48]	SETTABLE 	1 -18 4	; "dofile" -
 	47	[48]	RETURN   	0 1
 
-function <.\_lfs\_init.lua:6,26> (31 instructions at 010d84f0)
+function <.\_lfs\_init.lua:6,26> (31 instructions at 010b3578)
 2 params, 10 slots, 2 upvalues, 0 locals, 10 constants, 0 functions
 	1	[7]	GETUPVAL 	2 0	; -
 	2	[7]	MOVE     	3 1
@@ -1518,7 +1318,7 @@ function <.\_lfs\_init.lua:6,26> (31 instructions at 010d84f0)
 	30	[24]	RETURN   	7 2
 	31	[26]	RETURN   	0 1
 
-function <.\_lfs\_init.lua:27,29> (7 instructions at 010d8498)
+function <.\_lfs\_init.lua:27,29> (7 instructions at 010b35d0)
 3 params, 6 slots, 1 upvalue, 0 locals, 3 constants, 0 functions
 	1	[28]	GETTABUP 	3 0 -1	; - "error"
 	2	[28]	LOADK    	4 -2	; "LFS is readonly. Invalid write to LFS."
@@ -1528,13 +1328,13 @@ function <.\_lfs\_init.lua:27,29> (7 instructions at 010d8498)
 	6	[28]	CALL     	3 3 1
 	7	[29]	RETURN   	0 1
 
-function <.\_lfs\_init.lua:38,40> (3 instructions at 010d8758)
+function <.\_lfs\_init.lua:38,40> (3 instructions at 010b3730)
 1 param, 2 slots, 1 upvalue, 0 locals, 0 constants, 0 functions
 	1	[39]	GETTABUP 	1 0 0	; -
 	2	[39]	RETURN   	1 2
 	3	[40]	RETURN   	0 1
 
-function <.\_lfs\_init.lua:42,47> (31 instructions at 010d8bd0)
+function <.\_lfs\_init.lua:42,47> (31 instructions at 010b2ff8)
 1 param, 7 slots, 3 upvalues, 0 locals, 7 constants, 0 functions
 	1	[43]	GETTABUP 	1 0 -1	; - "file"
 	2	[43]	GETTABLE 	1 1 -2	; "exists"
@@ -1568,7 +1368,7 @@ function <.\_lfs\_init.lua:42,47> (31 instructions at 010d8bd0)
 	30	[46]	RETURN   	3 2
 	31	[47]	RETURN   	0 1
 
-function <.\_lfs\_init.lua:48,48> (8 instructions at 010d8a18)
+function <.\_lfs\_init.lua:48,48> (8 instructions at 010b30a8)
 1 param, 4 slots, 1 upvalue, 0 locals, 2 constants, 0 functions
 	1	[48]	GETTABUP 	1 0 -1	; - "assert"
 	2	[48]	GETTABUP 	2 0 -2	; - "loadfile"
@@ -1579,7 +1379,7 @@ function <.\_lfs\_init.lua:48,48> (8 instructions at 010d8a18)
 	7	[48]	RETURN   	1 0
 	8	[48]	RETURN   	0 1
 
-main <.\_lfs\_leftturn.lua:0,0> (40 instructions at 010d8968)
+main <.\_lfs\_leftturn.lua:0,0> (40 instructions at 010b3100)
 0+ params, 11 slots, 1 upvalue, 0 locals, 19 constants, 2 functions
 	1	[2]	GETTABUP 	0 0 -1	; - "math"
 	2	[2]	GETTABLE 	0 0 -2	; "random"
@@ -1609,7 +1409,7 @@ main <.\_lfs\_leftturn.lua:0,0> (40 instructions at 010d8968)
 	26	[13]	EQ       	0 0 -4	; - 2
 	27	[13]	JMP      	0 1	; to 29
 	28	[14]	LOADK    	4 -14	; 9
-	29	[26]	CLOSURE  	6 0	; 010d8128
+	29	[26]	CLOSURE  	6 0	; 010b8268
 	30	[26]	MOVE     	5 6
 	31	[27]	GETTABUP 	6 0 -15	; - "tmr"
 	32	[27]	GETTABLE 	6 6 -16	; "create"
@@ -1617,12 +1417,12 @@ main <.\_lfs\_leftturn.lua:0,0> (40 instructions at 010d8968)
 	34	[27]	SELF     	6 6 -17	; "alarm"
 	35	[27]	LOADK    	8 -18	; 30
 	36	[27]	LOADK    	9 -19	; 1
-	37	[36]	CLOSURE  	10 1	; 010d81d8
+	37	[36]	CLOSURE  	10 1	; 010b8210
 	38	[27]	CALL     	6 5 1
 	39	[36]	JMP      	1 0	; to 40
 	40	[37]	RETURN   	0 1
 
-function <.\_lfs\_leftturn.lua:16,26> (41 instructions at 010d8128)
+function <.\_lfs\_leftturn.lua:16,26> (41 instructions at 010b8268)
 1 param, 9 slots, 4 upvalues, 0 locals, 9 constants, 0 functions
 	1	[17]	LOADK    	1 -1	; 1
 	2	[17]	LOADK    	2 -2	; 8
@@ -1666,7 +1466,7 @@ function <.\_lfs\_leftturn.lua:16,26> (41 instructions at 010d8128)
 	40	[17]	FORLOOP  	1 -36	; to 5
 	41	[26]	RETURN   	0 1
 
-function <.\_lfs\_leftturn.lua:27,36> (23 instructions at 010d81d8)
+function <.\_lfs\_leftturn.lua:27,36> (23 instructions at 010b8210)
 1 param, 3 slots, 4 upvalues, 0 locals, 5 constants, 0 functions
 	1	[28]	GETUPVAL 	1 0	; -
 	2	[28]	GETUPVAL 	2 1	; -
@@ -1692,7 +1492,7 @@ function <.\_lfs\_leftturn.lua:27,36> (23 instructions at 010d81d8)
 	22	[34]	CALL     	1 1 1
 	23	[36]	RETURN   	0 1
 
-main <.\_lfs\_max7219.lua:0,0> (27 instructions at 010d85f8)
+main <.\_lfs\_max7219.lua:0,0> (27 instructions at 010b7b30)
 0+ params, 13 slots, 1 upvalue, 0 locals, 15 constants, 8 functions
 	1	[1]	NEWTABLE 	0 0 0
 	2	[2]	LOADK    	1 -1	; 4
@@ -1703,26 +1503,26 @@ main <.\_lfs\_max7219.lua:0,0> (27 instructions at 010d85f8)
 	7	[7]	LOADK    	6 -6	; 12
 	8	[8]	LOADK    	7 -7	; 15
 	9	[9]	LOADNIL  	8 2
-	10	[25]	CLOSURE  	11 0	; 010d87b0
-	11	[37]	CLOSURE  	12 1	; 010d8230
+	10	[25]	CLOSURE  	11 0	; 010b82c0
+	11	[37]	CLOSURE  	12 1	; 010b7fa8
 	12	[27]	SETTABLE 	0 -8 12	; "sLine" -
-	13	[47]	CLOSURE  	12 2	; 010d8860
+	13	[47]	CLOSURE  	12 2	; 010b8478
 	14	[47]	SETTABLE 	0 -9 12	; "bToDig" -
-	15	[71]	CLOSURE  	12 3	; 010d8288
+	15	[71]	CLOSURE  	12 3	; 010b8000
 	16	[50]	SETTABLE 	0 -10 12	; "setup" -
-	17	[77]	CLOSURE  	12 4	; 010d8548
+	17	[77]	CLOSURE  	12 4	; 010b7be0
 	18	[73]	SETTABLE 	0 -11 12	; "setIntensity" -
-	19	[85]	CLOSURE  	12 5	; 010d8440
+	19	[85]	CLOSURE  	12 5	; 010b7a28
 	20	[79]	SETTABLE 	0 -12 12	; "clear" -
-	21	[94]	CLOSURE  	12 6	; 010d8b78
+	21	[94]	CLOSURE  	12 6	; 010b8160
 	22	[87]	SETTABLE 	0 -13 12	; "shutdown" -
-	23	[109]	CLOSURE  	12 7	; 010d8b20
+	23	[109]	CLOSURE  	12 7	; 010b7e48
 	24	[96]	SETTABLE 	0 -14 12	; "write" -
 	25	[111]	SETTABLE 	0 -15 11	; "sb" -
 	26	[112]	RETURN   	0 2
 	27	[112]	RETURN   	0 1
 
-function <.\_lfs\_max7219.lua:11,25> (40 instructions at 010d87b0)
+function <.\_lfs\_max7219.lua:11,25> (40 instructions at 010b82c0)
 3 params, 9 slots, 3 upvalues, 0 locals, 10 constants, 0 functions
 	1	[12]	LOADNIL  	3 0
 	2	[13]	LOADK    	3 -1	; 1
@@ -1765,7 +1565,7 @@ function <.\_lfs\_max7219.lua:11,25> (40 instructions at 010d87b0)
 	39	[24]	MOVE     	3 4
 	40	[25]	RETURN   	0 1
 
-function <.\_lfs\_max7219.lua:27,37> (29 instructions at 010d8230)
+function <.\_lfs\_max7219.lua:27,37> (29 instructions at 010b7fa8)
 2 params, 8 slots, 3 upvalues, 0 locals, 10 constants, 0 functions
 	1	[28]	LOADNIL  	2 0
 	2	[29]	LOADK    	2 -1	; 1
@@ -1797,7 +1597,7 @@ function <.\_lfs\_max7219.lua:27,37> (29 instructions at 010d8230)
 	28	[36]	MOVE     	2 3
 	29	[37]	RETURN   	0 1
 
-function <.\_lfs\_max7219.lua:39,47> (32 instructions at 010d8860)
+function <.\_lfs\_max7219.lua:39,47> (32 instructions at 010b8478)
 2 params, 11 slots, 5 upvalues, 0 locals, 8 constants, 0 functions
 	1	[40]	NEWTABLE 	2 0 0
 	2	[40]	SETUPVAL 	2 0	; -
@@ -1832,7 +1632,7 @@ function <.\_lfs\_max7219.lua:39,47> (32 instructions at 010d8860)
 	31	[46]	CALL     	2 3 1
 	32	[47]	RETURN   	0 1
 
-function <.\_lfs\_max7219.lua:50,71> (78 instructions at 010d8288)
+function <.\_lfs\_max7219.lua:50,71> (78 instructions at 010b8000)
 4 params, 17 slots, 9 upvalues, 0 locals, 21 constants, 0 functions
 	1	[51]	TESTSET  	4 1 1
 	2	[51]	JMP      	0 1	; to 4
@@ -1913,7 +1713,7 @@ function <.\_lfs\_max7219.lua:50,71> (78 instructions at 010d8288)
 	77	[70]	MOVE     	4 9
 	78	[71]	RETURN   	0 1
 
-function <.\_lfs\_max7219.lua:73,77> (11 instructions at 010d8548)
+function <.\_lfs\_max7219.lua:73,77> (11 instructions at 010b7be0)
 1 param, 9 slots, 3 upvalues, 0 locals, 1 constant, 0 functions
 	1	[74]	LOADK    	1 -1	; 1
 	2	[74]	GETUPVAL 	2 0	; -
@@ -1927,7 +1727,7 @@ function <.\_lfs\_max7219.lua:73,77> (11 instructions at 010d8548)
 	10	[74]	FORLOOP  	1 -6	; to 5
 	11	[77]	RETURN   	0 1
 
-function <.\_lfs\_max7219.lua:79,85> (16 instructions at 010d8440)
+function <.\_lfs\_max7219.lua:79,85> (16 instructions at 010b7a28)
 0 params, 12 slots, 2 upvalues, 0 locals, 3 constants, 0 functions
 	1	[80]	LOADK    	0 -1	; 1
 	2	[80]	GETUPVAL 	1 0	; -
@@ -1946,7 +1746,7 @@ function <.\_lfs\_max7219.lua:79,85> (16 instructions at 010d8440)
 	15	[80]	FORLOOP  	0 -11	; to 5
 	16	[85]	RETURN   	0 1
 
-function <.\_lfs\_max7219.lua:87,94> (19 instructions at 010d8b78)
+function <.\_lfs\_max7219.lua:87,94> (19 instructions at 010b8160)
 1 param, 10 slots, 3 upvalues, 0 locals, 2 constants, 0 functions
 	1	[88]	LOADNIL  	1 0
 	2	[89]	TEST     	0 0
@@ -1968,7 +1768,7 @@ function <.\_lfs\_max7219.lua:87,94> (19 instructions at 010d8b78)
 	18	[93]	LOADNIL  	1 0
 	19	[94]	RETURN   	0 1
 
-function <.\_lfs\_max7219.lua:96,109> (34 instructions at 010d8b20)
+function <.\_lfs\_max7219.lua:96,109> (34 instructions at 010b7e48)
 1 param, 11 slots, 3 upvalues, 0 locals, 9 constants, 0 functions
 	1	[97]	LOADNIL  	1 0
 	2	[98]	LOADK    	1 -1	; 1
@@ -2005,203 +1805,7 @@ function <.\_lfs\_max7219.lua:96,109> (34 instructions at 010d8b20)
 	33	[108]	LOADNIL  	1 0
 	34	[109]	RETURN   	0 1
 
-main <.\_lfs\_mh-z19b.lua:0,0> (18 instructions at 010d82e0)
-0+ params, 6 slots, 1 upvalue, 0 locals, 8 constants, 3 functions
-	1	[1]	NEWTABLE 	0 0 0
-	2	[17]	CLOSURE  	1 0	; 010d8700
-	3	[17]	SETTABLE 	0 -1 1	; "check" -
-	4	[18]	GETTABUP 	1 0 -3	; - "tmr"
-	5	[18]	GETTABLE 	1 1 -4	; "create"
-	6	[18]	CALL     	1 1 2
-	7	[18]	SETTABLE 	0 -2 1	; "t" -
-	8	[19]	GETTABLE 	1 0 -2	; "t"
-	9	[19]	SELF     	1 1 -5	; "register"
-	10	[19]	LOADK    	3 -6	; 3000
-	11	[19]	GETTABUP 	4 0 -3	; - "tmr"
-	12	[19]	GETTABLE 	4 4 -7	; "ALARM_SINGLE"
-	13	[19]	CLOSURE  	5 1	; 010d8180
-	14	[19]	CALL     	1 5 1
-	15	[39]	CLOSURE  	1 2	; 010d85a0
-	16	[39]	SETTABLE 	0 -8 1	; "askmh" -
-	17	[40]	RETURN   	0 2
-	18	[40]	RETURN   	0 1
-
-function <.\_lfs\_mh-z19b.lua:2,17> (87 instructions at 010d8700)
-1 param, 8 slots, 2 upvalues, 0 locals, 26 constants, 0 functions
-	1	[3]	GETTABUP 	1 0 -1	; - "uart"
-	2	[3]	GETTABLE 	1 1 -2	; "on"
-	3	[3]	LOADK    	2 -3	; 2
-	4	[3]	LOADK    	3 -4	; "data"
-	5	[3]	CALL     	1 3 1
-	6	[4]	GETTABUP 	1 1 -5	; - "t"
-	7	[4]	TEST     	1 0
-	8	[4]	JMP      	0 7	; to 16
-	9	[4]	GETTABUP 	1 1 -5	; - "t"
-	10	[4]	SELF     	1 1 -6	; "stop"
-	11	[4]	CALL     	1 2 1
-	12	[4]	GETTABUP 	1 1 -5	; - "t"
-	13	[4]	SELF     	1 1 -7	; "unregister"
-	14	[4]	CALL     	1 2 1
-	15	[4]	SETTABUP 	1 -5 -8	; - "t" nil
-	16	[5]	TEST     	0 0
-	17	[5]	JMP      	0 9	; to 27
-	18	[5]	GETTABUP 	1 0 -9	; - "print"
-	19	[5]	LOADK    	2 -10	; "UART Killed!"
-	20	[5]	CALL     	1 2 1
-	21	[5]	GETTABUP 	1 1 -11	; - "call"
-	22	[5]	TEST     	1 0
-	23	[5]	JMP      	0 2	; to 26
-	24	[5]	GETTABUP 	1 1 -11	; - "call"
-	25	[5]	CALL     	1 1 1
-	26	[5]	RETURN   	0 1
-	27	[6]	GETTABUP 	1 1 -12	; - "RAW"
-	28	[6]	SETTABLE 	1 -13 -14	; 1 0
-	29	[7]	LOADK    	1 -3	; 2
-	30	[7]	LOADK    	2 -15	; 8
-	31	[7]	LOADK    	3 -13	; 1
-	32	[7]	FORPREP  	1 18	; to 51
-	33	[8]	GETTABUP 	5 1 -12	; - "RAW"
-	34	[8]	GETTABUP 	6 1 -12	; - "RAW"
-	35	[8]	GETTABLE 	6 6 4
-	36	[8]	TEST     	6 0
-	37	[8]	JMP      	0 4	; to 42
-	38	[8]	GETTABUP 	6 1 -12	; - "RAW"
-	39	[8]	GETTABLE 	6 6 4
-	40	[8]	TEST     	6 1
-	41	[8]	JMP      	0 1	; to 43
-	42	[8]	LOADK    	6 -14	; 0
-	43	[8]	SETTABLE 	5 4 6
-	44	[9]	GETTABUP 	5 1 -12	; - "RAW"
-	45	[9]	GETTABUP 	6 1 -12	; - "RAW"
-	46	[9]	GETTABLE 	6 6 -13	; 1
-	47	[9]	GETTABUP 	7 1 -12	; - "RAW"
-	48	[9]	GETTABLE 	7 7 4
-	49	[9]	ADD      	6 6 7
-	50	[9]	SETTABLE 	5 -13 6	; 1 -
-	51	[7]	FORLOOP  	1 -19	; to 33
-	52	[11]	GETTABUP 	1 1 -12	; - "RAW"
-	53	[11]	GETTABUP 	2 0 -16	; - "bit"
-	54	[11]	GETTABLE 	2 2 -17	; "band"
-	55	[11]	LOADK    	3 -18	; 255
-	56	[11]	GETTABUP 	4 1 -12	; - "RAW"
-	57	[11]	GETTABLE 	4 4 -13	; 1
-	58	[11]	CALL     	2 3 2
-	59	[11]	SUB      	2 -19 2	; 256 -
-	60	[11]	SETTABLE 	1 -13 2	; 1 -
-	61	[12]	GETTABUP 	1 1 -12	; - "RAW"
-	62	[12]	GETTABLE 	1 1 -13	; 1
-	63	[12]	GETTABUP 	2 1 -12	; - "RAW"
-	64	[12]	GETTABLE 	2 2 -20	; 9
-	65	[12]	EQ       	0 1 2
-	66	[12]	JMP      	0 15	; to 82
-	67	[13]	GETTABUP 	1 0 -21	; - "prt"
-	68	[13]	LOADK    	2 -22	; "Sum: "
-	69	[13]	GETTABUP 	3 1 -12	; - "RAW"
-	70	[13]	GETTABLE 	3 3 -13	; 1
-	71	[13]	GETTABUP 	4 1 -12	; - "RAW"
-	72	[13]	GETTABLE 	4 4 -20	; 9
-	73	[13]	CALL     	1 4 1
-	74	[14]	GETTABUP 	1 1 -23	; - "tbl"
-	75	[14]	GETTABUP 	2 1 -12	; - "RAW"
-	76	[14]	GETTABLE 	2 2 -25	; 3
-	77	[14]	MUL      	2 2 -19	; - 256
-	78	[14]	GETTABUP 	3 1 -12	; - "RAW"
-	79	[14]	GETTABLE 	3 3 -26	; 4
-	80	[14]	ADD      	2 2 3
-	81	[14]	SETTABLE 	1 -24 2	; "co2" -
-	82	[16]	GETTABUP 	1 1 -11	; - "call"
-	83	[16]	TEST     	1 0
-	84	[16]	JMP      	0 2	; to 87
-	85	[16]	GETTABUP 	1 1 -11	; - "call"
-	86	[16]	CALL     	1 1 1
-	87	[17]	RETURN   	0 1
-
-function <.\_lfs\_mh-z19b.lua:19,19> (4 instructions at 010d8180)
-0 params, 2 slots, 1 upvalue, 0 locals, 1 constant, 0 functions
-	1	[19]	GETTABUP 	0 0 -1	; - "check"
-	2	[19]	LOADBOOL 	1 1 0
-	3	[19]	CALL     	0 2 1
-	4	[19]	RETURN   	0 1
-
-function <.\_lfs\_mh-z19b.lua:21,39> (38 instructions at 010d85a0)
-2 params, 14 slots, 2 upvalues, 0 locals, 17 constants, 1 function
-	1	[22]	LOADBOOL 	2 0 0
-	2	[23]	TEST     	0 1
-	3	[23]	JMP      	0 4	; to 8
-	4	[23]	GETTABUP 	3 0 -1	; - "check"
-	5	[23]	LOADBOOL 	4 1 0
-	6	[23]	TAILCALL 	3 2 0
-	7	[23]	RETURN   	3 0
-	8	[24]	SETTABUP 	0 -2 0	; - "tbl"
-	9	[25]	NEWTABLE 	3 0 0
-	10	[25]	SETTABUP 	0 -3 3	; - "RAW"
-	11	[26]	TEST     	1 0
-	12	[26]	JMP      	0 1	; to 14
-	13	[26]	SETTABUP 	0 -4 1	; - "call"
-	14	[27]	GETTABUP 	3 1 -5	; - "uart"
-	15	[27]	GETTABLE 	3 3 -6	; "on"
-	16	[27]	LOADK    	4 -7	; 2
-	17	[27]	LOADK    	5 -8	; "data"
-	18	[27]	LOADK    	6 -9	; 1
-	19	[36]	CLOSURE  	7 0	; 010d8a70
-	20	[36]	LOADK    	8 -10	; 0
-	21	[27]	CALL     	3 6 1
-	22	[37]	GETTABUP 	3 1 -5	; - "uart"
-	23	[37]	GETTABLE 	3 3 -11	; "write"
-	24	[37]	LOADK    	4 -7	; 2
-	25	[37]	LOADK    	5 -12	; 255
-	26	[37]	LOADK    	6 -13	; 1
-	27	[37]	LOADK    	7 -14	; 134
-	28	[37]	LOADK    	8 -10	; 0
-	29	[37]	LOADK    	9 -10	; 0
-	30	[37]	LOADK    	10 -10	; 0
-	31	[37]	LOADK    	11 -10	; 0
-	32	[37]	LOADK    	12 -10	; 0
-	33	[37]	LOADK    	13 -15	; 121
-	34	[37]	CALL     	3 11 1
-	35	[38]	GETTABUP 	3 0 -16	; - "t"
-	36	[38]	SELF     	3 3 -17	; "start"
-	37	[38]	CALL     	3 2 1
-	38	[39]	RETURN   	0 1
-
-function <.\_lfs\_mh-z19b.lua:28,36> (34 instructions at 010d8a70)
-1 param, 6 slots, 3 upvalues, 0 locals, 8 constants, 0 functions
-	1	[29]	GETUPVAL 	1 0	; -
-	2	[29]	EQ       	0 1 -1	; - false
-	3	[29]	JMP      	0 9	; to 13
-	4	[29]	GETTABUP 	1 1 -2	; - "string"
-	5	[29]	GETTABLE 	1 1 -3	; "byte"
-	6	[29]	MOVE     	2 0
-	7	[29]	LOADK    	3 -4	; 1
-	8	[29]	CALL     	1 3 2
-	9	[29]	EQ       	1 1 -5	; - 255
-	10	[29]	JMP      	0 2	; to 13
-	11	[30]	RETURN   	0 1
-	12	[30]	JMP      	0 5	; to 18
-	13	[31]	GETUPVAL 	1 0	; -
-	14	[31]	EQ       	0 1 -1	; - false
-	15	[31]	JMP      	0 2	; to 18
-	16	[32]	LOADBOOL 	1 1 0
-	17	[32]	SETUPVAL 	1 0	; -
-	18	[34]	GETTABUP 	1 2 -6	; - "RAW"
-	19	[34]	GETTABUP 	2 2 -6	; - "RAW"
-	20	[34]	LEN      	2 2
-	21	[34]	ADD      	2 2 -4	; - 1
-	22	[34]	GETTABUP 	3 1 -2	; - "string"
-	23	[34]	GETTABLE 	3 3 -3	; "byte"
-	24	[34]	MOVE     	4 0
-	25	[34]	LOADK    	5 -4	; 1
-	26	[34]	CALL     	3 3 2
-	27	[34]	SETTABLE 	1 2 3
-	28	[35]	GETTABUP 	1 2 -6	; - "RAW"
-	29	[35]	LEN      	1 1
-	30	[35]	EQ       	0 1 -7	; - 9
-	31	[35]	JMP      	0 2	; to 34
-	32	[35]	GETTABUP 	1 2 -8	; - "check"
-	33	[35]	CALL     	1 1 1
-	34	[36]	RETURN   	0 1
-
-main <.\_lfs\_narodask.lua:0,0> (63 instructions at 010d8338)
+main <.\_lfs\_narodask.lua:0,0> (63 instructions at 010b8318)
 0+ params, 10 slots, 1 upvalue, 0 locals, 21 constants, 2 functions
 	1	[2]	GETTABUP 	0 0 -1	; - "dat"
 	2	[2]	GETTABLE 	0 0 -2	; "uuid"
@@ -2232,7 +1836,7 @@ main <.\_lfs\_narodask.lua:0,0> (63 instructions at 010d8338)
 	27	[10]	GETTABLE 	5 5 -10	; "TCP"
 	28	[10]	LOADK    	6 -11	; 0
 	29	[10]	CALL     	4 3 2
-	30	[18]	CLOSURE  	5 0	; 010d8808
+	30	[18]	CLOSURE  	5 0	; 010b81b8
 	31	[19]	GETTABUP 	6 0 -1	; - "dat"
 	32	[19]	GETTABUP 	7 0 -1	; - "dat"
 	33	[19]	GETTABLE 	7 7 -5	; "pnarod"
@@ -2257,7 +1861,7 @@ main <.\_lfs\_narodask.lua:0,0> (63 instructions at 010d8338)
 	52	[21]	CALL     	6 4 1
 	53	[22]	SELF     	6 4 -16	; "on"
 	54	[22]	LOADK    	8 -18	; "connection"
-	55	[29]	CLOSURE  	9 1	; 010d88b8
+	55	[29]	CLOSURE  	9 1	; 010b7ce8
 	56	[22]	CALL     	6 4 1
 	57	[30]	SELF     	6 4 -19	; "connect"
 	58	[30]	LOADK    	8 -20	; 80
@@ -2267,7 +1871,7 @@ main <.\_lfs\_narodask.lua:0,0> (63 instructions at 010d8338)
 	62	[31]	JMP      	1 0	; to 63
 	63	[32]	RETURN   	0 1
 
-function <.\_lfs\_narodask.lua:11,18> (12 instructions at 010d8808)
+function <.\_lfs\_narodask.lua:11,18> (12 instructions at 010b81b8)
 2 params, 4 slots, 2 upvalues, 0 locals, 7 constants, 0 functions
 	1	[12]	GETTABUP 	2 0 -1	; - "_G"
 	2	[12]	SETTABLE 	2 -2 1	; "c" -
@@ -2282,7 +1886,7 @@ function <.\_lfs\_narodask.lua:11,18> (12 instructions at 010d8808)
 	11	[17]	CALL     	2 2 1
 	12	[18]	RETURN   	0 1
 
-function <.\_lfs\_narodask.lua:22,29> (11 instructions at 010d88b8)
+function <.\_lfs\_narodask.lua:22,29> (11 instructions at 010b7ce8)
 2 params, 11 slots, 3 upvalues, 0 locals, 5 constants, 0 functions
 	1	[23]	SELF     	2 0 -1	; "send"
 	2	[23]	LOADK    	4 -2	; "GET /api/sensorsValues?sensors="
@@ -2296,7 +1900,7 @@ function <.\_lfs\_narodask.lua:22,29> (11 instructions at 010d88b8)
 	10	[23]	CALL     	2 3 1
 	11	[29]	RETURN   	0 1
 
-main <.\_lfs\_narodtric.lua:0,0> (20 instructions at 010d89c0)
+main <.\_lfs\_narodtric.lua:0,0> (20 instructions at 010b8370)
 0+ params, 5 slots, 1 upvalue, 0 locals, 4 constants, 3 functions
 	1	[2]	GETTABUP 	0 0 -1	; - "dat"
 	2	[2]	GETTABLE 	0 0 -2	; "nkey"
@@ -2308,18 +1912,18 @@ main <.\_lfs\_narodtric.lua:0,0> (20 instructions at 010d89c0)
 	8	[3]	CALL     	0 2 1
 	9	[4]	NEWTABLE 	0 0 0
 	10	[5]	LOADNIL  	1 2
-	11	[21]	CLOSURE  	4 0	; 010d8ac8
+	11	[21]	CLOSURE  	4 0	; 010b7c38
 	12	[21]	MOVE     	1 4
-	13	[36]	CLOSURE  	4 1	; 010d83e8
+	13	[36]	CLOSURE  	4 1	; 010b7ea0
 	14	[36]	MOVE     	2 4
-	15	[49]	CLOSURE  	4 2	; 010d8cd8
+	15	[49]	CLOSURE  	4 2	; 010b7ef8
 	16	[49]	MOVE     	3 4
 	17	[50]	MOVE     	4 2
 	18	[50]	CALL     	4 1 1
 	19	[50]	JMP      	1 0	; to 20
 	20	[51]	RETURN   	0 1
 
-function <.\_lfs\_narodtric.lua:7,21> (58 instructions at 010d8ac8)
+function <.\_lfs\_narodtric.lua:7,21> (58 instructions at 010b7c38)
 2 params, 9 slots, 1 upvalue, 0 locals, 17 constants, 0 functions
 	1	[8]	TEST     	0 1
 	2	[8]	JMP      	0 1	; to 4
@@ -2380,7 +1984,7 @@ function <.\_lfs\_narodtric.lua:7,21> (58 instructions at 010d8ac8)
 	57	[20]	RETURN   	2 2
 	58	[21]	RETURN   	0 1
 
-function <.\_lfs\_narodtric.lua:23,36> (47 instructions at 010d83e8)
+function <.\_lfs\_narodtric.lua:23,36> (47 instructions at 010b7ea0)
 0 params, 9 slots, 4 upvalues, 0 locals, 13 constants, 0 functions
 	1	[24]	GETUPVAL 	0 1	; -
 	2	[24]	GETTABUP 	1 2 -2	; - "wth"
@@ -2430,7 +2034,7 @@ function <.\_lfs\_narodtric.lua:23,36> (47 instructions at 010d83e8)
 	46	[34]	CALL     	0 1 1
 	47	[36]	RETURN   	0 1
 
-function <.\_lfs\_narodtric.lua:38,49> (18 instructions at 010d8cd8)
+function <.\_lfs\_narodtric.lua:38,49> (18 instructions at 010b7ef8)
 0 params, 4 slots, 2 upvalues, 0 locals, 9 constants, 1 function
 	1	[39]	GETTABUP 	0 0 -1	; - "prt"
 	2	[39]	LOADK    	1 -2	; "Do special To Send Narod"
@@ -2447,11 +2051,11 @@ function <.\_lfs\_narodtric.lua:38,49> (18 instructions at 010d8cd8)
 	13	[44]	GETTABUP 	1 0 -8	; - "dat"
 	14	[44]	GETTABLE 	1 1 -9	; "nkey"
 	15	[44]	GETUPVAL 	2 1	; -
-	16	[48]	CLOSURE  	3 0	; 010d8e90
+	16	[48]	CLOSURE  	3 0	; 010b7c90
 	17	[44]	CALL     	0 4 1
 	18	[49]	RETURN   	0 1
 
-function <.\_lfs\_narodtric.lua:44,48> (7 instructions at 010d8e90)
+function <.\_lfs\_narodtric.lua:44,48> (7 instructions at 010b7c90)
 0 params, 2 slots, 1 upvalue, 0 locals, 6 constants, 0 functions
 	1	[45]	SETTABUP 	0 -1 -2	; - "narod" nil
 	2	[46]	GETTABUP 	0 0 -3	; - "package"
@@ -2461,7 +2065,7 @@ function <.\_lfs\_narodtric.lua:44,48> (7 instructions at 010d8e90)
 	6	[47]	CALL     	0 1 1
 	7	[48]	RETURN   	0 1
 
-main <.\_lfs\_prtOUTL.lua:0,0> (26 instructions at 010d8c80)
+main <.\_lfs\_prtOUTL.lua:0,0> (26 instructions at 010b7d40)
 0+ params, 7 slots, 1 upvalue, 0 locals, 10 constants, 0 functions
 	1	[1]	GETTABUP 	0 0 -1	; - "SOUTLINES"
 	2	[1]	TEST     	0 1
@@ -2490,267 +2094,483 @@ main <.\_lfs\_prtOUTL.lua:0,0> (26 instructions at 010d8c80)
 	25	[5]	FORLOOP  	0 -7	; to 19
 	26	[8]	RETURN   	0 1
 
-main <.\_lfs\_uartSPS30.lua:0,0> (21 instructions at 010d8e38)
-0+ params, 13 slots, 1 upvalue, 0 locals, 6 constants, 5 functions
+main <.\_lfs\_scd30mod.lua:0,0> (32 instructions at 010b8420)
+0+ params, 9 slots, 1 upvalue, 0 locals, 11 constants, 11 functions
 	1	[1]	NEWTABLE 	0 0 0
-	2	[2]	LOADBOOL 	1 0 0
-	3	[3]	NEWTABLE 	2 0 0
-	4	[4]	LOADNIL  	3 3
-	5	[9]	CLOSURE  	7 0	; 010d8d30
-	6	[9]	MOVE     	3 7
-	7	[30]	CLOSURE  	7 1	; 010d8ee8
-	8	[30]	MOVE     	5 7
-	9	[55]	CLOSURE  	7 2	; 010d9048
-	10	[55]	MOVE     	6 7
-	11	[80]	CLOSURE  	7 3	; 010d8de0
-	12	[80]	MOVE     	4 7
-	13	[82]	GETTABUP 	7 0 -1	; - "uart"
-	14	[82]	GETTABLE 	7 7 -2	; "on"
-	15	[82]	LOADK    	8 -3	; 2
-	16	[82]	LOADK    	9 -4	; "data"
-	17	[82]	LOADK    	10 -5	; 1
-	18	[116]	CLOSURE  	11 4	; 010d8f98
-	19	[116]	LOADK    	12 -6	; 0
-	20	[82]	CALL     	7 6 1
-	21	[116]	RETURN   	0 1
+	2	[2]	LOADK    	1 -1	; 97
+	3	[3]	LOADK    	2 -2	; 1013
+	4	[4]	GETTABUP 	3 0 -3	; - "prt"
+	5	[4]	TEST     	3 1
+	6	[4]	JMP      	0 1	; to 8
+	7	[4]	GETTABUP 	3 0 -4	; - "print"
+	8	[5]	LOADNIL  	4 3
+	9	[16]	CLOSURE  	8 0	; 010b7ad8
+	10	[16]	MOVE     	4 8
+	11	[24]	CLOSURE  	8 1	; 010b7b88
+	12	[24]	MOVE     	5 8
+	13	[33]	CLOSURE  	8 2	; 010b7df0
+	14	[26]	SETTABLE 	0 -5 8	; "start" -
+	15	[37]	CLOSURE  	8 3	; 010b7f50
+	16	[35]	SETTABLE 	0 -6 8	; "stop" -
+	17	[45]	CLOSURE  	8 4	; 010b8058
+	18	[39]	SETTABLE 	0 -7 8	; "setTempOffset" -
+	19	[53]	CLOSURE  	8 5	; 010b80b0
+	20	[47]	SETTABLE 	0 -8 8	; "altComp" -
+	21	[58]	CLOSURE  	8 6	; 010b8688
+	22	[55]	SETTABLE 	0 -9 8	; "reset" -
+	23	[90]	CLOSURE  	8 7	; 010b88f0
+	24	[60]	SETTABLE 	0 -10 8	; "read" -
+	25	[107]	CLOSURE  	8 8	; 010b8738
+	26	[92]	SETTABLE 	0 -11 8	; "readfw" -
+	27	[123]	CLOSURE  	8 9	; 010b86e0
+	28	[123]	MOVE     	6 8
+	29	[132]	CLOSURE  	8 10	; 010b87e8
+	30	[132]	MOVE     	7 8
+	31	[133]	RETURN   	0 2
+	32	[133]	RETURN   	0 1
 
-function <.\_lfs\_uartSPS30.lua:5,9> (27 instructions at 010d8d30)
-1 param, 8 slots, 1 upvalue, 0 locals, 12 constants, 0 functions
-	1	[6]	GETTABUP 	1 0 -1	; - "type"
-	2	[6]	MOVE     	2 0
-	3	[6]	CALL     	1 2 2
-	4	[6]	EQ       	0 1 -2	; - "table"
-	5	[6]	JMP      	0 3	; to 9
-	6	[6]	LEN      	1 0
-	7	[6]	EQ       	1 1 -3	; - 4
-	8	[6]	JMP      	0 1	; to 10
-	9	[6]	RETURN   	0 1
-	10	[7]	GETTABUP 	1 0 -4	; - "string"
-	11	[7]	GETTABLE 	1 1 -5	; "unpack"
-	12	[7]	LOADK    	2 -6	; "f"
-	13	[7]	GETTABUP 	3 0 -4	; - "string"
-	14	[7]	GETTABLE 	3 3 -7	; "char"
-	15	[7]	GETTABLE 	4 0 -3	; 4
-	16	[7]	GETTABLE 	5 0 -8	; 3
-	17	[7]	GETTABLE 	6 0 -9	; 2
-	18	[7]	GETTABLE 	7 0 -10	; 1
-	19	[7]	CALL     	3 5 0
-	20	[7]	CALL     	1 0 2
-	21	[8]	GETTABUP 	2 0 -4	; - "string"
-	22	[8]	GETTABLE 	2 2 -11	; "format"
-	23	[8]	LOADK    	3 -12	; "%0.1f"
-	24	[8]	MOVE     	4 1
-	25	[8]	TAILCALL 	2 3 0
-	26	[8]	RETURN   	2 0
-	27	[9]	RETURN   	0 1
+function <.\_lfs\_scd30mod.lua:7,16> (30 instructions at 010b7ad8)
+1 param, 5 slots, 3 upvalues, 0 locals, 8 constants, 0 functions
+	1	[8]	GETTABUP 	1 0 -1	; - "i2c"
+	2	[8]	GETTABLE 	1 1 -2	; "start"
+	3	[8]	LOADK    	2 -3	; 0
+	4	[8]	CALL     	1 2 1
+	5	[9]	GETTABUP 	1 0 -1	; - "i2c"
+	6	[9]	GETTABLE 	1 1 -4	; "address"
+	7	[9]	LOADK    	2 -3	; 0
+	8	[9]	GETUPVAL 	3 1	; -
+	9	[9]	GETTABUP 	4 0 -1	; - "i2c"
+	10	[9]	GETTABLE 	4 4 -5	; "TRANSMITTER"
+	11	[9]	CALL     	1 4 2
+	12	[9]	TEST     	1 1
+	13	[9]	JMP      	0 5	; to 19
+	14	[10]	GETUPVAL 	1 2	; -
+	15	[10]	LOADK    	2 -6	; "\n\n!!!Lost I2C"
+	16	[10]	CALL     	1 2 1
+	17	[11]	LOADBOOL 	1 0 0
+	18	[11]	RETURN   	1 2
+	19	[13]	GETTABUP 	1 0 -1	; - "i2c"
+	20	[13]	GETTABLE 	1 1 -7	; "write"
+	21	[13]	LOADK    	2 -3	; 0
+	22	[13]	MOVE     	3 0
+	23	[13]	CALL     	1 3 1
+	24	[14]	GETTABUP 	1 0 -1	; - "i2c"
+	25	[14]	GETTABLE 	1 1 -8	; "stop"
+	26	[14]	LOADK    	2 -3	; 0
+	27	[14]	CALL     	1 2 1
+	28	[15]	LOADBOOL 	1 1 0
+	29	[15]	RETURN   	1 2
+	30	[16]	RETURN   	0 1
 
-function <.\_lfs\_uartSPS30.lua:12,30> (35 instructions at 010d8ee8)
-1 param, 7 slots, 1 upvalue, 0 locals, 9 constants, 0 functions
-	1	[18]	LOADK    	1 -1	; 0
-	2	[19]	LOADK    	2 -2	; 1
-	3	[19]	LEN      	3 0
-	4	[19]	SUB      	3 3 -2	; - 1
-	5	[19]	LOADK    	4 -2	; 1
-	6	[19]	FORPREP  	2 2	; to 9
-	7	[20]	GETTABLE 	6 0 5
-	8	[20]	ADD      	1 1 6
-	9	[19]	FORLOOP  	2 -3	; to 7
-	10	[22]	GETTABUP 	2 0 -3	; - "bit"
-	11	[22]	GETTABLE 	2 2 -4	; "bxor"
-	12	[22]	LOADK    	3 -5	; 255
-	13	[22]	GETTABUP 	4 0 -3	; - "bit"
-	14	[22]	GETTABLE 	4 4 -6	; "band"
-	15	[22]	LOADK    	5 -5	; 255
-	16	[22]	MOVE     	6 1
-	17	[22]	CALL     	4 3 0
-	18	[22]	CALL     	2 0 2
-	19	[22]	MOVE     	1 2
-	20	[23]	LEN      	2 0
-	21	[23]	GETTABLE 	2 0 2
-	22	[23]	EQ       	0 1 2
-	23	[23]	JMP      	0 6	; to 30
-	24	[24]	GETTABUP 	2 0 -7	; - "prt"
-	25	[24]	LOADK    	3 -8	; "\n\n\nSum is OK!"
-	26	[24]	CALL     	2 2 1
-	27	[25]	LOADBOOL 	2 1 0
-	28	[25]	RETURN   	2 2
-	29	[25]	JMP      	0 5	; to 35
-	30	[27]	GETTABUP 	2 0 -7	; - "prt"
-	31	[27]	LOADK    	3 -9	; "\n\n\t\t\tWrong Sum!"
-	32	[27]	CALL     	2 2 1
-	33	[28]	LOADBOOL 	2 0 0
-	34	[28]	RETURN   	2 2
-	35	[30]	RETURN   	0 1
+function <.\_lfs\_scd30mod.lua:18,24> (27 instructions at 010b7b88)
+1 param, 8 slots, 2 upvalues, 0 locals, 8 constants, 0 functions
+	1	[19]	LOADNIL  	1 2
+	2	[20]	GETTABUP 	4 0 -1	; - "bit"
+	3	[20]	GETTABLE 	4 4 -2	; "rshift"
+	4	[20]	MOVE     	5 0
+	5	[20]	LOADK    	6 -3	; 8
+	6	[20]	CALL     	4 3 2
+	7	[20]	MOVE     	1 4
+	8	[21]	GETTABUP 	4 0 -1	; - "bit"
+	9	[21]	GETTABLE 	4 4 -4	; "band"
+	10	[21]	MOVE     	5 0
+	11	[21]	LOADK    	6 -5	; 255
+	12	[21]	CALL     	4 3 2
+	13	[21]	MOVE     	2 4
+	14	[22]	GETUPVAL 	4 1	; -
+	15	[22]	GETTABUP 	5 0 -6	; - "string"
+	16	[22]	GETTABLE 	5 5 -7	; "char"
+	17	[22]	MOVE     	6 1
+	18	[22]	MOVE     	7 2
+	19	[22]	CALL     	5 3 2
+	20	[22]	LOADK    	6 -8	; 1
+	21	[22]	CALL     	4 3 2
+	22	[22]	MOVE     	3 4
+	23	[23]	MOVE     	4 1
+	24	[23]	MOVE     	5 2
+	25	[23]	MOVE     	6 3
+	26	[23]	RETURN   	4 4
+	27	[24]	RETURN   	0 1
 
-function <.\_lfs\_uartSPS30.lua:32,55> (34 instructions at 010d9048)
-1 param, 10 slots, 0 upvalues, 0 locals, 10 constants, 0 functions
-	1	[33]	NEWTABLE 	1 0 0
-	2	[34]	LOADK    	2 -1	; 0
-	3	[35]	NEWTABLE 	3 0 0
-	4	[36]	SETTABLE 	3 -2 -3	; 94 126
-	5	[37]	SETTABLE 	3 -4 -5	; 93 125
-	6	[38]	SETTABLE 	3 -6 -7	; 49 17
-	7	[39]	SETTABLE 	3 -8 -9	; 51 19
-	8	[41]	LOADK    	4 -10	; 1
-	9	[41]	LEN      	5 0
-	10	[41]	LOADK    	6 -10	; 1
-	11	[41]	FORPREP  	4 20	; to 32
-	12	[42]	GETTABLE 	8 0 7
-	13	[42]	EQ       	0 8 -5	; - 125
-	14	[42]	JMP      	0 3	; to 18
-	15	[43]	ADD      	8 7 -10	; - 1
-	16	[43]	GETTABLE 	8 0 8
-	17	[43]	GETTABLE 	2 3 8
-	18	[45]	GETTABLE 	8 0 7
-	19	[45]	EQ       	1 8 -5	; - 125
-	20	[45]	JMP      	0 11	; to 32
-	21	[46]	EQ       	1 2 -1	; - 0
-	22	[46]	JMP      	0 5	; to 28
-	23	[47]	LEN      	8 1
-	24	[47]	ADD      	8 8 -10	; - 1
-	25	[47]	SETTABLE 	1 8 2
-	26	[48]	LOADK    	2 -1	; 0
-	27	[48]	JMP      	0 4	; to 32
-	28	[50]	LEN      	8 1
-	29	[50]	ADD      	8 8 -10	; - 1
-	30	[50]	GETTABLE 	9 0 7
-	31	[50]	SETTABLE 	1 8 9
-	32	[41]	FORLOOP  	4 -21	; to 12
-	33	[54]	RETURN   	1 2
-	34	[55]	RETURN   	0 1
+function <.\_lfs\_scd30mod.lua:26,33> (35 instructions at 010b7df0)
+1 param, 11 slots, 4 upvalues, 0 locals, 7 constants, 0 functions
+	1	[27]	LOADNIL  	1 2
+	2	[28]	TEST     	0 1
+	3	[28]	JMP      	0 1	; to 5
+	4	[28]	GETUPVAL 	0 0	; -
+	5	[29]	LT       	1 0 -1	; - 700
+	6	[29]	JMP      	0 2	; to 9
+	7	[29]	LT       	0 -2 0	; 1400 -
+	8	[29]	JMP      	0 1	; to 10
+	9	[29]	GETUPVAL 	0 0	; -
+	10	[30]	GETUPVAL 	4 1	; -
+	11	[30]	MOVE     	5 0
+	12	[30]	CALL     	4 2 4
+	13	[30]	MOVE     	3 6
+	14	[30]	MOVE     	2 5
+	15	[30]	MOVE     	1 4
+	16	[31]	GETUPVAL 	4 2	; -
+	17	[31]	LOADK    	5 -3	; "\n--------\nStart SCD30 at Pressure Correction "
+	18	[31]	MOVE     	6 0
+	19	[31]	LOADK    	7 -4	; " mBar\nCorrection Data:"
+	20	[31]	CONCAT   	5 5 7
+	21	[31]	MOVE     	6 1
+	22	[31]	MOVE     	7 2
+	23	[31]	MOVE     	8 3
+	24	[31]	LOADK    	9 -5	; "\n-------"
+	25	[31]	CALL     	4 6 1
+	26	[32]	GETUPVAL 	4 3	; -
+	27	[32]	NEWTABLE 	5 5 0
+	28	[32]	LOADK    	6 -6	; 0
+	29	[32]	LOADK    	7 -7	; 16
+	30	[32]	MOVE     	8 1
+	31	[32]	MOVE     	9 2
+	32	[32]	MOVE     	10 3
+	33	[32]	SETLIST  	5 5 1	; 1
+	34	[32]	CALL     	4 2 1
+	35	[33]	RETURN   	0 1
 
-function <.\_lfs\_uartSPS30.lua:57,80> (43 instructions at 010d8de0)
-1 param, 11 slots, 3 upvalues, 0 locals, 25 constants, 0 functions
-	1	[58]	GETTABUP 	1 0 -1	; - "prt"
-	2	[58]	LOADK    	2 -2	; "\n\nWork Makedata Function"
-	3	[58]	CALL     	1 2 1
-	4	[59]	NEWTABLE 	1 0 0
-	5	[60]	LOADK    	2 -3	; 1
-	6	[61]	NEWTABLE 	3 0 0
-	7	[62]	SETTABLE 	3 -3 -4	; 1 "pm1"
-	8	[62]	SETTABLE 	3 -5 -6	; 2 "pm2_5"
-	9	[62]	SETTABLE 	3 -7 -8	; 3 "pm4"
-	10	[63]	SETTABLE 	3 -9 -10	; 4 "pm10"
-	11	[63]	SETTABLE 	3 -11 -12	; 5 "npm0_5"
-	12	[63]	SETTABLE 	3 -13 -14	; 6 "npm1"
-	13	[64]	SETTABLE 	3 -15 -16	; 7 "npm2_5"
-	14	[64]	SETTABLE 	3 -17 -18	; 8 "npm4"
-	15	[64]	SETTABLE 	3 -19 -20	; 9 "npm10"
-	16	[65]	SETTABLE 	3 -21 -22	; 10 "tpz"
-	17	[67]	LOADK    	4 -11	; 5
-	18	[67]	LOADK    	5 -23	; 44
-	19	[67]	LOADK    	6 -3	; 1
-	20	[67]	FORPREP  	4 16	; to 37
-	21	[68]	LEN      	8 1
-	22	[68]	ADD      	8 8 -3	; - 1
-	23	[68]	GETTABLE 	9 0 7
-	24	[68]	SETTABLE 	1 8 9
-	25	[70]	LEN      	8 1
-	26	[70]	EQ       	0 8 -9	; - 4
-	27	[70]	JMP      	0 9	; to 37
-	28	[71]	GETUPVAL 	8 1	; -
-	29	[71]	MOVE     	9 1
-	30	[71]	CALL     	8 2 2
-	31	[73]	GETTABUP 	9 0 -24	; - "wth"
-	32	[73]	GETTABLE 	10 3 2
-	33	[73]	SETTABLE 	9 10 8
-	34	[74]	NEWTABLE 	9 0 0
-	35	[74]	MOVE     	1 9
-	36	[75]	ADD      	2 2 -3	; - 1
-	37	[67]	FORLOOP  	4 -17	; to 21
-	38	[78]	NEWTABLE 	4 0 0
-	39	[78]	SETUPVAL 	4 2	; -
-	40	[79]	GETTABUP 	4 0 -1	; - "prt"
-	41	[79]	LOADK    	5 -25	; "\n\n\tNow Got Data From SPS30"
-	42	[79]	CALL     	4 2 1
-	43	[80]	RETURN   	0 1
+function <.\_lfs\_scd30mod.lua:35,37> (7 instructions at 010b7f50)
+0 params, 4 slots, 1 upvalue, 0 locals, 2 constants, 0 functions
+	1	[36]	GETUPVAL 	0 0	; -
+	2	[36]	NEWTABLE 	1 2 0
+	3	[36]	LOADK    	2 -1	; 1
+	4	[36]	LOADK    	3 -2	; 4
+	5	[36]	SETLIST  	1 2 1	; 1
+	6	[36]	CALL     	0 2 1
+	7	[37]	RETURN   	0 1
 
-function <.\_lfs\_uartSPS30.lua:83,116> (82 instructions at 010d8f98)
-1 param, 9 slots, 7 upvalues, 0 locals, 19 constants, 0 functions
-	1	[84]	LOADBOOL 	1 0 0
-	2	[85]	GETTABUP 	2 0 -1	; - "string"
-	3	[85]	GETTABLE 	2 2 -2	; "byte"
-	4	[85]	MOVE     	3 0
-	5	[85]	LOADK    	4 -3	; 1
-	6	[85]	CALL     	2 3 2
-	7	[87]	GETUPVAL 	3 1	; -
-	8	[87]	EQ       	0 3 -4	; - false
-	9	[87]	JMP      	0 4	; to 14
-	10	[87]	EQ       	1 2 -5	; - 126
-	11	[87]	JMP      	0 2	; to 14
-	12	[88]	RETURN   	0 1
-	13	[88]	JMP      	0 8	; to 22
-	14	[89]	GETUPVAL 	3 1	; -
-	15	[89]	EQ       	0 3 -4	; - false
-	16	[89]	JMP      	0 5	; to 22
-	17	[90]	LOADBOOL 	3 1 0
-	18	[90]	SETUPVAL 	3 1	; -
-	19	[91]	NEWTABLE 	3 0 0
-	20	[91]	SETUPVAL 	3 2	; -
-	21	[92]	RETURN   	0 1
-	22	[94]	EQ       	0 2 -5	; - 126
-	23	[94]	JMP      	0 54	; to 78
-	24	[95]	GETUPVAL 	3 4	; -
-	25	[95]	GETUPVAL 	4 2	; -
-	26	[95]	CALL     	3 2 2
-	27	[95]	SETUPVAL 	3 3	; -
-	28	[96]	GETUPVAL 	3 5	; -
-	29	[96]	GETUPVAL 	4 3	; -
-	30	[96]	CALL     	3 2 2
-	31	[96]	MOVE     	1 3
-	32	[97]	GETTABUP 	3 0 -6	; - "prt"
-	33	[97]	LOADK    	4 -7	; "Got "
-	34	[97]	MOVE     	5 1
-	35	[97]	LOADK    	6 -8	; " Data from SPS30"
-	36	[97]	CALL     	3 4 1
-	37	[98]	LOADBOOL 	3 0 0
-	38	[98]	SETUPVAL 	3 1	; -
-	39	[99]	GETUPVAL 	3 3	; -
-	40	[99]	LEN      	3 3
-	41	[99]	LT       	0 -9 3	; 40 -
-	42	[99]	JMP      	0 4	; to 47
-	43	[100]	GETUPVAL 	3 6	; -
-	44	[100]	GETUPVAL 	4 3	; -
-	45	[100]	CALL     	3 2 1
-	46	[100]	JMP      	0 30	; to 77
-	47	[102]	GETTABUP 	1 3 -10	; - 3
-	48	[103]	EQ       	0 1 -11	; - 0
-	49	[103]	JMP      	0 4	; to 54
-	50	[104]	GETTABUP 	3 0 -6	; - "prt"
-	51	[104]	LOADK    	4 -12	; "\n\n\tCommand is Ok! No error."
-	52	[104]	CALL     	3 2 1
-	53	[104]	JMP      	0 23	; to 77
-	54	[106]	GETTABUP 	3 0 -1	; - "string"
-	55	[106]	GETTABLE 	3 3 -13	; "format"
-	56	[106]	LOADK    	4 -14	; "bt = 0x%02X"
-	57	[106]	MOVE     	5 1
-	58	[106]	CALL     	3 3 2
-	59	[107]	GETTABUP 	4 0 -6	; - "prt"
-	60	[107]	LOADK    	5 -15	; "Command Error:"
-	61	[107]	GETTABUP 	6 0 -1	; - "string"
-	62	[107]	GETTABLE 	6 6 -13	; "format"
-	63	[107]	LOADK    	7 -16	; "0x%02X"
-	64	[107]	MOVE     	8 1
-	65	[107]	CALL     	6 3 0
-	66	[107]	CALL     	4 0 1
-	67	[108]	EQ       	0 1 -17	; - 67
-	68	[108]	JMP      	0 3	; to 72
-	69	[108]	GETTABUP 	4 0 -6	; - "prt"
-	70	[108]	LOADK    	5 -18	; "\n\n\tCommand not allowed in current state"
-	71	[108]	CALL     	4 2 1
-	72	[109]	EQ       	0 1 -10	; - 3
-	73	[109]	JMP      	0 3	; to 77
-	74	[109]	GETTABUP 	4 0 -6	; - "prt"
-	75	[109]	LOADK    	5 -19	; "\n\n\tNo access right for command"
-	76	[109]	CALL     	4 2 1
-	77	[112]	RETURN   	0 1
-	78	[114]	GETUPVAL 	3 2	; -
-	79	[114]	LEN      	3 3
-	80	[114]	ADD      	3 3 -3	; - 1
-	81	[114]	SETTABUP 	2 3 2	; -
-	82	[116]	RETURN   	0 1
+function <.\_lfs\_scd30mod.lua:39,45> (32 instructions at 010b8058)
+1 param, 12 slots, 4 upvalues, 0 locals, 8 constants, 0 functions
+	1	[40]	LOADNIL  	1 3
+	2	[41]	GETTABUP 	5 0 -1	; - "math"
+	3	[41]	GETTABLE 	5 5 -2	; "floor"
+	4	[41]	MUL      	6 0 -3	; - 100
+	5	[41]	CALL     	5 2 2
+	6	[41]	MOVE     	1 5
+	7	[42]	GETUPVAL 	5 1	; -
+	8	[42]	MOVE     	6 1
+	9	[42]	CALL     	5 2 4
+	10	[42]	MOVE     	4 7
+	11	[42]	MOVE     	3 6
+	12	[42]	MOVE     	2 5
+	13	[43]	GETUPVAL 	5 2	; -
+	14	[43]	LOADK    	6 -4	; "\nSet SCD30 Temperature Correction "
+	15	[43]	MOVE     	7 0
+	16	[43]	LOADK    	8 -5	; "\194\176\208\161 \nCorrection Data:"
+	17	[43]	CONCAT   	6 6 8
+	18	[43]	MOVE     	7 2
+	19	[43]	MOVE     	8 3
+	20	[43]	MOVE     	9 4
+	21	[43]	LOADK    	10 -6	; "\n\n"
+	22	[43]	CALL     	5 6 1
+	23	[44]	GETUPVAL 	5 3	; -
+	24	[44]	NEWTABLE 	6 5 0
+	25	[44]	LOADK    	7 -7	; 84
+	26	[44]	LOADK    	8 -8	; 3
+	27	[44]	MOVE     	9 2
+	28	[44]	MOVE     	10 3
+	29	[44]	MOVE     	11 4
+	30	[44]	SETLIST  	6 5 1	; 1
+	31	[44]	CALL     	5 2 1
+	32	[45]	RETURN   	0 1
 
-main <.\_lfs\_workF.lua:0,0> (44 instructions at 010d8f40)
+function <.\_lfs\_scd30mod.lua:47,53> (30 instructions at 010b80b0)
+1 param, 12 slots, 3 upvalues, 0 locals, 6 constants, 0 functions
+	1	[48]	LOADNIL  	1 3
+	2	[49]	TESTSET  	1 0 1
+	3	[49]	JMP      	0 1	; to 5
+	4	[49]	LOADK    	1 -1	; 107
+	5	[50]	GETUPVAL 	5 0	; -
+	6	[50]	MOVE     	6 1
+	7	[50]	CALL     	5 2 4
+	8	[50]	MOVE     	4 7
+	9	[50]	MOVE     	3 6
+	10	[50]	MOVE     	2 5
+	11	[51]	GETUPVAL 	5 1	; -
+	12	[51]	LOADK    	6 -2	; "\nSet SCD30 Altitude Compensation "
+	13	[51]	MOVE     	7 0
+	14	[51]	LOADK    	8 -3	; " m. \nCorrection Data:"
+	15	[51]	CONCAT   	6 6 8
+	16	[51]	MOVE     	7 2
+	17	[51]	MOVE     	8 3
+	18	[51]	MOVE     	9 4
+	19	[51]	LOADK    	10 -4	; "\n\n"
+	20	[51]	CALL     	5 6 1
+	21	[52]	GETUPVAL 	5 2	; -
+	22	[52]	NEWTABLE 	6 5 0
+	23	[52]	LOADK    	7 -5	; 81
+	24	[52]	LOADK    	8 -6	; 2
+	25	[52]	MOVE     	9 2
+	26	[52]	MOVE     	10 3
+	27	[52]	MOVE     	11 4
+	28	[52]	SETLIST  	6 5 1	; 1
+	29	[52]	CALL     	5 2 1
+	30	[53]	RETURN   	0 1
+
+function <.\_lfs\_scd30mod.lua:55,58> (10 instructions at 010b8688)
+0 params, 4 slots, 2 upvalues, 0 locals, 3 constants, 0 functions
+	1	[56]	GETUPVAL 	0 0	; -
+	2	[56]	LOADK    	1 -1	; "\nReset SCD30 Now!\n"
+	3	[56]	CALL     	0 2 1
+	4	[57]	GETUPVAL 	0 1	; -
+	5	[57]	NEWTABLE 	1 2 0
+	6	[57]	LOADK    	2 -2	; 211
+	7	[57]	LOADK    	3 -3	; 4
+	8	[57]	SETLIST  	1 2 1	; 1
+	9	[57]	CALL     	0 2 1
+	10	[58]	RETURN   	0 1
+
+function <.\_lfs\_scd30mod.lua:60,90> (98 instructions at 010b88f0)
+2 params, 16 slots, 5 upvalues, 0 locals, 24 constants, 0 functions
+	1	[61]	LOADNIL  	2 3
+	2	[62]	NEWTABLE 	6 0 0
+	3	[62]	MOVE     	3 6
+	4	[63]	NEWTABLE 	6 0 0
+	5	[63]	MOVE     	4 6
+	6	[64]	SETTABLE 	4 -1 -2	; 1 "co2"
+	7	[65]	SETTABLE 	4 -3 -4	; 7 "temp_scd30"
+	8	[66]	SETTABLE 	4 -5 -6	; 13 "humy_scd30"
+	9	[68]	GETUPVAL 	6 0	; -
+	10	[68]	NEWTABLE 	7 2 0
+	11	[68]	LOADK    	8 -7	; 3
+	12	[68]	LOADK    	9 -8	; 0
+	13	[68]	SETLIST  	7 2 1	; 1
+	14	[68]	CALL     	6 2 1
+	15	[69]	GETTABUP 	6 1 -9	; - "i2c"
+	16	[69]	GETTABLE 	6 6 -10	; "start"
+	17	[69]	LOADK    	7 -8	; 0
+	18	[69]	CALL     	6 2 1
+	19	[70]	GETTABUP 	6 1 -9	; - "i2c"
+	20	[70]	GETTABLE 	6 6 -11	; "address"
+	21	[70]	LOADK    	7 -8	; 0
+	22	[70]	GETUPVAL 	8 2	; -
+	23	[70]	GETTABUP 	9 1 -9	; - "i2c"
+	24	[70]	GETTABLE 	9 9 -12	; "RECEIVER"
+	25	[70]	CALL     	6 4 2
+	26	[70]	TEST     	6 1
+	27	[70]	JMP      	0 2	; to 30
+	28	[71]	LOADNIL  	6 0
+	29	[71]	RETURN   	6 2
+	30	[73]	GETTABUP 	6 1 -9	; - "i2c"
+	31	[73]	GETTABLE 	6 6 -13	; "read"
+	32	[73]	LOADK    	7 -8	; 0
+	33	[73]	LOADK    	8 -14	; 18
+	34	[73]	CALL     	6 3 2
+	35	[73]	MOVE     	2 6
+	36	[74]	GETTABUP 	6 1 -9	; - "i2c"
+	37	[74]	GETTABLE 	6 6 -15	; "stop"
+	38	[74]	LOADK    	7 -8	; 0
+	39	[74]	CALL     	6 2 1
+	40	[76]	GETUPVAL 	6 3	; -
+	41	[76]	MOVE     	7 2
+	42	[76]	LOADK    	8 -14	; 18
+	43	[76]	CALL     	6 3 2
+	44	[76]	TEST     	6 1
+	45	[76]	JMP      	0 4	; to 50
+	46	[77]	GETUPVAL 	6 4	; -
+	47	[77]	LOADK    	7 -16	; "\n\n!!! CRC Fall"
+	48	[77]	CALL     	6 2 1
+	49	[77]	RETURN   	0 1
+	50	[80]	LOADK    	6 -1	; 1
+	51	[80]	LEN      	7 2
+	52	[80]	LOADK    	8 -17	; 6
+	53	[80]	FORPREP  	6 32	; to 86
+	54	[81]	GETTABUP 	10 1 -18	; - "string"
+	55	[81]	GETTABLE 	10 10 -19	; "sub"
+	56	[81]	MOVE     	11 2
+	57	[81]	MOVE     	12 9
+	58	[81]	ADD      	13 9 -1	; - 1
+	59	[81]	CALL     	10 4 2
+	60	[81]	MOVE     	5 10
+	61	[82]	MOVE     	10 5
+	62	[82]	GETTABUP 	11 1 -18	; - "string"
+	63	[82]	GETTABLE 	11 11 -19	; "sub"
+	64	[82]	MOVE     	12 2
+	65	[82]	ADD      	13 9 -7	; - 3
+	66	[82]	ADD      	14 9 -20	; - 4
+	67	[82]	CALL     	11 4 2
+	68	[82]	CONCAT   	5 10 11
+	69	[83]	GETTABLE 	10 4 9
+	70	[83]	GETTABUP 	11 1 -18	; - "string"
+	71	[83]	GETTABLE 	11 11 -21	; "format"
+	72	[83]	LOADK    	12 -22	; "%0.1f"
+	73	[83]	GETTABUP 	13 1 -18	; - "string"
+	74	[83]	GETTABLE 	13 13 -23	; "unpack"
+	75	[83]	LOADK    	14 -24	; ">f"
+	76	[83]	MOVE     	15 5
+	77	[83]	CALL     	13 3 0
+	78	[83]	CALL     	11 0 2
+	79	[83]	SETTABLE 	3 10 11
+	80	[84]	TEST     	0 0
+	81	[84]	JMP      	0 4	; to 86
+	82	[85]	GETTABLE 	10 4 9
+	83	[85]	GETTABLE 	11 4 9
+	84	[85]	GETTABLE 	11 3 11
+	85	[85]	SETTABLE 	0 10 11
+	86	[80]	FORLOOP  	6 -33	; to 54
+	87	[88]	TEST     	1 0
+	88	[88]	JMP      	0 2	; to 91
+	89	[88]	MOVE     	6 1
+	90	[88]	CALL     	6 1 1
+	91	[89]	GETTABLE 	6 4 -1	; 1
+	92	[89]	GETTABLE 	6 3 6
+	93	[89]	GETTABLE 	7 4 -3	; 7
+	94	[89]	GETTABLE 	7 3 7
+	95	[89]	GETTABLE 	8 4 -5	; 13
+	96	[89]	GETTABLE 	8 3 8
+	97	[89]	RETURN   	6 4
+	98	[90]	RETURN   	0 1
+
+function <.\_lfs\_scd30mod.lua:92,107> (60 instructions at 010b8738)
+0 params, 9 slots, 5 upvalues, 0 locals, 16 constants, 0 functions
+	1	[93]	LOADNIL  	0 0
+	2	[94]	GETUPVAL 	1 0	; -
+	3	[94]	NEWTABLE 	2 2 0
+	4	[94]	LOADK    	3 -1	; 209
+	5	[94]	LOADK    	4 -2	; 0
+	6	[94]	SETLIST  	2 2 1	; 1
+	7	[94]	CALL     	1 2 1
+	8	[95]	GETTABUP 	1 1 -3	; - "i2c"
+	9	[95]	GETTABLE 	1 1 -4	; "start"
+	10	[95]	LOADK    	2 -2	; 0
+	11	[95]	CALL     	1 2 1
+	12	[96]	GETTABUP 	1 1 -3	; - "i2c"
+	13	[96]	GETTABLE 	1 1 -5	; "address"
+	14	[96]	LOADK    	2 -2	; 0
+	15	[96]	GETUPVAL 	3 2	; -
+	16	[96]	GETTABUP 	4 1 -3	; - "i2c"
+	17	[96]	GETTABLE 	4 4 -6	; "RECEIVER"
+	18	[96]	CALL     	1 4 2
+	19	[96]	TEST     	1 1
+	20	[96]	JMP      	0 2	; to 23
+	21	[97]	LOADNIL  	1 0
+	22	[97]	RETURN   	1 2
+	23	[99]	GETTABUP 	1 1 -3	; - "i2c"
+	24	[99]	GETTABLE 	1 1 -7	; "read"
+	25	[99]	LOADK    	2 -2	; 0
+	26	[99]	LOADK    	3 -8	; 3
+	27	[99]	CALL     	1 3 2
+	28	[99]	MOVE     	0 1
+	29	[100]	GETTABUP 	1 1 -3	; - "i2c"
+	30	[100]	GETTABLE 	1 1 -9	; "stop"
+	31	[100]	LOADK    	2 -2	; 0
+	32	[100]	CALL     	1 2 1
+	33	[102]	GETUPVAL 	1 3	; -
+	34	[102]	MOVE     	2 0
+	35	[102]	LOADK    	3 -8	; 3
+	36	[102]	CALL     	1 3 2
+	37	[102]	TEST     	1 0
+	38	[102]	JMP      	0 18	; to 57
+	39	[103]	GETUPVAL 	1 4	; -
+	40	[103]	LOADK    	2 -10	; "\nFW: "
+	41	[103]	GETTABUP 	3 1 -11	; - "string"
+	42	[103]	GETTABLE 	3 3 -12	; "byte"
+	43	[103]	MOVE     	4 0
+	44	[103]	LOADK    	5 -13	; 1
+	45	[103]	LOADK    	6 -13	; 1
+	46	[103]	CALL     	3 4 2
+	47	[103]	LOADK    	4 -14	; "."
+	48	[103]	GETTABUP 	5 1 -11	; - "string"
+	49	[103]	GETTABLE 	5 5 -12	; "byte"
+	50	[103]	MOVE     	6 0
+	51	[103]	LOADK    	7 -15	; 2
+	52	[103]	LOADK    	8 -15	; 2
+	53	[103]	CALL     	5 4 2
+	54	[103]	CONCAT   	2 2 5
+	55	[103]	CALL     	1 2 1
+	56	[103]	JMP      	0 3	; to 60
+	57	[105]	GETUPVAL 	1 4	; -
+	58	[105]	LOADK    	2 -16	; "Lost Firmware Now!"
+	59	[105]	CALL     	1 2 1
+	60	[107]	RETURN   	0 1
+
+function <.\_lfs\_scd30mod.lua:109,123> (58 instructions at 010b86e0)
+2 params, 15 slots, 1 upvalue, 0 locals, 13 constants, 0 functions
+	1	[110]	LOADK    	2 -1	; 255
+	2	[111]	MOVE     	3 1
+	3	[111]	ADD      	4 1 -2	; - 1
+	4	[111]	LOADK    	5 -2	; 1
+	5	[111]	FORPREP  	3 45	; to 51
+	6	[112]	GETTABUP 	7 0 -3	; - "bit"
+	7	[112]	GETTABLE 	7 7 -4	; "bxor"
+	8	[112]	MOVE     	8 2
+	9	[112]	GETTABUP 	9 0 -5	; - "string"
+	10	[112]	GETTABLE 	9 9 -6	; "byte"
+	11	[112]	MOVE     	10 0
+	12	[112]	MOVE     	11 6
+	13	[112]	CALL     	9 3 0
+	14	[112]	CALL     	7 0 2
+	15	[112]	MOVE     	2 7
+	16	[113]	LOADK    	7 -7	; 8
+	17	[113]	LOADK    	8 -2	; 1
+	18	[113]	LOADK    	9 -8	; -1
+	19	[113]	FORPREP  	7 30	; to 50
+	20	[114]	GETTABUP 	11 0 -3	; - "bit"
+	21	[114]	GETTABLE 	11 11 -9	; "isset"
+	22	[114]	MOVE     	12 2
+	23	[114]	LOADK    	13 -10	; 7
+	24	[114]	CALL     	11 3 2
+	25	[114]	TEST     	11 0
+	26	[114]	JMP      	0 11	; to 38
+	27	[115]	GETTABUP 	11 0 -3	; - "bit"
+	28	[115]	GETTABLE 	11 11 -4	; "bxor"
+	29	[115]	GETTABUP 	12 0 -3	; - "bit"
+	30	[115]	GETTABLE 	12 12 -11	; "lshift"
+	31	[115]	MOVE     	13 2
+	32	[115]	LOADK    	14 -2	; 1
+	33	[115]	CALL     	12 3 2
+	34	[115]	LOADK    	13 -12	; 49
+	35	[115]	CALL     	11 3 2
+	36	[115]	MOVE     	2 11
+	37	[115]	JMP      	0 6	; to 44
+	38	[117]	GETTABUP 	11 0 -3	; - "bit"
+	39	[117]	GETTABLE 	11 11 -11	; "lshift"
+	40	[117]	MOVE     	12 2
+	41	[117]	LOADK    	13 -2	; 1
+	42	[117]	CALL     	11 3 2
+	43	[117]	MOVE     	2 11
+	44	[119]	GETTABUP 	11 0 -3	; - "bit"
+	45	[119]	GETTABLE 	11 11 -13	; "band"
+	46	[119]	MOVE     	12 2
+	47	[119]	LOADK    	13 -1	; 255
+	48	[119]	CALL     	11 3 2
+	49	[119]	MOVE     	2 11
+	50	[113]	FORLOOP  	7 -31	; to 20
+	51	[111]	FORLOOP  	3 -46	; to 6
+	52	[122]	GETTABUP 	3 0 -3	; - "bit"
+	53	[122]	GETTABLE 	3 3 -13	; "band"
+	54	[122]	MOVE     	4 2
+	55	[122]	LOADK    	5 -1	; 255
+	56	[122]	TAILCALL 	3 3 0
+	57	[122]	RETURN   	3 0
+	58	[123]	RETURN   	0 1
+
+function <.\_lfs\_scd30mod.lua:125,132> (21 instructions at 010b87e8)
+2 params, 10 slots, 2 upvalues, 0 locals, 5 constants, 0 functions
+	1	[126]	LOADK    	2 -1	; 1
+	2	[126]	MOVE     	3 1
+	3	[126]	LOADK    	4 -2	; 3
+	4	[126]	FORPREP  	2 13	; to 18
+	5	[127]	GETUPVAL 	6 0	; -
+	6	[127]	MOVE     	7 0
+	7	[127]	MOVE     	8 5
+	8	[127]	CALL     	6 3 2
+	9	[127]	GETTABUP 	7 1 -3	; - "string"
+	10	[127]	GETTABLE 	7 7 -4	; "byte"
+	11	[127]	MOVE     	8 0
+	12	[127]	ADD      	9 5 -5	; - 2
+	13	[127]	CALL     	7 3 2
+	14	[127]	EQ       	1 6 7
+	15	[127]	JMP      	0 2	; to 18
+	16	[128]	LOADBOOL 	6 0 0
+	17	[128]	RETURN   	6 2
+	18	[126]	FORLOOP  	2 -14	; to 5
+	19	[131]	LOADBOOL 	2 1 0
+	20	[131]	RETURN   	2 2
+	21	[132]	RETURN   	0 1
+
+main <.\_lfs\_workF.lua:0,0> (44 instructions at 010b8790)
 0+ params, 17 slots, 1 upvalue, 0 locals, 16 constants, 6 functions
 	1	[2]	GETTABUP 	0 0 -1	; - "digl"
 	2	[2]	TEST     	0 1
@@ -2776,20 +2596,20 @@ main <.\_lfs\_workF.lua:0,0> (44 instructions at 010d8f40)
 	22	[13]	GETTABUP 	10 0 -4	; - "dat"
 	23	[13]	SETTABLE 	10 -9 -10	; "TMRWORK" false
 	24	[14]	LOADK    	10 -5	; 0
-	25	[25]	CLOSURE  	11 0	; 010d8ff0
+	25	[25]	CLOSURE  	11 0	; 010b8840
 	26	[27]	SELF     	12 6 -11	; "register"
 	27	[27]	LOADK    	14 -12	; 1000
 	28	[27]	GETTABUP 	15 0 -7	; - "tmr"
 	29	[27]	GETTABLE 	15 15 -13	; "ALARM_AUTO"
 	30	[27]	MOVE     	16 11
 	31	[27]	CALL     	12 5 1
-	32	[38]	CLOSURE  	12 1	; 010e1f70
-	33	[44]	CLOSURE  	13 2	; 010e2230
-	34	[67]	CLOSURE  	14 3	; 010e1a48
+	32	[38]	CLOSURE  	12 1	; 010b8898
+	33	[44]	CLOSURE  	13 2	; 010b8948
+	34	[67]	CLOSURE  	14 3	; 010b84d0
 	35	[67]	MOVE     	3 14
-	36	[82]	CLOSURE  	14 4	; 010e2078
+	36	[82]	CLOSURE  	14 4	; 010b8528
 	37	[82]	MOVE     	4 14
-	38	[97]	CLOSURE  	14 5	; 010e1998
+	38	[97]	CLOSURE  	14 5	; 010b8580
 	39	[97]	MOVE     	2 14
 	40	[112]	SETTABUP 	0 -14 13	; - "STOPBLINK"
 	41	[113]	SETTABUP 	0 -15 0	; - "SOUTLINES"
@@ -2797,7 +2617,7 @@ main <.\_lfs\_workF.lua:0,0> (44 instructions at 010d8f40)
 	43	[114]	JMP      	1 0	; to 44
 	44	[115]	RETURN   	0 1
 
-function <.\_lfs\_workF.lua:15,25> (29 instructions at 010d8ff0)
+function <.\_lfs\_workF.lua:15,25> (29 instructions at 010b8840)
 1 param, 4 slots, 5 upvalues, 0 locals, 5 constants, 0 functions
 	1	[16]	GETUPVAL 	1 0	; -
 	2	[16]	EQ       	0 1 -1	; - true
@@ -2829,7 +2649,7 @@ function <.\_lfs\_workF.lua:15,25> (29 instructions at 010d8ff0)
 	28	[23]	CALL     	1 3 1
 	29	[25]	RETURN   	0 1
 
-function <.\_lfs\_workF.lua:29,38> (43 instructions at 010e1f70)
+function <.\_lfs\_workF.lua:29,38> (43 instructions at 010b8898)
 0 params, 5 slots, 6 upvalues, 0 locals, 14 constants, 0 functions
 	1	[30]	GETTABUP 	0 0 -1	; - "dat"
 	2	[30]	SETTABLE 	0 -2 -3	; "TMRWORK" true
@@ -2875,7 +2695,7 @@ function <.\_lfs\_workF.lua:29,38> (43 instructions at 010e1f70)
 	42	[37]	CALL     	0 2 1
 	43	[38]	RETURN   	0 1
 
-function <.\_lfs\_workF.lua:39,44> (16 instructions at 010e2230)
+function <.\_lfs\_workF.lua:39,44> (16 instructions at 010b8948)
 0 params, 3 slots, 3 upvalues, 0 locals, 8 constants, 0 functions
 	1	[40]	GETTABUP 	0 0 -1	; - "dat"
 	2	[40]	SETTABLE 	0 -2 -3	; "TMRWORK" false
@@ -2894,7 +2714,7 @@ function <.\_lfs\_workF.lua:39,44> (16 instructions at 010e2230)
 	15	[43]	CALL     	0 3 1
 	16	[44]	RETURN   	0 1
 
-function <.\_lfs\_workF.lua:46,67> (88 instructions at 010e1a48)
+function <.\_lfs\_workF.lua:46,67> (88 instructions at 010b84d0)
 1 param, 16 slots, 3 upvalues, 0 locals, 13 constants, 0 functions
 	1	[47]	LOADK    	1 -1	; 1
 	2	[47]	LOADK    	2 -2	; 8
@@ -2985,7 +2805,7 @@ function <.\_lfs\_workF.lua:46,67> (88 instructions at 010e1a48)
 	87	[47]	FORLOOP  	1 -83	; to 5
 	88	[67]	RETURN   	0 1
 
-function <.\_lfs\_workF.lua:69,82> (33 instructions at 010e2078)
+function <.\_lfs\_workF.lua:69,82> (33 instructions at 010b8528)
 0 params, 7 slots, 7 upvalues, 0 locals, 11 constants, 0 functions
 	1	[70]	GETUPVAL 	0 0	; -
 	2	[70]	GETUPVAL 	1 1	; -
@@ -3021,7 +2841,7 @@ function <.\_lfs\_workF.lua:69,82> (33 instructions at 010e2078)
 	32	[81]	SETTABLE 	0 -10 -11	; "call" nil
 	33	[82]	RETURN   	0 1
 
-function <.\_lfs\_workF.lua:84,97> (18 instructions at 010e1998)
+function <.\_lfs\_workF.lua:84,97> (18 instructions at 010b8580)
 1 param, 4 slots, 3 upvalues, 0 locals, 7 constants, 0 functions
 	1	[85]	SETUPVAL 	0 0	; -
 	2	[90]	GETTABUP 	1 1 -1	; - "string"
@@ -3042,7 +2862,7 @@ function <.\_lfs\_workF.lua:84,97> (18 instructions at 010e1998)
 	17	[95]	CALL     	1 2 1
 	18	[97]	RETURN   	0 1
 
-main <.\_lfs\bright.lua:0,0> (109 instructions at 010e1fc8)
+main <.\_lfs\bright.lua:0,0> (109 instructions at 010b85d8)
 0+ params, 5 slots, 1 upvalue, 0 locals, 27 constants, 0 functions
 	1	[1]	LOADNIL  	0 0
 	2	[4]	GETTABUP 	1 0 -1	; - "dat"
@@ -3154,7 +2974,7 @@ main <.\_lfs\bright.lua:0,0> (109 instructions at 010e1fc8)
 	108	[49]	CALL     	1 3 1
 	109	[51]	RETURN   	0 1
 
-main <.\_lfs\dummy_strings.lua:0,0> (57 instructions at 010e2128)
+main <.\_lfs\dummy_strings.lua:0,0> (57 instructions at 010b8630)
 0+ params, 56 slots, 1 upvalue, 0 locals, 56 constants, 0 functions
 	1	[2]	LOADK    	0 -1	; "?.lc;?.lua"
 	2	[2]	LOADK    	1 -2	; "/\n;\n?\n!\n-"
@@ -3214,7 +3034,7 @@ main <.\_lfs\dummy_strings.lua:0,0> (57 instructions at 010e2128)
 	56	[10]	LOADK    	55 -56	; "tmr.timer"
 	57	[10]	RETURN   	0 1
 
-main <.\_lfs\mqttanalize.lua:0,0> (65 instructions at 010e20d0)
+main <.\_lfs\mqttanalize.lua:0,0> (65 instructions at 010bfe08)
 0+ params, 4 slots, 1 upvalue, 0 locals, 17 constants, 2 functions
 	1	[1]	GETTABUP 	0 0 -1	; - "killtop"
 	2	[1]	TEST     	0 0
@@ -3234,7 +3054,7 @@ main <.\_lfs\mqttanalize.lua:0,0> (65 instructions at 010e20d0)
 	16	[6]	GETTABUP 	2 0 -5	; - "node"
 	17	[6]	GETTABLE 	2 2 -6	; "task"
 	18	[6]	GETTABLE 	2 2 -7	; "post"
-	19	[6]	CLOSURE  	3 0	; 010e1e10
+	19	[6]	CLOSURE  	3 0	; 010bff10
 	20	[6]	TAILCALL 	2 2 0
 	21	[6]	RETURN   	2 0
 	22	[9]	GETTABLE 	2 0 -8	; 1
@@ -3278,80 +3098,25 @@ main <.\_lfs\mqttanalize.lua:0,0> (65 instructions at 010e20d0)
 	60	[24]	GETTABUP 	2 0 -5	; - "node"
 	61	[24]	GETTABLE 	2 2 -6	; "task"
 	62	[24]	GETTABLE 	2 2 -7	; "post"
-	63	[24]	CLOSURE  	3 1	; 010e2390
+	63	[24]	CLOSURE  	3 1	; 010bffc0
 	64	[24]	CALL     	2 2 1
 	65	[25]	RETURN   	0 1
 
-function <.\_lfs\mqttanalize.lua:6,6> (4 instructions at 010e1e10)
+function <.\_lfs\mqttanalize.lua:6,6> (4 instructions at 010bff10)
 0 params, 2 slots, 1 upvalue, 0 locals, 2 constants, 0 functions
 	1	[6]	GETTABUP 	0 0 -1	; - "dofile"
 	2	[6]	LOADK    	1 -2	; "mqttpub.lua"
 	3	[6]	CALL     	0 2 1
 	4	[6]	RETURN   	0 1
 
-function <.\_lfs\mqttanalize.lua:24,24> (4 instructions at 010e2390)
+function <.\_lfs\mqttanalize.lua:24,24> (4 instructions at 010bffc0)
 0 params, 2 slots, 1 upvalue, 0 locals, 2 constants, 0 functions
 	1	[24]	GETTABUP 	0 0 -1	; - "dofile"
 	2	[24]	LOADK    	1 -2	; "mqttanalize.lua"
 	3	[24]	CALL     	0 2 1
 	4	[24]	RETURN   	0 1
 
-main <.\_lfs\mqttmake.lua:0,0> (3 instructions at 010e2288)
-0+ params, 2 slots, 1 upvalue, 0 locals, 0 constants, 1 function
-	1	[10]	CLOSURE  	0 0	; 010e23e8
-	2	[10]	RETURN   	0 2
-	3	[10]	RETURN   	0 1
-
-function <.\_lfs\mqttmake.lua:1,10> (46 instructions at 010e23e8)
-3 params, 10 slots, 1 upvalue, 0 locals, 20 constants, 0 functions
-	1	[2]	GETTABUP 	3 0 -2	; - "mqtt"
-	2	[2]	GETTABLE 	3 3 -3	; "Client"
-	3	[2]	GETTABUP 	4 0 -4	; - "dat"
-	4	[2]	GETTABLE 	4 4 -5	; "clnt"
-	5	[2]	LOADK    	5 -6	; 30
-	6	[2]	GETTABUP 	6 0 -4	; - "dat"
-	7	[2]	GETTABLE 	6 6 -5	; "clnt"
-	8	[2]	LOADK    	7 -7	; "superpass"
-	9	[2]	CALL     	3 5 2
-	10	[2]	SETTABUP 	0 -1 3	; - "m"
-	11	[3]	GETTABUP 	3 0 -1	; - "m"
-	12	[3]	SELF     	3 3 -8	; "lwt"
-	13	[3]	GETTABUP 	5 0 -4	; - "dat"
-	14	[3]	GETTABLE 	5 5 -5	; "clnt"
-	15	[3]	LOADK    	6 -9	; "/state"
-	16	[3]	CONCAT   	5 5 6
-	17	[3]	LOADK    	6 -10	; "Off"
-	18	[3]	LOADK    	7 -11	; 0
-	19	[3]	LOADK    	8 -12	; 1
-	20	[3]	CALL     	3 6 1
-	21	[4]	GETTABUP 	3 0 -1	; - "m"
-	22	[4]	SELF     	3 3 -13	; "on"
-	23	[4]	LOADK    	5 -14	; "offline"
-	24	[4]	MOVE     	6 1
-	25	[4]	CALL     	3 4 1
-	26	[7]	GETTABUP 	3 0 -1	; - "m"
-	27	[7]	SELF     	3 3 -13	; "on"
-	28	[7]	LOADK    	5 -15	; "message"
-	29	[7]	MOVE     	6 2
-	30	[7]	CALL     	3 4 1
-	31	[8]	GETTABUP 	3 0 -16	; - "print"
-	32	[8]	LOADK    	4 -17	; "Connect to"
-	33	[8]	GETTABUP 	5 0 -4	; - "dat"
-	34	[8]	GETTABLE 	5 5 -18	; "brk"
-	35	[8]	CALL     	3 3 1
-	36	[9]	GETTABUP 	3 0 -1	; - "m"
-	37	[9]	SELF     	3 3 -19	; "connect"
-	38	[9]	GETTABUP 	5 0 -4	; - "dat"
-	39	[9]	GETTABLE 	5 5 -18	; "brk"
-	40	[9]	GETTABUP 	6 0 -4	; - "dat"
-	41	[9]	GETTABLE 	6 6 -20	; "port"
-	42	[9]	LOADK    	7 -11	; 0
-	43	[9]	MOVE     	8 0
-	44	[9]	MOVE     	9 1
-	45	[9]	CALL     	3 7 1
-	46	[10]	RETURN   	0 1
-
-main <.\_lfs\mqttpub.lua:0,0> (54 instructions at 010e2180)
+main <.\_lfs\mqttpub.lua:0,0> (54 instructions at 010bfd00)
 0+ params, 9 slots, 1 upvalue, 0 locals, 24 constants, 1 function
 	1	[1]	GETTABUP 	0 0 -1	; - "dat"
 	2	[1]	GETTABLE 	0 0 -2	; "broker"
@@ -3389,7 +3154,7 @@ main <.\_lfs\mqttpub.lua:0,0> (54 instructions at 010e2180)
 	34	[7]	MOVE     	5 1
 	35	[7]	LOADK    	6 -17	; 2
 	36	[7]	LOADK    	7 -18	; 0
-	37	[9]	CLOSURE  	8 0	; 010e1f18
+	37	[9]	CLOSURE  	8 0	; 010bfeb8
 	38	[7]	CALL     	2 7 1
 	39	[10]	GETTABUP 	2 0 -1	; - "dat"
 	40	[10]	GETTABLE 	2 2 -19	; "boot"
@@ -3408,13 +3173,13 @@ main <.\_lfs\mqttpub.lua:0,0> (54 instructions at 010e2180)
 	53	[15]	CALL     	2 1 1
 	54	[15]	RETURN   	0 1
 
-function <.\_lfs\mqttpub.lua:7,9> (3 instructions at 010e1f18)
+function <.\_lfs\mqttpub.lua:7,9> (3 instructions at 010bfeb8)
 1 param, 2 slots, 1 upvalue, 0 locals, 3 constants, 0 functions
 	1	[8]	GETTABUP 	1 0 -1	; - "dat"
 	2	[8]	SETTABLE 	1 -2 -3	; "killm" 0
 	3	[9]	RETURN   	0 1
 
-main <.\_lfs\mqttset.lua:0,0> (35 instructions at 010e2020)
+main <.\_lfs\mqttset.lua:0,0> (35 instructions at 010bfca8)
 0+ params, 12 slots, 1 upvalue, 0 locals, 11 constants, 5 functions
 	1	[2]	GETTABUP 	0 0 -1	; - "dat"
 	2	[2]	GETTABLE 	0 0 -2	; "brk"
@@ -3435,15 +3200,15 @@ main <.\_lfs\mqttset.lua:0,0> (35 instructions at 010e2020)
 	17	[10]	LOADK    	9 -10	; 35000
 	18	[10]	GETTABUP 	10 0 -7	; - "tmr"
 	19	[10]	GETTABLE 	10 10 -11	; "ALARM_AUTO"
-	20	[24]	CLOSURE  	11 0	; 010e22e0
+	20	[24]	CLOSURE  	11 0	; 010bff68
 	21	[10]	CALL     	7 5 1
-	22	[33]	CLOSURE  	7 1	; 010e1e68
+	22	[33]	CLOSURE  	7 1	; 010c0018
 	23	[26]	MOVE     	2 7
-	24	[41]	CLOSURE  	7 2	; 010e1940
+	24	[41]	CLOSURE  	7 2	; 010bfba0
 	25	[35]	MOVE     	3 7
-	26	[63]	CLOSURE  	7 3	; 010e21d8
+	26	[63]	CLOSURE  	7 3	; 010bfe60
 	27	[43]	MOVE     	4 7
-	28	[72]	CLOSURE  	7 4	; 010e1ec0
+	28	[72]	CLOSURE  	7 4	; 010bfbf8
 	29	[65]	MOVE     	5 7
 	30	[73]	MOVE     	7 5
 	31	[73]	MOVE     	8 4
@@ -3452,7 +3217,7 @@ main <.\_lfs\mqttset.lua:0,0> (35 instructions at 010e2020)
 	34	[73]	JMP      	1 0	; to 35
 	35	[74]	RETURN   	0 1
 
-function <.\_lfs\mqttset.lua:10,24> (45 instructions at 010e22e0)
+function <.\_lfs\mqttset.lua:10,24> (45 instructions at 010bff68)
 1 param, 9 slots, 7 upvalues, 0 locals, 14 constants, 0 functions
 	1	[11]	GETTABUP 	1 0 -1	; - "print"
 	2	[11]	LOADK    	2 -2	; "dat.killm:"
@@ -3500,7 +3265,7 @@ function <.\_lfs\mqttset.lua:10,24> (45 instructions at 010e22e0)
 	44	[21]	CALL     	1 8 1
 	45	[24]	RETURN   	0 1
 
-function <.\_lfs\mqttset.lua:26,33> (35 instructions at 010e1e68)
+function <.\_lfs\mqttset.lua:26,33> (35 instructions at 010c0018)
 1 param, 7 slots, 1 upvalue, 0 locals, 16 constants, 0 functions
 	1	[27]	GETTABUP 	1 0 -1	; - "print"
 	2	[27]	LOADK    	2 -2	; "Connected MQTT Broker as '"
@@ -3538,7 +3303,7 @@ function <.\_lfs\mqttset.lua:26,33> (35 instructions at 010e1e68)
 	34	[32]	CALL     	1 2 1
 	35	[33]	RETURN   	0 1
 
-function <.\_lfs\mqttset.lua:35,41> (14 instructions at 010e1940)
+function <.\_lfs\mqttset.lua:35,41> (14 instructions at 010bfba0)
 2 params, 5 slots, 2 upvalues, 0 locals, 7 constants, 0 functions
 	1	[36]	GETTABUP 	2 0 -1	; - "print"
 	2	[36]	LOADK    	3 -2	; "MQTT Error:"
@@ -3555,43 +3320,44 @@ function <.\_lfs\mqttset.lua:35,41> (14 instructions at 010e1940)
 	13	[40]	CALL     	2 1 1
 	14	[41]	RETURN   	0 1
 
-function <.\_lfs\mqttset.lua:43,63> (33 instructions at 010e21d8)
-0 params, 6 slots, 2 upvalues, 0 locals, 15 constants, 2 functions
+function <.\_lfs\mqttset.lua:43,63> (34 instructions at 010bfe60)
+0 params, 6 slots, 2 upvalues, 0 locals, 16 constants, 2 functions
 	1	[44]	GETTABUP 	0 0 -2	; - "mqtt"
 	2	[44]	GETTABLE 	0 0 -3	; "Client"
 	3	[44]	GETTABUP 	1 0 -4	; - "dat"
 	4	[44]	GETTABLE 	1 1 -5	; "clnt"
 	5	[44]	LOADK    	2 -6	; 25
 	6	[44]	GETTABUP 	3 0 -4	; - "dat"
-	7	[44]	GETTABLE 	3 3 -5	; "clnt"
-	8	[44]	LOADK    	4 -7	; "pass22"
-	9	[44]	CALL     	0 5 2
-	10	[44]	SETTABUP 	0 -1 0	; - "m"
-	11	[45]	GETTABUP 	0 0 -1	; - "m"
-	12	[45]	SELF     	0 0 -8	; "lwt"
-	13	[45]	GETTABUP 	2 0 -4	; - "dat"
-	14	[45]	GETTABLE 	2 2 -5	; "clnt"
-	15	[45]	LOADK    	3 -9	; "/state"
-	16	[45]	CONCAT   	2 2 3
-	17	[45]	LOADK    	3 -10	; "Off"
-	18	[45]	LOADK    	4 -11	; 0
-	19	[45]	LOADK    	5 -12	; 1
-	20	[45]	CALL     	0 6 1
-	21	[46]	GETTABUP 	0 0 -1	; - "m"
-	22	[46]	SELF     	0 0 -13	; "on"
-	23	[46]	LOADK    	2 -14	; "offline"
-	24	[50]	CLOSURE  	3 0	; 010e1ba8
-	25	[46]	CALL     	0 4 1
-	26	[51]	GETTABUP 	0 0 -1	; - "m"
-	27	[51]	SELF     	0 0 -13	; "on"
-	28	[51]	LOADK    	2 -15	; "message"
-	29	[61]	CLOSURE  	3 1	; 010e2338
-	30	[51]	CALL     	0 4 1
-	31	[62]	GETTABUP 	0 0 -1	; - "m"
-	32	[62]	RETURN   	0 2
-	33	[63]	RETURN   	0 1
+	7	[44]	GETTABLE 	3 3 -7	; "mqlgin"
+	8	[44]	GETTABUP 	4 0 -4	; - "dat"
+	9	[44]	GETTABLE 	4 4 -8	; "mqpass"
+	10	[44]	CALL     	0 5 2
+	11	[44]	SETTABUP 	0 -1 0	; - "m"
+	12	[45]	GETTABUP 	0 0 -1	; - "m"
+	13	[45]	SELF     	0 0 -9	; "lwt"
+	14	[45]	GETTABUP 	2 0 -4	; - "dat"
+	15	[45]	GETTABLE 	2 2 -5	; "clnt"
+	16	[45]	LOADK    	3 -10	; "/state"
+	17	[45]	CONCAT   	2 2 3
+	18	[45]	LOADK    	3 -11	; "Off"
+	19	[45]	LOADK    	4 -12	; 0
+	20	[45]	LOADK    	5 -13	; 1
+	21	[45]	CALL     	0 6 1
+	22	[46]	GETTABUP 	0 0 -1	; - "m"
+	23	[46]	SELF     	0 0 -14	; "on"
+	24	[46]	LOADK    	2 -15	; "offline"
+	25	[50]	CLOSURE  	3 0	; 010bfd58
+	26	[46]	CALL     	0 4 1
+	27	[51]	GETTABUP 	0 0 -1	; - "m"
+	28	[51]	SELF     	0 0 -14	; "on"
+	29	[51]	LOADK    	2 -16	; "message"
+	30	[61]	CLOSURE  	3 1	; 010bfc50
+	31	[51]	CALL     	0 4 1
+	32	[62]	GETTABUP 	0 0 -1	; - "m"
+	33	[62]	RETURN   	0 2
+	34	[63]	RETURN   	0 1
 
-function <.\_lfs\mqttset.lua:46,50> (9 instructions at 010e1ba8)
+function <.\_lfs\mqttset.lua:46,50> (9 instructions at 010bfd58)
 2 params, 5 slots, 2 upvalues, 0 locals, 4 constants, 0 functions
 	1	[47]	SELF     	2 0 -1	; "close"
 	2	[47]	CALL     	2 2 1
@@ -3603,7 +3369,7 @@ function <.\_lfs\mqttset.lua:46,50> (9 instructions at 010e1ba8)
 	8	[49]	CALL     	2 3 1
 	9	[50]	RETURN   	0 1
 
-function <.\_lfs\mqttset.lua:51,61> (34 instructions at 010e2338)
+function <.\_lfs\mqttset.lua:51,61> (34 instructions at 010bfc50)
 3 params, 8 slots, 1 upvalue, 0 locals, 12 constants, 0 functions
 	1	[52]	GETTABUP 	3 0 -1	; - "killtop"
 	2	[52]	TEST     	3 1
@@ -3640,7 +3406,7 @@ function <.\_lfs\mqttset.lua:51,61> (34 instructions at 010e2338)
 	33	[58]	CALL     	3 2 1
 	34	[61]	RETURN   	0 1
 
-function <.\_lfs\mqttset.lua:65,72> (21 instructions at 010e1ec0)
+function <.\_lfs\mqttset.lua:65,72> (21 instructions at 010bfbf8)
 1 param, 9 slots, 5 upvalues, 0 locals, 8 constants, 0 functions
 	1	[66]	GETTABUP 	1 0 -1	; - "dat"
 	2	[66]	GETTABLE 	1 1 -2	; "ip"
@@ -3664,18 +3430,18 @@ function <.\_lfs\mqttset.lua:65,72> (21 instructions at 010e1ec0)
 	20	[70]	SETTABLE 	1 -7 -8	; "killm" 7
 	21	[72]	RETURN   	0 1
 
-main <.\_lfs\narodmonmod.lua:0,0> (8 instructions at 010e19f0)
+main <.\_lfs\narodmonmod.lua:0,0> (8 instructions at 010bfdb0)
 0+ params, 2 slots, 1 upvalue, 0 locals, 2 constants, 1 function
 	1	[1]	NEWTABLE 	0 0 0
 	2	[1]	SETTABUP 	0 -1 0	; - "M"
 	3	[2]	GETTABUP 	0 0 -1	; - "M"
-	4	[31]	CLOSURE  	1 0	; 010e1d60
+	4	[31]	CLOSURE  	1 0	; 010bf3b8
 	5	[2]	SETTABLE 	0 -2 1	; "sendNarod" -
 	6	[32]	GETTABUP 	0 0 -1	; - "M"
 	7	[32]	RETURN   	0 2
 	8	[32]	RETURN   	0 1
 
-function <.\_lfs\narodmonmod.lua:2,31> (65 instructions at 010e1d60)
+function <.\_lfs\narodmonmod.lua:2,31> (65 instructions at 010bf3b8)
 3 params, 15 slots, 1 upvalue, 0 locals, 21 constants, 2 functions
 	1	[3]	GETTABUP 	3 0 -1	; - "type"
 	2	[3]	MOVE     	4 1
@@ -3729,12 +3495,12 @@ function <.\_lfs\narodmonmod.lua:2,31> (65 instructions at 010e1d60)
 	50	[18]	GETTABUP 	4 0 -11	; - "conn"
 	51	[18]	SELF     	4 4 -16	; "on"
 	52	[18]	LOADK    	6 -17	; "connection"
-	53	[20]	CLOSURE  	7 0	; 010e1aa0
+	53	[20]	CLOSURE  	7 0	; 010bf0a0
 	54	[18]	CALL     	4 4 1
 	55	[21]	GETTABUP 	4 0 -11	; - "conn"
 	56	[21]	SELF     	4 4 -16	; "on"
 	57	[21]	LOADK    	6 -18	; "receive"
-	58	[29]	CLOSURE  	7 1	; 010e1af8
+	58	[29]	CLOSURE  	7 1	; 010bf9e8
 	59	[21]	CALL     	4 4 1
 	60	[30]	GETTABUP 	4 0 -11	; - "conn"
 	61	[30]	SELF     	4 4 -19	; "connect"
@@ -3743,14 +3509,14 @@ function <.\_lfs\narodmonmod.lua:2,31> (65 instructions at 010e1d60)
 	64	[30]	CALL     	4 4 1
 	65	[31]	RETURN   	0 1
 
-function <.\_lfs\narodmonmod.lua:18,20> (4 instructions at 010e1aa0)
+function <.\_lfs\narodmonmod.lua:18,20> (4 instructions at 010bf0a0)
 2 params, 5 slots, 1 upvalue, 0 locals, 1 constant, 0 functions
 	1	[19]	SELF     	2 0 -1	; "send"
 	2	[19]	GETUPVAL 	4 0	; -
 	3	[19]	CALL     	2 3 1
 	4	[20]	RETURN   	0 1
 
-function <.\_lfs\narodmonmod.lua:21,29> (16 instructions at 010e1af8)
+function <.\_lfs\narodmonmod.lua:21,29> (16 instructions at 010bf9e8)
 2 params, 5 slots, 2 upvalues, 0 locals, 4 constants, 0 functions
 	1	[22]	GETTABUP 	2 0 -1	; - "print"
 	2	[22]	LOADK    	3 -2	; "Narodmon: "
@@ -3769,7 +3535,7 @@ function <.\_lfs\narodmonmod.lua:21,29> (16 instructions at 010e1af8)
 	15	[27]	CALL     	2 1 1
 	16	[29]	RETURN   	0 1
 
-main <.\_lfs\narodparce.lua:0,0> (46 instructions at 010e1b50)
+main <.\_lfs\narodparce.lua:0,0> (46 instructions at 010bf360)
 0+ params, 11 slots, 1 upvalue, 0 locals, 19 constants, 1 function
 	1	[1]	GETTABUP 	0 0 -1	; - "print"
 	2	[1]	LOADK    	1 -2	; "Parce Narod"
@@ -3780,7 +3546,7 @@ main <.\_lfs\narodparce.lua:0,0> (46 instructions at 010e1b50)
 	7	[4]	LOADK    	4 -4	; 100
 	8	[5]	GETTABUP 	5 0 -5	; - "dat"
 	9	[5]	GETTABLE 	5 5 -6	; "sens"
-	10	[27]	CLOSURE  	6 0	; 010e1c00
+	10	[27]	CLOSURE  	6 0	; 010bf2b0
 	11	[29]	GETTABUP 	7 0 -7	; - "c"
 	12	[29]	TEST     	7 0
 	13	[29]	JMP      	0 11	; to 25
@@ -3818,7 +3584,7 @@ main <.\_lfs\narodparce.lua:0,0> (46 instructions at 010e1b50)
 	45	[40]	SETTABLE 	7 -7 -19	; "c" nil
 	46	[40]	RETURN   	0 1
 
-function <.\_lfs\narodparce.lua:6,27> (87 instructions at 010e1c00)
+function <.\_lfs\narodparce.lua:6,27> (87 instructions at 010bf2b0)
 0+ params, 10 slots, 4 upvalues, 0 locals, 18 constants, 0 functions
 	1	[7]	GETTABUP 	0 0 -1	; - "ipairs"
 	2	[7]	NEWTABLE 	1 0 0
@@ -3908,324 +3674,8 @@ function <.\_lfs\narodparce.lua:6,27> (87 instructions at 010e1c00)
 	86	[25]	SETTABLE 	0 -13 -18	; "narod" nil
 	87	[27]	RETURN   	0 1
 
-main <.\_lfs\scd4x.lua:0,0> (14 instructions at 010e1c58)
-0+ params, 3 slots, 1 upvalue, 0 locals, 6 constants, 5 functions
-	1	[1]	NEWTABLE 	0 0 0
-	2	[2]	LOADK    	1 -1	; 98
-	3	[12]	CLOSURE  	2 0	; 010e1cb0
-	4	[4]	SETTABLE 	0 -2 2	; "start" -
-	5	[22]	CLOSURE  	2 1	; 010e1d08
-	6	[14]	SETTABLE 	0 -3 2	; "stop" -
-	7	[49]	CLOSURE  	2 2	; 010e1db8
-	8	[24]	SETTABLE 	0 -4 2	; "read" -
-	9	[65]	CLOSURE  	2 3	; 010e2548
-	10	[51]	SETTABLE 	0 -5 2	; "crc_word" -
-	11	[74]	CLOSURE  	2 4	; 010e24f0
-	12	[67]	SETTABLE 	0 -6 2	; "crc_valid" -
-	13	[76]	RETURN   	0 2
-	14	[76]	RETURN   	0 1
-
-function <.\_lfs\scd4x.lua:4,12> (30 instructions at 010e1cb0)
-0 params, 5 slots, 2 upvalues, 0 locals, 9 constants, 0 functions
-	1	[5]	GETTABUP 	0 0 -1	; - "i2c"
-	2	[5]	GETTABLE 	0 0 -2	; "start"
-	3	[5]	LOADK    	1 -3	; 0
-	4	[5]	CALL     	0 2 1
-	5	[6]	GETTABUP 	0 0 -1	; - "i2c"
-	6	[6]	GETTABLE 	0 0 -4	; "address"
-	7	[6]	LOADK    	1 -3	; 0
-	8	[6]	GETUPVAL 	2 1	; -
-	9	[6]	GETTABUP 	3 0 -1	; - "i2c"
-	10	[6]	GETTABLE 	3 3 -5	; "TRANSMITTER"
-	11	[6]	CALL     	0 4 2
-	12	[6]	TEST     	0 1
-	13	[6]	JMP      	0 2	; to 16
-	14	[7]	LOADBOOL 	0 0 0
-	15	[7]	RETURN   	0 2
-	16	[9]	GETTABUP 	0 0 -1	; - "i2c"
-	17	[9]	GETTABLE 	0 0 -6	; "write"
-	18	[9]	LOADK    	1 -3	; 0
-	19	[9]	NEWTABLE 	2 2 0
-	20	[9]	LOADK    	3 -7	; 33
-	21	[9]	LOADK    	4 -8	; 177
-	22	[9]	SETLIST  	2 2 1	; 1
-	23	[9]	CALL     	0 3 1
-	24	[10]	GETTABUP 	0 0 -1	; - "i2c"
-	25	[10]	GETTABLE 	0 0 -9	; "stop"
-	26	[10]	LOADK    	1 -3	; 0
-	27	[10]	CALL     	0 2 1
-	28	[11]	LOADBOOL 	0 1 0
-	29	[11]	RETURN   	0 2
-	30	[12]	RETURN   	0 1
-
-function <.\_lfs\scd4x.lua:14,22> (30 instructions at 010e1d08)
-0 params, 5 slots, 2 upvalues, 0 locals, 9 constants, 0 functions
-	1	[15]	GETTABUP 	0 0 -1	; - "i2c"
-	2	[15]	GETTABLE 	0 0 -2	; "start"
-	3	[15]	LOADK    	1 -3	; 0
-	4	[15]	CALL     	0 2 1
-	5	[16]	GETTABUP 	0 0 -1	; - "i2c"
-	6	[16]	GETTABLE 	0 0 -4	; "address"
-	7	[16]	LOADK    	1 -3	; 0
-	8	[16]	GETUPVAL 	2 1	; -
-	9	[16]	GETTABUP 	3 0 -1	; - "i2c"
-	10	[16]	GETTABLE 	3 3 -5	; "TRANSMITTER"
-	11	[16]	CALL     	0 4 2
-	12	[16]	TEST     	0 1
-	13	[16]	JMP      	0 2	; to 16
-	14	[17]	LOADBOOL 	0 0 0
-	15	[17]	RETURN   	0 2
-	16	[19]	GETTABUP 	0 0 -1	; - "i2c"
-	17	[19]	GETTABLE 	0 0 -6	; "write"
-	18	[19]	LOADK    	1 -3	; 0
-	19	[19]	NEWTABLE 	2 2 0
-	20	[19]	LOADK    	3 -7	; 63
-	21	[19]	LOADK    	4 -8	; 134
-	22	[19]	SETLIST  	2 2 1	; 1
-	23	[19]	CALL     	0 3 1
-	24	[20]	GETTABUP 	0 0 -1	; - "i2c"
-	25	[20]	GETTABLE 	0 0 -9	; "stop"
-	26	[20]	LOADK    	1 -3	; 0
-	27	[20]	CALL     	0 2 1
-	28	[21]	LOADBOOL 	0 1 0
-	29	[21]	RETURN   	0 2
-	30	[22]	RETURN   	0 1
-
-function <.\_lfs\scd4x.lua:24,49> (145 instructions at 010e1db8)
-1 param, 11 slots, 3 upvalues, 0 locals, 35 constants, 0 functions
-	1	[25]	GETTABUP 	1 0 -1	; - "i2c"
-	2	[25]	GETTABLE 	1 1 -2	; "start"
-	3	[25]	LOADK    	2 -3	; 0
-	4	[25]	CALL     	1 2 1
-	5	[26]	GETTABUP 	1 0 -1	; - "i2c"
-	6	[26]	GETTABLE 	1 1 -4	; "address"
-	7	[26]	LOADK    	2 -3	; 0
-	8	[26]	GETUPVAL 	3 1	; -
-	9	[26]	GETTABUP 	4 0 -1	; - "i2c"
-	10	[26]	GETTABLE 	4 4 -5	; "TRANSMITTER"
-	11	[26]	CALL     	1 4 2
-	12	[26]	TEST     	1 1
-	13	[26]	JMP      	0 2	; to 16
-	14	[27]	LOADNIL  	1 0
-	15	[27]	RETURN   	1 2
-	16	[29]	GETTABUP 	1 0 -1	; - "i2c"
-	17	[29]	GETTABLE 	1 1 -6	; "write"
-	18	[29]	LOADK    	2 -3	; 0
-	19	[29]	NEWTABLE 	3 2 0
-	20	[29]	LOADK    	4 -7	; 236
-	21	[29]	LOADK    	5 -8	; 5
-	22	[29]	SETLIST  	3 2 1	; 1
-	23	[29]	CALL     	1 3 1
-	24	[30]	GETTABUP 	1 0 -1	; - "i2c"
-	25	[30]	GETTABLE 	1 1 -9	; "stop"
-	26	[30]	LOADK    	2 -3	; 0
-	27	[30]	CALL     	1 2 1
-	28	[31]	GETTABUP 	1 0 -1	; - "i2c"
-	29	[31]	GETTABLE 	1 1 -2	; "start"
-	30	[31]	LOADK    	2 -3	; 0
-	31	[31]	CALL     	1 2 1
-	32	[32]	GETTABUP 	1 0 -1	; - "i2c"
-	33	[32]	GETTABLE 	1 1 -4	; "address"
-	34	[32]	LOADK    	2 -3	; 0
-	35	[32]	GETUPVAL 	3 1	; -
-	36	[32]	GETTABUP 	4 0 -1	; - "i2c"
-	37	[32]	GETTABLE 	4 4 -10	; "RECEIVER"
-	38	[32]	CALL     	1 4 2
-	39	[32]	TEST     	1 1
-	40	[32]	JMP      	0 2	; to 43
-	41	[33]	LOADNIL  	1 0
-	42	[33]	RETURN   	1 2
-	43	[35]	GETTABUP 	1 0 -1	; - "i2c"
-	44	[35]	GETTABLE 	1 1 -11	; "read"
-	45	[35]	LOADK    	2 -3	; 0
-	46	[35]	LOADK    	3 -12	; 9
-	47	[35]	CALL     	1 3 2
-	48	[36]	GETTABUP 	2 0 -1	; - "i2c"
-	49	[36]	GETTABLE 	2 2 -9	; "stop"
-	50	[36]	LOADK    	3 -3	; 0
-	51	[36]	CALL     	2 2 1
-	52	[37]	GETTABUP 	2 2 -13	; - "crc_valid"
-	53	[37]	MOVE     	3 1
-	54	[37]	LOADK    	4 -12	; 9
-	55	[37]	CALL     	2 3 2
-	56	[37]	TEST     	2 1
-	57	[37]	JMP      	0 2	; to 60
-	58	[38]	LOADNIL  	2 0
-	59	[38]	RETURN   	2 2
-	60	[40]	GETTABUP 	2 0 -14	; - "string"
-	61	[40]	GETTABLE 	2 2 -15	; "byte"
-	62	[40]	MOVE     	3 1
-	63	[40]	LOADK    	4 -16	; 1
-	64	[40]	CALL     	2 3 2
-	65	[40]	MUL      	2 2 -17	; - 256
-	66	[40]	GETTABUP 	3 0 -14	; - "string"
-	67	[40]	GETTABLE 	3 3 -15	; "byte"
-	68	[40]	MOVE     	4 1
-	69	[40]	LOADK    	5 -18	; 2
-	70	[40]	CALL     	3 3 2
-	71	[40]	ADD      	2 2 3
-	72	[41]	GETTABUP 	3 0 -14	; - "string"
-	73	[41]	GETTABLE 	3 3 -15	; "byte"
-	74	[41]	MOVE     	4 1
-	75	[41]	LOADK    	5 -19	; 4
-	76	[41]	CALL     	3 3 2
-	77	[41]	MUL      	3 3 -17	; - 256
-	78	[41]	GETTABUP 	4 0 -14	; - "string"
-	79	[41]	GETTABLE 	4 4 -15	; "byte"
-	80	[41]	MOVE     	5 1
-	81	[41]	LOADK    	6 -8	; 5
-	82	[41]	CALL     	4 3 2
-	83	[41]	ADD      	3 3 4
-	84	[41]	MUL      	3 -20 3	; 175 -
-	85	[42]	GETTABUP 	4 0 -14	; - "string"
-	86	[42]	GETTABLE 	4 4 -15	; "byte"
-	87	[42]	MOVE     	5 1
-	88	[42]	LOADK    	6 -21	; 7
-	89	[42]	CALL     	4 3 2
-	90	[42]	MUL      	4 4 -17	; - 256
-	91	[42]	GETTABUP 	5 0 -14	; - "string"
-	92	[42]	GETTABLE 	5 5 -15	; "byte"
-	93	[42]	MOVE     	6 1
-	94	[42]	LOADK    	7 -22	; 8
-	95	[42]	CALL     	5 3 2
-	96	[42]	ADD      	4 4 5
-	97	[42]	MUL      	4 -23 4	; 100 -
-	98	[44]	GETTABUP 	5 0 -14	; - "string"
-	99	[44]	GETTABLE 	5 5 -24	; "format"
-	100	[44]	LOADK    	6 -25	; "%d.%d "
-	101	[44]	GETTABUP 	7 0 -26	; - "math"
-	102	[44]	GETTABLE 	7 7 -27	; "floor"
-	103	[44]	DIV      	8 3 -28	; - 65536
-	104	[44]	SUB      	8 8 -29	; - 45
-	105	[44]	CALL     	7 2 2
-	106	[44]	GETTABUP 	8 0 -26	; - "math"
-	107	[44]	GETTABLE 	8 8 -27	; "floor"
-	108	[44]	MOD      	9 3 -28	; - 65536
-	109	[44]	DIV      	9 9 -30	; - 6554
-	110	[44]	CALL     	8 2 0
-	111	[44]	CALL     	5 0 2
-	112	[45]	GETTABUP 	6 0 -14	; - "string"
-	113	[45]	GETTABLE 	6 6 -24	; "format"
-	114	[45]	LOADK    	7 -25	; "%d.%d "
-	115	[45]	GETTABUP 	8 0 -26	; - "math"
-	116	[45]	GETTABLE 	8 8 -27	; "floor"
-	117	[45]	DIV      	9 4 -28	; - 65536
-	118	[45]	CALL     	8 2 2
-	119	[45]	GETTABUP 	9 0 -26	; - "math"
-	120	[45]	GETTABLE 	9 9 -27	; "floor"
-	121	[45]	MOD      	10 4 -28	; - 65536
-	122	[45]	DIV      	10 10 -30	; - 6554
-	123	[45]	CALL     	9 2 0
-	124	[45]	CALL     	6 0 2
-	125	[47]	TEST     	0 0
-	126	[47]	JMP      	0 14	; to 141
-	127	[47]	GETTABUP 	7 0 -32	; - "tonumber"
-	128	[47]	MOVE     	8 2
-	129	[47]	CALL     	7 2 2
-	130	[47]	SETTABLE 	0 -31 7	; "co2" -
-	131	[47]	GETTABUP 	7 0 -32	; - "tonumber"
-	132	[47]	MOVE     	8 6
-	133	[47]	CALL     	7 2 2
-	134	[47]	SETTABLE 	0 -33 7	; "humi" -
-	135	[47]	GETTABUP 	7 0 -32	; - "tonumber"
-	136	[47]	MOVE     	8 5
-	137	[47]	CALL     	7 2 2
-	138	[47]	SETTABLE 	0 -34 7	; "temperature" -
-	139	[47]	GETTABLE 	7 0 -34	; "temperature"
-	140	[47]	SETTABLE 	0 -35 7	; "ds18b20" -
-	141	[48]	MOVE     	7 2
-	142	[48]	MOVE     	8 5
-	143	[48]	MOVE     	9 6
-	144	[48]	RETURN   	7 4
-	145	[49]	RETURN   	0 1
-
-function <.\_lfs\scd4x.lua:51,65> (58 instructions at 010e2548)
-2 params, 15 slots, 1 upvalue, 0 locals, 13 constants, 0 functions
-	1	[52]	LOADK    	2 -1	; 255
-	2	[53]	MOVE     	3 1
-	3	[53]	ADD      	4 1 -2	; - 1
-	4	[53]	LOADK    	5 -2	; 1
-	5	[53]	FORPREP  	3 45	; to 51
-	6	[54]	GETTABUP 	7 0 -3	; - "bit"
-	7	[54]	GETTABLE 	7 7 -4	; "bxor"
-	8	[54]	MOVE     	8 2
-	9	[54]	GETTABUP 	9 0 -5	; - "string"
-	10	[54]	GETTABLE 	9 9 -6	; "byte"
-	11	[54]	MOVE     	10 0
-	12	[54]	MOVE     	11 6
-	13	[54]	CALL     	9 3 0
-	14	[54]	CALL     	7 0 2
-	15	[54]	MOVE     	2 7
-	16	[55]	LOADK    	7 -7	; 8
-	17	[55]	LOADK    	8 -2	; 1
-	18	[55]	LOADK    	9 -8	; -1
-	19	[55]	FORPREP  	7 30	; to 50
-	20	[56]	GETTABUP 	11 0 -3	; - "bit"
-	21	[56]	GETTABLE 	11 11 -9	; "isset"
-	22	[56]	MOVE     	12 2
-	23	[56]	LOADK    	13 -10	; 7
-	24	[56]	CALL     	11 3 2
-	25	[56]	TEST     	11 0
-	26	[56]	JMP      	0 11	; to 38
-	27	[57]	GETTABUP 	11 0 -3	; - "bit"
-	28	[57]	GETTABLE 	11 11 -4	; "bxor"
-	29	[57]	GETTABUP 	12 0 -3	; - "bit"
-	30	[57]	GETTABLE 	12 12 -11	; "lshift"
-	31	[57]	MOVE     	13 2
-	32	[57]	LOADK    	14 -2	; 1
-	33	[57]	CALL     	12 3 2
-	34	[57]	LOADK    	13 -12	; 49
-	35	[57]	CALL     	11 3 2
-	36	[57]	MOVE     	2 11
-	37	[57]	JMP      	0 6	; to 44
-	38	[59]	GETTABUP 	11 0 -3	; - "bit"
-	39	[59]	GETTABLE 	11 11 -11	; "lshift"
-	40	[59]	MOVE     	12 2
-	41	[59]	LOADK    	13 -2	; 1
-	42	[59]	CALL     	11 3 2
-	43	[59]	MOVE     	2 11
-	44	[61]	GETTABUP 	11 0 -3	; - "bit"
-	45	[61]	GETTABLE 	11 11 -13	; "band"
-	46	[61]	MOVE     	12 2
-	47	[61]	LOADK    	13 -1	; 255
-	48	[61]	CALL     	11 3 2
-	49	[61]	MOVE     	2 11
-	50	[55]	FORLOOP  	7 -31	; to 20
-	51	[53]	FORLOOP  	3 -46	; to 6
-	52	[64]	GETTABUP 	3 0 -3	; - "bit"
-	53	[64]	GETTABLE 	3 3 -13	; "band"
-	54	[64]	MOVE     	4 2
-	55	[64]	LOADK    	5 -1	; 255
-	56	[64]	TAILCALL 	3 3 0
-	57	[64]	RETURN   	3 0
-	58	[65]	RETURN   	0 1
-
-function <.\_lfs\scd4x.lua:67,74> (21 instructions at 010e24f0)
-2 params, 10 slots, 2 upvalues, 0 locals, 6 constants, 0 functions
-	1	[68]	LOADK    	2 -1	; 1
-	2	[68]	MOVE     	3 1
-	3	[68]	LOADK    	4 -2	; 3
-	4	[68]	FORPREP  	2 13	; to 18
-	5	[69]	GETTABUP 	6 0 -3	; - "crc_word"
-	6	[69]	MOVE     	7 0
-	7	[69]	MOVE     	8 5
-	8	[69]	CALL     	6 3 2
-	9	[69]	GETTABUP 	7 1 -4	; - "string"
-	10	[69]	GETTABLE 	7 7 -5	; "byte"
-	11	[69]	MOVE     	8 0
-	12	[69]	ADD      	9 5 -6	; - 2
-	13	[69]	CALL     	7 3 2
-	14	[69]	EQ       	1 6 7
-	15	[69]	JMP      	0 2	; to 18
-	16	[70]	LOADBOOL 	6 0 0
-	17	[70]	RETURN   	6 2
-	18	[68]	FORLOOP  	2 -14	; to 5
-	19	[73]	LOADBOOL 	2 1 0
-	20	[73]	RETURN   	2 2
-	21	[74]	RETURN   	0 1
-
-main <.\_lfs\setglobals.lua:0,0> (143 instructions at 010e2860)
-0+ params, 8 slots, 1 upvalue, 0 locals, 53 constants, 2 functions
+main <.\_lfs\setglobals.lua:0,0> (143 instructions at 010bf410)
+0+ params, 8 slots, 1 upvalue, 0 locals, 54 constants, 2 functions
 	1	[1]	GETTABUP 	0 0 -1	; - "print"
 	2	[1]	LOADK    	1 -2	; "Client:"
 	3	[1]	GETTABUP 	2 0 -3	; - "dat"
@@ -4236,180 +3686,180 @@ main <.\_lfs\setglobals.lua:0,0> (143 instructions at 010e2860)
 	8	[2]	CALL     	0 2 1
 	9	[3]	GETTABUP 	0 0 -3	; - "dat"
 	10	[3]	SETTABLE 	0 -7 -8	; "pnarod" 1
-	11	[5]	GETTABUP 	0 0 -9	; - "SDA"
-	12	[5]	TEST     	0 0
-	13	[5]	JMP      	0 33	; to 47
-	14	[5]	GETTABUP 	0 0 -10	; - "SCL"
-	15	[5]	TEST     	0 0
-	16	[5]	JMP      	0 30	; to 47
-	17	[6]	GETTABUP 	0 0 -12	; - "require"
-	18	[6]	LOADK    	1 -11	; "scd4x"
-	19	[6]	CALL     	0 2 2
-	20	[6]	SETTABUP 	0 -11 0	; - "scd4x"
-	21	[7]	GETTABUP 	0 0 -1	; - "print"
-	22	[7]	LOADK    	1 -13	; "i2c set at pins SDA: "
-	23	[7]	GETTABUP 	2 0 -9	; - "SDA"
-	24	[7]	LOADK    	3 -14	; ", SCL: "
-	25	[7]	GETTABUP 	4 0 -10	; - "SCL"
-	26	[7]	LOADK    	5 -15	; ", Speed:"
-	27	[7]	CONCAT   	1 1 5
-	28	[7]	GETTABUP 	2 0 -16	; - "i2c"
-	29	[7]	GETTABLE 	2 2 -17	; "setup"
-	30	[7]	GETTABUP 	3 0 -18	; - "ID"
-	31	[7]	GETTABUP 	4 0 -9	; - "SDA"
-	32	[7]	GETTABUP 	5 0 -10	; - "SCL"
-	33	[7]	GETTABUP 	6 0 -16	; - "i2c"
-	34	[7]	GETTABLE 	6 6 -19	; "SLOW"
-	35	[7]	CALL     	2 5 0
-	36	[7]	CALL     	0 0 1
-	37	[8]	GETTABUP 	0 0 -11	; - "scd4x"
-	38	[8]	GETTABLE 	0 0 -20	; "start"
-	39	[8]	CALL     	0 1 1
-	40	[9]	GETTABUP 	0 0 -3	; - "dat"
-	41	[9]	SETTABLE 	0 -16 -21	; "i2c" true
-	42	[10]	LOADNIL  	0 1
-	43	[10]	SETTABUP 	0 -18 -22	; - "ID" nil
-	44	[10]	SETTABUP 	0 -10 1	; - "SCL"
-	45	[10]	SETTABUP 	0 -9 0	; - "SDA"
-	46	[10]	JMP      	0 2	; to 49
-	47	[12]	GETTABUP 	0 0 -3	; - "dat"
-	48	[12]	SETTABLE 	0 -23 -21	; "noSDC" true
-	49	[15]	GETTABUP 	0 0 -24	; - "TX"
-	50	[15]	TEST     	0 0
-	51	[15]	JMP      	0 26	; to 78
-	52	[15]	GETTABUP 	0 0 -25	; - "RX"
-	53	[15]	TEST     	0 0
-	54	[15]	JMP      	0 23	; to 78
-	55	[16]	GETTABUP 	0 0 -26	; - "uart"
-	56	[16]	GETTABLE 	0 0 -17	; "setup"
-	57	[16]	LOADK    	1 -27	; 2
-	58	[16]	LOADK    	2 -28	; 9600
-	59	[16]	LOADK    	3 -29	; 8
-	60	[16]	GETTABUP 	4 0 -26	; - "uart"
-	61	[16]	GETTABLE 	4 4 -30	; "PARITY_NONE"
-	62	[16]	GETTABUP 	5 0 -26	; - "uart"
-	63	[16]	GETTABLE 	5 5 -31	; "STOPBITS_1"
-	64	[16]	NEWTABLE 	6 0 2
-	65	[16]	GETTABUP 	7 0 -24	; - "TX"
-	66	[16]	SETTABLE 	6 -32 7	; "tx" -
-	67	[16]	GETTABUP 	7 0 -25	; - "RX"
-	68	[16]	SETTABLE 	6 -33 7	; "rx" -
-	69	[16]	CALL     	0 7 1
-	70	[17]	GETTABUP 	0 0 -26	; - "uart"
-	71	[17]	GETTABLE 	0 0 -20	; "start"
-	72	[17]	LOADK    	1 -27	; 2
-	73	[17]	CALL     	0 2 1
-	74	[19]	LOADNIL  	0 0
-	75	[19]	SETTABUP 	0 -25 -22	; - "RX" nil
-	76	[19]	SETTABUP 	0 -24 0	; - "TX"
-	77	[19]	JMP      	0 2	; to 80
-	78	[21]	GETTABUP 	0 0 -3	; - "dat"
-	79	[21]	SETTABLE 	0 -34 -21	; "noMZH" true
-	80	[24]	GETTABUP 	0 0 -12	; - "require"
-	81	[24]	LOADK    	1 -36	; "_max7219"
-	82	[24]	CALL     	0 2 2
-	83	[24]	SETTABUP 	0 -35 0	; - "max7219"
-	84	[25]	GETTABUP 	0 0 -35	; - "max7219"
-	85	[25]	GETTABLE 	0 0 -17	; "setup"
-	86	[25]	GETTABUP 	1 0 -37	; - "CS"
-	87	[25]	GETTABUP 	2 0 -38	; - "SCLK"
-	88	[25]	GETTABUP 	3 0 -39	; - "MOSI"
-	89	[25]	GETTABUP 	4 0 -40	; - "MISO"
-	90	[25]	CALL     	0 5 1
-	91	[26]	LOADNIL  	0 2
-	92	[26]	SETTABUP 	0 -40 -22	; - "MISO" nil
-	93	[26]	SETTABUP 	0 -39 2	; - "MOSI"
-	94	[26]	SETTABUP 	0 -38 1	; - "SCLK"
-	95	[26]	SETTABUP 	0 -37 0	; - "CS"
-	96	[28]	GETTABUP 	0 0 -5	; - "dofile"
-	97	[28]	LOADK    	1 -41	; "_workF.lua"
-	98	[28]	CALL     	0 2 1
-	99	[29]	GETTABUP 	0 0 -42	; - "node"
-	100	[29]	GETTABLE 	0 0 -43	; "bootreason"
-	101	[29]	CALL     	0 1 3
-	102	[30]	EQ       	0 0 -8	; - 1
-	103	[30]	JMP      	0 10	; to 114
-	104	[30]	EQ       	1 1 -44	; - 6
-	105	[30]	JMP      	0 2	; to 108
-	106	[30]	EQ       	0 1 -29	; - 8
-	107	[30]	JMP      	0 6	; to 114
-	108	[31]	GETTABUP 	2 0 -35	; - "max7219"
-	109	[31]	GETTABLE 	2 2 -45	; "clear"
-	110	[31]	CALL     	2 1 1
-	111	[31]	GETTABUP 	2 0 -5	; - "dofile"
-	112	[31]	LOADK    	3 -46	; "dstartn.lua"
-	113	[31]	CALL     	2 2 1
-	114	[33]	LOADNIL  	1 1
-	115	[33]	MOVE     	0 2
-	116	[35]	GETTABUP 	2 0 -3	; - "dat"
-	117	[35]	GETTABUP 	3 0 -5	; - "dofile"
-	118	[35]	LOADK    	4 -48	; "timewh.lua"
-	119	[35]	CALL     	3 2 2
-	120	[35]	LOADK    	4 -49	; 900
-	121	[35]	CALL     	3 2 2
-	122	[35]	SETTABLE 	2 -47 3	; "sensnar" -
-	123	[36]	GETTABUP 	2 0 -3	; - "dat"
-	124	[36]	SETTABLE 	2 -50 -22	; "sensowtime" nil
-	125	[37]	GETTABUP 	2 0 -3	; - "dat"
-	126	[37]	GETTABLE 	2 2 -51	; "brk"
-	127	[37]	TEST     	2 0
-	128	[37]	JMP      	0 9	; to 138
-	129	[37]	GETTABUP 	2 0 -3	; - "dat"
-	130	[37]	GETTABLE 	2 2 -4	; "clnt"
-	131	[37]	TEST     	2 0
-	132	[37]	JMP      	0 5	; to 138
-	133	[38]	GETTABUP 	2 0 -42	; - "node"
-	134	[38]	GETTABLE 	2 2 -52	; "task"
-	135	[38]	GETTABLE 	2 2 -53	; "post"
-	136	[38]	CLOSURE  	3 0	; 010e28b8
-	137	[38]	CALL     	2 2 1
-	138	[42]	GETTABUP 	2 0 -42	; - "node"
-	139	[42]	GETTABLE 	2 2 -52	; "task"
-	140	[42]	GETTABLE 	2 2 -53	; "post"
-	141	[42]	CLOSURE  	3 1	; 010e27b0
-	142	[42]	CALL     	2 2 1
-	143	[42]	RETURN   	0 1
+	11	[17]	GETTABUP 	0 0 -9	; - "SDA"
+	12	[17]	TEST     	0 0
+	13	[17]	JMP      	0 33	; to 47
+	14	[17]	GETTABUP 	0 0 -10	; - "SCL"
+	15	[17]	TEST     	0 0
+	16	[17]	JMP      	0 30	; to 47
+	17	[18]	GETTABUP 	0 0 -12	; - "require"
+	18	[18]	LOADK    	1 -13	; "_scd30mod"
+	19	[18]	CALL     	0 2 2
+	20	[18]	SETTABUP 	0 -11 0	; - "scd30"
+	21	[19]	GETTABUP 	0 0 -1	; - "print"
+	22	[19]	LOADK    	1 -14	; "i2c set at pins SDA: "
+	23	[19]	GETTABUP 	2 0 -9	; - "SDA"
+	24	[19]	LOADK    	3 -15	; ", SCL: "
+	25	[19]	GETTABUP 	4 0 -10	; - "SCL"
+	26	[19]	LOADK    	5 -16	; ", Speed:"
+	27	[19]	CONCAT   	1 1 5
+	28	[19]	GETTABUP 	2 0 -17	; - "i2c"
+	29	[19]	GETTABLE 	2 2 -18	; "setup"
+	30	[19]	GETTABUP 	3 0 -19	; - "ID"
+	31	[19]	GETTABUP 	4 0 -9	; - "SDA"
+	32	[19]	GETTABUP 	5 0 -10	; - "SCL"
+	33	[19]	GETTABUP 	6 0 -17	; - "i2c"
+	34	[19]	GETTABLE 	6 6 -20	; "SLOW"
+	35	[19]	CALL     	2 5 0
+	36	[19]	CALL     	0 0 1
+	37	[20]	GETTABUP 	0 0 -11	; - "scd30"
+	38	[20]	GETTABLE 	0 0 -21	; "start"
+	39	[20]	CALL     	0 1 1
+	40	[21]	GETTABUP 	0 0 -3	; - "dat"
+	41	[21]	SETTABLE 	0 -17 -22	; "i2c" true
+	42	[22]	LOADNIL  	0 1
+	43	[22]	SETTABUP 	0 -19 -23	; - "ID" nil
+	44	[22]	SETTABUP 	0 -10 1	; - "SCL"
+	45	[22]	SETTABUP 	0 -9 0	; - "SDA"
+	46	[22]	JMP      	0 2	; to 49
+	47	[24]	GETTABUP 	0 0 -3	; - "dat"
+	48	[24]	SETTABLE 	0 -24 -22	; "noSCD" true
+	49	[27]	GETTABUP 	0 0 -25	; - "TX"
+	50	[27]	TEST     	0 0
+	51	[27]	JMP      	0 26	; to 78
+	52	[27]	GETTABUP 	0 0 -26	; - "RX"
+	53	[27]	TEST     	0 0
+	54	[27]	JMP      	0 23	; to 78
+	55	[28]	GETTABUP 	0 0 -27	; - "uart"
+	56	[28]	GETTABLE 	0 0 -18	; "setup"
+	57	[28]	LOADK    	1 -28	; 2
+	58	[28]	LOADK    	2 -29	; 9600
+	59	[28]	LOADK    	3 -30	; 8
+	60	[28]	GETTABUP 	4 0 -27	; - "uart"
+	61	[28]	GETTABLE 	4 4 -31	; "PARITY_NONE"
+	62	[28]	GETTABUP 	5 0 -27	; - "uart"
+	63	[28]	GETTABLE 	5 5 -32	; "STOPBITS_1"
+	64	[28]	NEWTABLE 	6 0 2
+	65	[28]	GETTABUP 	7 0 -25	; - "TX"
+	66	[28]	SETTABLE 	6 -33 7	; "tx" -
+	67	[28]	GETTABUP 	7 0 -26	; - "RX"
+	68	[28]	SETTABLE 	6 -34 7	; "rx" -
+	69	[28]	CALL     	0 7 1
+	70	[29]	GETTABUP 	0 0 -27	; - "uart"
+	71	[29]	GETTABLE 	0 0 -21	; "start"
+	72	[29]	LOADK    	1 -28	; 2
+	73	[29]	CALL     	0 2 1
+	74	[31]	LOADNIL  	0 0
+	75	[31]	SETTABUP 	0 -26 -23	; - "RX" nil
+	76	[31]	SETTABUP 	0 -25 0	; - "TX"
+	77	[31]	JMP      	0 2	; to 80
+	78	[33]	GETTABUP 	0 0 -3	; - "dat"
+	79	[33]	SETTABLE 	0 -35 -22	; "noMZH" true
+	80	[36]	GETTABUP 	0 0 -12	; - "require"
+	81	[36]	LOADK    	1 -37	; "_max7219"
+	82	[36]	CALL     	0 2 2
+	83	[36]	SETTABUP 	0 -36 0	; - "max7219"
+	84	[37]	GETTABUP 	0 0 -36	; - "max7219"
+	85	[37]	GETTABLE 	0 0 -18	; "setup"
+	86	[37]	GETTABUP 	1 0 -38	; - "CS"
+	87	[37]	GETTABUP 	2 0 -39	; - "SCLK"
+	88	[37]	GETTABUP 	3 0 -40	; - "MOSI"
+	89	[37]	GETTABUP 	4 0 -41	; - "MISO"
+	90	[37]	CALL     	0 5 1
+	91	[38]	LOADNIL  	0 2
+	92	[38]	SETTABUP 	0 -41 -23	; - "MISO" nil
+	93	[38]	SETTABUP 	0 -40 2	; - "MOSI"
+	94	[38]	SETTABUP 	0 -39 1	; - "SCLK"
+	95	[38]	SETTABUP 	0 -38 0	; - "CS"
+	96	[40]	GETTABUP 	0 0 -5	; - "dofile"
+	97	[40]	LOADK    	1 -42	; "_workF.lua"
+	98	[40]	CALL     	0 2 1
+	99	[41]	GETTABUP 	0 0 -43	; - "node"
+	100	[41]	GETTABLE 	0 0 -44	; "bootreason"
+	101	[41]	CALL     	0 1 3
+	102	[42]	EQ       	0 0 -8	; - 1
+	103	[42]	JMP      	0 10	; to 114
+	104	[42]	EQ       	1 1 -45	; - 6
+	105	[42]	JMP      	0 2	; to 108
+	106	[42]	EQ       	0 1 -30	; - 8
+	107	[42]	JMP      	0 6	; to 114
+	108	[43]	GETTABUP 	2 0 -36	; - "max7219"
+	109	[43]	GETTABLE 	2 2 -46	; "clear"
+	110	[43]	CALL     	2 1 1
+	111	[43]	GETTABUP 	2 0 -5	; - "dofile"
+	112	[43]	LOADK    	3 -47	; "dstartn.lua"
+	113	[43]	CALL     	2 2 1
+	114	[45]	LOADNIL  	1 1
+	115	[45]	MOVE     	0 2
+	116	[47]	GETTABUP 	2 0 -3	; - "dat"
+	117	[47]	GETTABUP 	3 0 -5	; - "dofile"
+	118	[47]	LOADK    	4 -49	; "timewh.lua"
+	119	[47]	CALL     	3 2 2
+	120	[47]	LOADK    	4 -50	; 900
+	121	[47]	CALL     	3 2 2
+	122	[47]	SETTABLE 	2 -48 3	; "sensnar" -
+	123	[48]	GETTABUP 	2 0 -3	; - "dat"
+	124	[48]	SETTABLE 	2 -51 -23	; "sensowtime" nil
+	125	[49]	GETTABUP 	2 0 -3	; - "dat"
+	126	[49]	GETTABLE 	2 2 -52	; "brk"
+	127	[49]	TEST     	2 0
+	128	[49]	JMP      	0 9	; to 138
+	129	[49]	GETTABUP 	2 0 -3	; - "dat"
+	130	[49]	GETTABLE 	2 2 -4	; "clnt"
+	131	[49]	TEST     	2 0
+	132	[49]	JMP      	0 5	; to 138
+	133	[50]	GETTABUP 	2 0 -43	; - "node"
+	134	[50]	GETTABLE 	2 2 -53	; "task"
+	135	[50]	GETTABLE 	2 2 -54	; "post"
+	136	[50]	CLOSURE  	3 0	; 010bf7d8
+	137	[50]	CALL     	2 2 1
+	138	[54]	GETTABUP 	2 0 -43	; - "node"
+	139	[54]	GETTABLE 	2 2 -53	; "task"
+	140	[54]	GETTABLE 	2 2 -54	; "post"
+	141	[54]	CLOSURE  	3 1	; 010bf570
+	142	[54]	CALL     	2 2 1
+	143	[54]	RETURN   	0 1
 
-function <.\_lfs\setglobals.lua:38,38> (4 instructions at 010e28b8)
+function <.\_lfs\setglobals.lua:50,50> (4 instructions at 010bf7d8)
 0 params, 2 slots, 1 upvalue, 0 locals, 2 constants, 0 functions
-	1	[38]	GETTABUP 	0 0 -1	; - "dofile"
-	2	[38]	LOADK    	1 -2	; "mqttset.lua"
-	3	[38]	CALL     	0 2 1
-	4	[38]	RETURN   	0 1
+	1	[50]	GETTABUP 	0 0 -1	; - "dofile"
+	2	[50]	LOADK    	1 -2	; "mqttset.lua"
+	3	[50]	CALL     	0 2 1
+	4	[50]	RETURN   	0 1
 
-function <.\_lfs\setglobals.lua:42,42> (4 instructions at 010e27b0)
+function <.\_lfs\setglobals.lua:54,54> (4 instructions at 010bf570)
 0 params, 2 slots, 1 upvalue, 0 locals, 2 constants, 0 functions
-	1	[42]	GETTABUP 	0 0 -1	; - "dofile"
-	2	[42]	LOADK    	1 -2	; "main.lua"
-	3	[42]	CALL     	0 2 1
-	4	[42]	RETURN   	0 1
+	1	[54]	GETTABUP 	0 0 -1	; - "dofile"
+	2	[54]	LOADK    	1 -2	; "main.lua"
+	3	[54]	CALL     	0 2 1
+	4	[54]	RETURN   	0 1
 
-main <.\_lfs\setglobfn.lua:0,0> (5 instructions at 010e25f8)
+main <.\_lfs\setglobfn.lua:0,0> (5 instructions at 010bf468)
 0+ params, 2 slots, 1 upvalue, 0 locals, 2 constants, 2 functions
-	1	[7]	CLOSURE  	0 0	; 010e2808
+	1	[7]	CLOSURE  	0 0	; 010bf4c0
 	2	[7]	SETTABUP 	0 -1 0	; - "askfl"
-	3	[8]	CLOSURE  	0 1	; 010e2498
+	3	[8]	CLOSURE  	0 1	; 010bfaf0
 	4	[8]	SETTABUP 	0 -2 0	; - "prt"
 	5	[8]	RETURN   	0 1
 
-function <.\_lfs\setglobfn.lua:1,7> (14 instructions at 010e2808)
+function <.\_lfs\setglobfn.lua:1,7> (14 instructions at 010bf4c0)
 2 params, 4 slots, 1 upvalue, 0 locals, 3 constants, 2 functions
 	1	[2]	TEST     	1 0
 	2	[2]	JMP      	0 6	; to 9
 	3	[3]	GETTABUP 	2 0 -1	; - "node"
 	4	[3]	GETTABLE 	2 2 -2	; "task"
 	5	[3]	GETTABLE 	2 2 -3	; "post"
-	6	[3]	CLOSURE  	3 0	; 010e25a0
+	6	[3]	CLOSURE  	3 0	; 010bf990
 	7	[3]	CALL     	2 2 1
 	8	[3]	JMP      	0 5	; to 14
 	9	[5]	GETTABUP 	2 0 -1	; - "node"
 	10	[5]	GETTABLE 	2 2 -2	; "task"
 	11	[5]	GETTABLE 	2 2 -3	; "post"
-	12	[5]	CLOSURE  	3 1	; 010e2440
+	12	[5]	CLOSURE  	3 1	; 010bf1a8
 	13	[5]	CALL     	2 2 1
 	14	[7]	RETURN   	0 1
 
-function <.\_lfs\setglobfn.lua:3,3> (6 instructions at 010e25a0)
+function <.\_lfs\setglobfn.lua:3,3> (6 instructions at 010bf990)
 0 params, 2 slots, 3 upvalues, 0 locals, 1 constant, 0 functions
 	1	[3]	GETTABUP 	0 0 -1	; - "dofile"
 	2	[3]	GETUPVAL 	1 1	; -
@@ -4418,14 +3868,14 @@ function <.\_lfs\setglobfn.lua:3,3> (6 instructions at 010e25a0)
 	5	[3]	CALL     	0 2 1
 	6	[3]	RETURN   	0 1
 
-function <.\_lfs\setglobfn.lua:5,5> (4 instructions at 010e2440)
+function <.\_lfs\setglobfn.lua:5,5> (4 instructions at 010bf1a8)
 0 params, 2 slots, 2 upvalues, 0 locals, 1 constant, 0 functions
 	1	[5]	GETTABUP 	0 0 -1	; - "dofile"
 	2	[5]	GETUPVAL 	1 1	; -
 	3	[5]	CALL     	0 2 1
 	4	[5]	RETURN   	0 1
 
-function <.\_lfs\setglobfn.lua:8,8> (7 instructions at 010e2498)
+function <.\_lfs\setglobfn.lua:8,8> (7 instructions at 010bfaf0)
 0+ params, 2 slots, 1 upvalue, 0 locals, 2 constants, 0 functions
 	1	[8]	GETTABUP 	0 0 -1	; - "DEBUG"
 	2	[8]	TEST     	0 0
@@ -4435,13 +3885,13 @@ function <.\_lfs\setglobfn.lua:8,8> (7 instructions at 010e2498)
 	6	[8]	CALL     	0 0 1
 	7	[8]	RETURN   	0 1
 
-main <.\_lfs\timewh.lua:0,0> (3 instructions at 010e2650)
+main <.\_lfs\timewh.lua:0,0> (3 instructions at 010bf780)
 0+ params, 2 slots, 1 upvalue, 0 locals, 0 constants, 1 function
-	1	[30]	CLOSURE  	0 0	; 010e2700
+	1	[30]	CLOSURE  	0 0	; 010bf258
 	2	[31]	RETURN   	0 2
 	3	[32]	RETURN   	0 1
 
-function <.\_lfs\timewh.lua:2,30> (36 instructions at 010e2700)
+function <.\_lfs\timewh.lua:2,30> (36 instructions at 010bf258)
 2 params, 7 slots, 1 upvalue, 0 locals, 10 constants, 2 functions
 	1	[3]	TEST     	1 0
 	2	[3]	JMP      	0 5	; to 8
@@ -4469,9 +3919,9 @@ function <.\_lfs\timewh.lua:2,30> (36 instructions at 010e2700)
 	24	[7]	NEWTABLE 	3 0 0
 	25	[7]	MOVE     	1 3
 	26	[8]	NEWTABLE 	3 0 2
-	27	[20]	CLOSURE  	4 0	; 010e26a8
+	27	[20]	CLOSURE  	4 0	; 010bf518
 	28	[20]	SETTABLE 	3 -8 4	; "__newindex" -
-	29	[26]	CLOSURE  	4 1	; 010e2758
+	29	[26]	CLOSURE  	4 1	; 010bfa98
 	30	[26]	SETTABLE 	3 -9 4	; "__index" -
 	31	[28]	GETTABUP 	4 0 -10	; - "setmetatable"
 	32	[28]	MOVE     	5 1
@@ -4480,7 +3930,7 @@ function <.\_lfs\timewh.lua:2,30> (36 instructions at 010e2700)
 	35	[29]	RETURN   	1 2
 	36	[30]	RETURN   	0 1
 
-function <.\_lfs\timewh.lua:9,20> (24 instructions at 010e26a8)
+function <.\_lfs\timewh.lua:9,20> (24 instructions at 010bf518)
 3 params, 8 slots, 2 upvalues, 0 locals, 3 constants, 0 functions
 	1	[10]	LOADNIL  	3 1
 	2	[11]	GETTABUP 	5 0 -1	; - "time"
@@ -4507,7 +3957,7 @@ function <.\_lfs\timewh.lua:9,20> (24 instructions at 010e26a8)
 	23	[18]	SETTABUP 	1 1 5	; -
 	24	[20]	RETURN   	0 1
 
-function <.\_lfs\timewh.lua:21,26> (18 instructions at 010e2758)
+function <.\_lfs\timewh.lua:21,26> (18 instructions at 010bfa98)
 2 params, 4 slots, 3 upvalues, 0 locals, 4 constants, 0 functions
 	1	[22]	GETTABUP 	2 0 1	; -
 	2	[22]	TEST     	2 1

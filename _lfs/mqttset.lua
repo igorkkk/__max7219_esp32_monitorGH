@@ -41,7 +41,7 @@ do
     end
 
     function newm()
-        m = mqtt.Client(dat.clnt, 25, dat.clnt, 'pass22')
+        m = mqtt.Client(dat.clnt, 25, dat.mqlgin, dat.mqpass)
         m:lwt(dat.clnt..'/state', "Off", 0, 1)
         m:on("offline", function(con, msg)
             con:close()

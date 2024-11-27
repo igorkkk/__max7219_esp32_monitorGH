@@ -1,6 +1,6 @@
 do
-    SDA = 21
-    SCL = 22
+    SDA = 22
+    SCL = 21
     if not dat then dat = {} end
     if not wth then wth = {} end
 
@@ -10,15 +10,15 @@ do
     if not dat.device_addr then dat.device_addr = 0x62 end
     SDA, SCL = nil, nil
 
-    local asksensor = function()
-        local co2, temp, humi = scd4x.read(wth)
+    asksensor = function()
+        local co2, temp, humi = scd30.read(wth)
         print('co2:', co2,'Temperature:', temp, 'Humidity:', humi)
     end
 
     if dat.sda and dat.scl and not dat.i2c then
-        scd4x = require("ModulesToLFS.scd4x")
+        scd30 = require("_scd30mod")
         print('i2c set at pins SDA: '..dat.sda..', SCL: '..dat.scl..', Speed:', i2c.setup(dat.id, dat.sda, dat.scl, i2c.SLOW))
-        scd4x.start()
+        scd30.start()
         dat.i2c = true
     else
         print('\t\t\t\ti2c Bus Ready')

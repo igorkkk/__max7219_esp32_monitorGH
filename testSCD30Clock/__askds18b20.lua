@@ -4,7 +4,7 @@ if not wth then wth = {} end
 do
     local prt = prt or print
     local e = {}
-    local o = dat.ds18pin or 4
+    local o = 5
     local a = 750
     local function t()
         prt("Got DS18b20: " .. #e)

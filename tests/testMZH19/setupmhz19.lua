@@ -10,7 +10,7 @@ do
         else uart.stop(2)
         end
     end
-    local mh = require('_mh-z19b')
+    local mh = require('ModulesToLFS._mh-z19b')
     mh.askmh(wth, call) 
 end
 

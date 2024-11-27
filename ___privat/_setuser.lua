@@ -1,5 +1,6 @@
 --------- wifi -------------
 SSID = "AP_Home73"
+-- SSID = "IKSYSTEM_TPN"
 PASSWD = "7740774077407740"
 -------- MAX7219 -----------
 SCLK = 19
@@ -7,36 +8,44 @@ MOSI = 23
 MISO = 26
 CS = 18
 
--- ------- SDC41 -------
+
+-- SCLK = 19
+-- MOSI = 23
+-- MISO = 26
+-- CS = 22
+
+------- SDC41 -------
 -- SDA = 21
 -- SCL = 22
 -- ID = i2c.SW
 
--- ------- SPS30 -------
+------- SCD30 -------
+SDA = 22
+SCL = 21
+ID = i2c.SW
+
+
+------- SPS30 -------
 -- TX = 17
 -- RX = 16
 
--- ------- SCD30 -------
-SDA = 22
-SCL = 21
+------- MZH19 -------
+-- TX = 16
+-- RX = 17
 
 ------- Lighjt Sensor -------
-dat.adcpin = 7 -- GPIO35
+dat.adcpin = 7   -- GPIO35 
+-- dat.adcpin = 4      -- GPIO32 - ADC
 
-
-------- DS18b20  ------------
-dat.ds18pin = 5
+dat.ds18pin = 5 -- DS18b20
 
 DEBUG = true
 
 -- TIMEZONE = 'EST-3'
 
-wth.city = 'Moscow'
-dat.lat = '55.7522'
-dat.lon = '37.6156'
-
 wth.offset = 10800    -- Время, секунды относительно Гринвича 
-dat.maxbright = 9      -- Максимальная яркость часов, max 15
+-- wth.offset = 0
+dat.maxbright = 5       -- Максимальная яркость часов, max 15
 dat.shownight = true  -- Показ данных ночью, false - не показывать, только часы
 
 -- Is light sensor:
@@ -45,27 +54,57 @@ dat.lsens = true -- Есть сенсор освещенности
 -- Night Mode
 dat.nghtmod = true -- false / true - ночной режим, ночью только время
 dat.even = 22      -- ночь наступила в этот час
-dat.morn = 6       -- утро наступило в этот час
+dat.morn = 6       -- утро наступило
 
 -- Настройки MQTT:
-dat.brk = '192.168.1.125' -- Брокер
-dat.port = 1883           -- Порт
+-- dat.brk = '192.168.1.125'
+-- dat.brk = '192.168.27.31'
+-- dat.brk = '192.168.37.190' -- Брокер
+-- dat.port = 1883           -- Порт
+dat.brk = 'igorkkk.keenetic.pro' -- Брокер
+dat.port = 1777           -- Порт
 
-dat.clnt = 'Clock/esp32-SPS30-wifi02' -- Имя этих часов для подписки
+
+-- dat.clnt = '/clock2'     -- Имя этих часов для подписки
+-- dat.clnt = 'Clock/esp32-MZH19-01'
+dat.clnt = 'Clock/sp32_SCD30Mos'
 dat.mqlgin = 'MQTT_Login'
 dat.mqpass = 'MAQTT_Passwd'
 
+-- dat.mqttemp = 'narod/28B1AED5040000A1' -- Температура на улице
+
+-- https://open-meteo.com/en/docs
+-- wth.city = 'Moscow'
+dat.lat = '55.7522'
+dat.lon = '37.6156'
+
+-- wth.city = 'Novi Sad'
+-- dat.lat = '45.2517'
+-- dat.lon = '19.8369'
+
+
 -- Narodmon:
 -- old
--- dat.uuid = "uuiduuiduuiduuiduuiduuiduuiduuiduuiduuid"
--- dat.api_key = "keykeykeykeykeykeykey"
+
+dat.uuid = "98a66f6b5cae480f99b2357ffea16e8c"
+dat.api_key = "QTGNnuvb5cZXM"
 
 ------------------
--- dat.nkey="#nkeynkeynkeynkeynkey\n"
+dat.nkey="#EAA3BEFF47A0\n"
+
+-- dat.nkey="#98:f4:ab:dc:aa:34\n#n9S6gW2yPCZdX\n#LAT#59.007180\n#LON#24.799817\n"
+
+-- dat.api_key = 'MY1nAHkc3rX85' -- kivin
+-- dat.uuid = 'b3f0472a-cd37-11ed-afa1-0242ac120002' -- new
 ------------------
 
--- Сенсоры Для Получения Температуры, иожно править, но не удалять, даже если не нужны
-dat.sens = {32191,66230,2013}  
+
+-- kivin
+-- dat.uuid = "b3f59c9d17d7445791fd002b737919af"
+-- dat.api_key = "MY1nAHkc3rX85"
+
+dat.sens = {32191,66230,2013}
+-- dat.sens = { 61379, 2439, 30060, 24244, 11113 } -- дача
 
 --
 
@@ -103,6 +142,7 @@ dat.tz = dat.rtz
 dat.rtz = nil
 dat.prt = 1
 node.task.post(function() dofile('setglobals.lua') end)
+
 
 wth.minlux = 300
 wth.maxlux = 3500
