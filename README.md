@@ -11,3 +11,8 @@
 [MH-Z19](https://www.winsen-sensor.com/d/files/PDF/Infrared%20Gas%20Sensor/NDIR%20CO2%20SENSOR/MH-Z19%20CO2%20Ver1.0.pdf)
 
 [ds18b20](https://amperkot.ru/static/3236/uploads/datasheets/DS18B20%20datasheet.pdf)
+
+
+Часы ветки настроены с датчиками SCD30 и DS18b20. 
+
+Драйверы других датчиков находятся в папке ModulesToLFS и требуют коррекции в файлах _setuser.lua, setglobals.lua, main.lua.
