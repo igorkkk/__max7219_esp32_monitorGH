@@ -16,7 +16,7 @@
     adc.ATTEN_11db The input voltage of ADC will be reduced to about 1/3.6 (3.9V when VDD_A=3.3V, maximum voltage is limited by VDD_A)
 --]]
 
-channelADC = 7 -- GPIO35
+channelADC = 7 -- GPIO35 
 adc.setup(adc.ADC1 , channelADC, adc.ATTEN_11db)
 
 getADC = function ()

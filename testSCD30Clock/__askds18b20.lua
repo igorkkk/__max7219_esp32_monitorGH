@@ -4,7 +4,7 @@ if not wth then wth = {} end
 do
     local prt = prt or print
     local e = {}
-    local o = 5
+    local pinDS = 5 -- Нога DS18b20
     local a = 750
     local function t()
         prt("Got DS18b20: " .. #e)
@@ -21,5 +21,5 @@ do
     end
     -- ds = node.LFS._ds18b20()
     ds = require('_ds18b20')
-    ds.getTemp(e, t, o, a)
+    ds.getTemp(e, t, pinDS, a)
 end
