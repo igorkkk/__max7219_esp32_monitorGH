@@ -1,10 +1,11 @@
 do
+    local prt = prt or print
 local a = dat.uuid
 local t = dat.api_key
 local e = dat.sens[dat.pnarod]
 local l = #dat.sens
 if not a or not t or not e then
-    print('Not dat.uuid or dat.api_key')
+    prt('Not dat.uuid or dat.api_key')
     return
 else
     local srv = net.createConnection(net.TCP, 0)

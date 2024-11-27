@@ -1,5 +1,5 @@
 do
-    local prt = print
+    local prt = prt or print
     local minnow = 0
     local wt = {}
     local nowt
@@ -114,7 +114,7 @@ do
             --
             if nowt - v[2] > v[3] then
                 v[3] = nowt
-                print('\n\n\t\t\t\t\t\t', v[1], v[2], v[3])
+                prt('\n\n\t\t\t\t\t\t', v[1], v[2], v[3])
                 askfl(v[1])
                 break
             end

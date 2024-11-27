@@ -1,3 +1,4 @@
+local prt = prt or print
 local M={}
 M.adrtbl = {}
 M.pin = 4
@@ -16,7 +17,7 @@ function M.getaddrs(ttable, call)
 	if #M.adrtbl ~= 0 then
 		M.askTemp(ttable, call)
 	else
-		print('No DS18b20!')
+		prt('No DS18b20!')
 		return
 	end
 end

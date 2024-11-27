@@ -1,6 +1,7 @@
 do
     if not digl then dofile '_digl.lua' end
     if not dat then dat = {} end
+    local prt = prt or print
     local soutlines = {}
     local dt = 0
     local out, prtdt, outreal
@@ -29,7 +30,7 @@ do
     local startblink = function()
         dat.TMRWORK = true
         if not soutlines then
-            print '\t\t\\!!! Not Data To Blink!'; return
+            prt '\t\t\\!!! Not Data To Blink!'; return
         end
         dots = true
         ln4 = string.sub(soutlines[4], 1, 15) .. '0' .. string.sub(soutlines[4], 17)

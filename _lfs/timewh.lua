@@ -1,8 +1,9 @@
 do
+    local prt = prt or print
     local timetb = function (sec, t)
         if not t or type(t) ~= 'table' then t = {} end
         if not sec or type(sec) ~= 'number' then sec = 600 end
-        print('\n\n\t\tMaked Table at', sec, 'second!\n\n')
+        prt('\n\n\t\tMaked Table at', sec, 'second!\n\n')
         local _t = t
         t = {}
         local mt = {

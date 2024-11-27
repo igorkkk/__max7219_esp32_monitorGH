@@ -1,5 +1,5 @@
 if not prt then prt = print end
-print('Works Get Forecast OM!')
+prt('Works Get Forecast OM!')
 local con, killt, conclose, makedt, rq, make
 local _up_thsh = 3
 local _skip_hd = true

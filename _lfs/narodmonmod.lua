@@ -1,7 +1,8 @@
 M={}
 function M.sendNarod(dataN, tb, call)
+    local prt = prt or print
     if type(tb) ~= "table"  then 
-        print("No table")
+        prt("No table")
         return
     end
     local s
@@ -13,13 +14,13 @@ function M.sendNarod(dataN, tb, call)
         end
     end
     dataN = dataN.."##\n"
-    print(dataN)
+    prt(dataN)
     conn=net.createConnection(net.TCP, 0)
     conn:on("connection",function(conn, payload)
         conn:send(dataN)
     end)
     conn:on("receive", function(conn, payload)
-        print('Narodmon: '..payload)
+        prt('Narodmon: '..payload)
         conn:close()
         if call then
            conn = nil

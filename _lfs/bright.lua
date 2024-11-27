@@ -1,11 +1,13 @@
 local bright
+local prt = prt or print
+
 
 -- Определяем освещенность и запоминаем крайние значения
 if dat.lsens then
     wth.lux = 4095 - adc.read(adc.ADC1, dat.adcpin)
     if wth.lux > wth.maxlux then wth.maxlux = wth.lux end
     if wth.lux < wth.minlux then wth.minlux = wth.lux end
-    print("\n\t\t\t\t\t\t\t\tGot Lux:", wth.lux)
+    prt("\n\t\t\t\t\t\t\t\tGot Lux:", wth.lux)
 end
 
 -- -- Определяем день сейчас или ночь
@@ -46,6 +48,6 @@ if not dat.lsens then
     if bright ~= wth.bright then
         wth.bright = bright
         max7219.setIntensity(bright)
-        print("Set Bright:", wth.bright)
+        prt("Set Bright:", wth.bright)
     end
 end

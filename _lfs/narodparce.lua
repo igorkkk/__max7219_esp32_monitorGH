@@ -1,4 +1,5 @@
-print('Parce Narod')
+local prt = prt or print
+prt('Parce Narod')
 local i, n
 local a, o = 0, 0
 local t = 100
@@ -13,15 +14,15 @@ local e = function(...)
     end
     for _, e in ipairs(h) do
         if dat.sensnar['' .. e] then
-            print('d' .. e, dat.sensnar['' .. e])
+            prt('d' .. e, dat.sensnar['' .. e])
             if dat.sensnar['' .. e] < t then t = dat.sensnar['' .. e] end
         end
     end
-    print('Narod Min:', t)
+    prt('Narod Min:', t)
     if t ~= 100 then
         wth.narod = tonumber(string.format("%.1f", t))
     else
-        print('Lost Nrod')
+        prt('Lost Nrod')
         wth.narod = nil
     end
 end
@@ -35,6 +36,6 @@ if a > 0 then
     i = string.rep('.-id":(%d+).-value":([+-]*%d+%.*%d*)', a)
     e(string.match(c, i))
 else
-    print('Lost narod')
+    prt('Lost narod')
 end
 _G.c = nil

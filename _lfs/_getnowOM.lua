@@ -1,5 +1,5 @@
 if not prt then prt = print end
-print('Works Getnow!')
+prt('Works Getnow OM!')
 local offset, temp, day, code, wind, humy, rain
 local con, killt, conclose, makedt, rq
 local _up_thsh = 3

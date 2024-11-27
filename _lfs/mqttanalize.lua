@@ -1,4 +1,5 @@
 if killtop and #killtop ~= 0 then
+	local prt = prt or print
 	local com, dt
 	com = table.remove(killtop)
 
@@ -17,7 +18,7 @@ if killtop and #killtop ~= 0 then
 			if dt then wth.mqttint = dt end
 		end
 	else
-		print('No "cmd" to Work')
+		prt('No "cmd" to Work')
 	end
 
 	com = nil

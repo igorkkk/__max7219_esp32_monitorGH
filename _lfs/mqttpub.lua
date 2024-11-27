@@ -1,5 +1,6 @@
 if not dat.broker or not m then return end
 wth.heap = node.heap()
+local prt = prt or print
 local ok, json = pcall(sjson.encode, wth)
 wth.heap = nil
 if ok then
@@ -9,7 +10,7 @@ if ok then
 	end)
 	if dat.boot then dofile('sendboot.lua') end
 else
-	print("failed to encode or send json!")
+	prt("failed to encode or send json!")
 end
 ok, json = nil, nil
 collectgarbage()

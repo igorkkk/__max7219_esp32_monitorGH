@@ -1,4 +1,5 @@
 do
+    local prt = prt or print
     local brk = dat.brk
     dat.brk = nil
     local port = dat.port
@@ -8,7 +9,7 @@ do
 
     getmqtt = tmr.create()
     getmqtt:alarm(35000, tmr.ALARM_AUTO, function(t)
-        print('dat.killm:', dat.killm)
+        prt('dat.killm:', dat.killm)
         dat.killm = dat.killm + 1
         if dat.killm > 5 then
             if m then m:close() ; m = nil end
@@ -24,16 +25,16 @@ do
     end)
 
     function subscribe(con)
-        print("Connected MQTT Broker as '"..dat.clnt.."'")
+        prt("Connected MQTT Broker as '"..dat.clnt.."'")
         dat.killm = 0
         dat.broker = true
         con:subscribe(dat.clnt.."/com/#", 0)
         con:publish(dat.clnt..'/state', "On", 0, 0)
-        print("Subscribed at '"..dat.clnt.."/com/#'")
+        prt("Subscribed at '"..dat.clnt.."/com/#'")
     end
 
     function merror(con, errmsg)
-        print('MQTT Error:', errmsg)
+        prt('MQTT Error:', errmsg)
         dat.killm = 6
         getmqtt:start(true)
         errmsg = nil
@@ -51,7 +52,7 @@ do
         m:on("message", function(con, top, dt)
             if not killtop then killtop = {} end
             top = string.match(top, "/(%w+)$")
-            print('Got', top, dt)
+            prt('Got', top, dt)
             if dt then
                 table.insert(killtop, {top, dt})
                 if not dat.analiz then
@@ -64,7 +65,7 @@ do
 
     function mconnect(con)
         if dat.ip then
-        print('Now connect to ', brk, port)
+        prt('Now connect to ', brk, port)
         con:connect(brk, port, 0, 0, subscribe, merror)
         else
             dat.killm = 7

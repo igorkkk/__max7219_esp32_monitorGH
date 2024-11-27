@@ -1,11 +1,12 @@
-print('Client:', dat.clnt)
+local prt = prt or print
+prt('Client:', dat.clnt)
 dofile 'setglobfn.lua'
 dat.pnarod = 1
 
 ---- For scd4x:
 -- if SDA and SCL then
 --     scd4x = require("_scd4x")
---     print('i2c set at pins SDA: ' .. SDA .. ', SCL: ' .. SCL .. ', Speed:', i2c.setup(ID, SDA, SCL, i2c.SLOW))
+--     prt('i2c set at pins SDA: ' .. SDA .. ', SCL: ' .. SCL .. ', Speed:', i2c.setup(ID, SDA, SCL, i2c.SLOW))
 --     scd4x.start()
 --     dat.i2c = true
 --     SDA, SCL, ID = nil, nil, nil
@@ -16,7 +17,7 @@ dat.pnarod = 1
 -- For SCD30
 if SDA and SCL then
     scd30 = require("_scd30mod")
-    print('i2c set at pins SDA: '..SDA..', SCL: '..SCL..', Speed:', i2c.setup(ID, SDA, SCL, i2c.SLOW))
+    prt('i2c set at pins SDA: '..SDA..', SCL: '..SCL..', Speed:', i2c.setup(ID, SDA, SCL, i2c.SLOW))
     scd30.start()
     dat.i2c = true
     SDA, SCL, ID = nil, nil, nil
