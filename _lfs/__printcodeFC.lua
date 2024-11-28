@@ -11,7 +11,7 @@ do
             filename = 'dfogn.lua'
         elseif wth.codeFCOM > 50 and wth.codeFCOM < 56 then
             filename = 'ddrizzlen.lua'
-        elseif wth.codeFCOM == 57 or wth.codeFCOM == 58 then
+        elseif wth.codeFCOM == 56 or wth.codeFCOM == 57 then
             filename = 'ddrizzlesupern.lua'
         elseif wth.codeFCOM > 60 and wth.codeFCOM < 69 then
             filename = 'dreinn.lua'
