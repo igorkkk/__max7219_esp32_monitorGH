@@ -62,8 +62,8 @@
         "os": "disable",
         "bit": "disable"
     },
-    "Lua.runtime.plugin": "C:/Users/remoteadmin/Documents/___SyncThing/esp/nodeMCU-emmylua//esp32/plugin.lua",
+    "Lua.runtime.plugin": "C:/nodeMCU-emmylua//esp32/plugin.lua",
     "Lua.workspace.library": [
-        "C:/Users/remoteadmin/Documents/___SyncThing/esp/nodeMCU-emmylua//esp32/library"
+        "C:/nodeMCU-emmylua//esp32/library"
     ],
 }
