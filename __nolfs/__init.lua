@@ -5,9 +5,7 @@ wth = {}
 TIMEZONE = 'EST-3'
 
 dofile'_setuser.lua'
--- dofile('_testDS18b20.lua')
-
-time.settimezone(TIMEZONE)
+-- time.settimezone(TIMEZONE)
 TIMEZONE = nil
 
 wifi.start()

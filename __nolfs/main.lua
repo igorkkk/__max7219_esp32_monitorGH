@@ -38,9 +38,6 @@ do
         end
     end
 
-
-    -- nowt = time.get()
-    -- prt('Got Unix', nowt)
     tiktak = function()
         printtime()
         if not dat.shownight and dat.night then return end

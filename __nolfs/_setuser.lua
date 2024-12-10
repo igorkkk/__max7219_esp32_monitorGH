@@ -1,6 +1,6 @@
 --------- wifi -------------
-SSID = "AP_Home73"
-PASSWD = "7740774077407740"
+SSID = "SSID"
+PASSWD = "PASSWD"
 -------- MAX7219 -----------
 SCLK = 19
 MOSI = 23
@@ -36,11 +36,11 @@ dat.lat = '55.7522'
 dat.lon = '37.6156'
 
 wth.offset = 10800    -- Время, секунды относительно Гринвича 
-dat.maxbright = 9      -- Максимальная яркость часов, max 15
+dat.maxbright = 9     -- Максимальная яркость часов, max 15
 dat.shownight = true  -- Показ данных ночью, false - не показывать, только часы
 
 -- Is light sensor:
-dat.lsens = true -- Есть сенсор освещенности
+dat.lsens = true      -- Есть сенсор освещенности
 
 -- Night Mode
 dat.nghtmod = true -- false / true - ночной режим, ночью только время
